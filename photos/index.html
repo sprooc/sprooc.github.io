@@ -32,7 +32,7 @@
   <style type="text/css">
     
     #container.show {
-      background: linear-gradient(200deg,#ccc,#000);
+      background: linear-gradient(200deg,#43bff5,#ffffff);
     }
   </style>
   
@@ -45,6 +45,22 @@
   
   
 
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+
+</script>
+
+
 
   
 
@@ -53,8 +69,8 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow"  style="background: rgba(255,255,255,0.0)">
-        
+    <div class="left-col" q-class="show:isShow">
+      
 
 
 <div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
@@ -102,9 +118,8 @@
 	</header>		
 </div>
 
-      </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse" style="background: http://s4687kszj.hd-bkt.clouddn.com/background.jpg?e=1700063290&amp;token=L3mTWXzZCv3lvtTOkdIw4RDK_yPI9Iej65IzO6ff:m0i_V_nlyyb9Te-c7ISbOYIwMPQ= no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);">
-
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
       
 <nav id="mobile-nav">
@@ -176,17 +191,6 @@
   
 
 
-  <!--显示阅读次数-->
-  
-    <br/>
-    <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-    <span class="icon-sort"></span>
-    <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-      阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-    </span>
-    </a>
-  
-  <!--显示阅读次数完毕-->
   
   
         
@@ -373,6 +377,15 @@
 	<script src="/lib/busuanzi.pure.js"></script>
 	
   
+  
+	
+	<span id="busuanzi_container_site_pv" style="display:none">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次	
+	        <span class="post-meta-divider" >|</span>
+	</span>
+  	<span id="busuanzi_container_site_uv" style='display:none'>
+  		本站访客数<span id="busuanzi_value_site_uv"></span>人
+  	</span>
   
 </footer>
 
