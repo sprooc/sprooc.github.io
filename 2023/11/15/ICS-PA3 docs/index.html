@@ -20,7 +20,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sprooc.github.io/2023/11/15/ICS-PA3%20docs/f70598671b2221a0543914666a6f06b.png">
 <meta property="article:published_time" content="2023-11-15T13:00:16.000Z">
-<meta property="article:modified_time" content="2023-11-15T14:15:33.277Z">
+<meta property="article:modified_time" content="2023-11-17T12:18:03.525Z">
 <meta property="article:author" content="Sprooc">
 <meta property="article:tag" content="ics-pa">
 <meta name="twitter:card" content="summary">
@@ -218,7 +218,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.9k字</span>
+      <span class="post-count">3.5k字</span>
     </span>
   </span>
 
@@ -227,7 +227,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">7分</span>
+      <span class="post-count">14分</span>
     </span>
   </span>
 </div>
@@ -292,12 +292,12 @@
 <p>接下来实现ecall指令。ecall的操作在isa_raise_intr()函数里实现，按要求写就行，没啥别的。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">word_t</span> <span class="title function_">isa_raise_intr</span><span class="params">(<span class="type">word_t</span> NO, <span class="type">vaddr_t</span> epc)</span> &#123;</span><br><span class="line">  <span class="comment">/* <span class="doctag">TODO:</span> Trigger an interrupt/exception with ``NO&#x27;&#x27;.</span></span><br><span class="line"><span class="comment">   * Then return the address of the interrupt/exception vector.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  cpu.csr[<span class="number">2</span>] = epc;</span><br><span class="line">  cpu.csr[<span class="number">0</span>] = NO;</span><br><span class="line">  <span class="keyword">return</span> cpu.csr[<span class="number">3</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>函数的实现很简单，主要问题是参数NO从哪来？四处辗转之后我发现yield()函数用内联汇编在ecall前加了一条指令“li a7 -1”。猜测是ecall之前都会将异常号存在a7中。所以ecall指令的操作就是以R(17)(就是a7）和PC值为参数调用isa_raise_intr()，再将函数返回值赋值给s-&gt;dnpc就可以了。</p>
+<p>函数的实现很简单，主要问题是参数NO从哪来？查手册发现riscv自陷Exception Code是11, 所以ecall指令的操作就是以11和PC值为参数调用isa_raise_intr()，再将函数返回值赋值给s-&gt;dnpc就可以了。</p>
 <p>最后mret指令就更容易了，置PC就行。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSTPAT(<span class="string">&quot;0000000 00000 00000 000 00000 11100 11&quot;</span>, ecall  , I, s-&gt;dnpc = isa_raise_intr(R(<span class="number">17</span>), s-&gt;pc));</span><br><span class="line">INSTPAT(<span class="string">&quot;0011000 00010 00000 000 00000 11100 11&quot;</span>, mret   , R, s-&gt;dnpc = CSRs(<span class="number">0x341</span>) + <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSTPAT(<span class="string">&quot;0000000 00000 00000 000 00000 11100 11&quot;</span>, ecall  , I, s-&gt;dnpc = isa_raise_intr(<span class="number">11</span>, s-&gt;pc));</span><br><span class="line">INSTPAT(<span class="string">&quot;0011000 00010 00000 000 00000 11100 11&quot;</span>, mret   , R, s-&gt;dnpc = CSRs(<span class="number">0x341</span>) + <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
 
 <p>再此尝试运行yield test，得到错误输出“Unhandled event”。发现是在注册的回调函数simple_trap()中，事件编号错误。想了很久才发现原因：</p>
-<p>执行ecall之后会跳转到__am_asm_trap函数，这个函数是用汇编写的，定义在trap.S中。此函数会保存上下文信息，然后跳转到__am_irq_handle()函数，这个函数参数为刚才保存的上下文信息Context，包含通用寄存器和CSR的值。它将根据mcause的值设置事件编号，并调用回调函数。默认时事件编号都会被设置为EVENT_ERROR，肯定会发生错误，所以添加一条case，mcause为-1时事件编号设为EVENT_YIELD，这样一来理论上应该就没问题了。</p>
+<p>执行ecall之后会跳转到__am_asm_trap函数，这个函数是用汇编写的，定义在trap.S中。此函数会保存上下文信息，然后跳转到__am_irq_handle()函数，这个函数参数为刚才保存的上下文信息Context，包含通用寄存器和CSR的值。它将根据mcause的值设置事件编号，并调用回调函数。默认时事件编号都会被设置为EVENT_ERROR，肯定会发生错误，所以添加一条case，mcause为11时事件编号设为EVENT_YIELD，这样一来理论上应该就没问题了。</p>
 <p>然而还是出错了。。。</p>
 <p>再是一番冥思苦想，发现am_asm_trap里一串代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#define OFFSET_CAUSE  ((NR_REGS + 0) * XLEN)</span><br><span class="line">#define OFFSET_STATUS ((NR_REGS + 1) * XLEN)</span><br><span class="line">#define OFFSET_EPC    ((NR_REGS + 2) * XLEN)</span><br></pre></td></tr></table></figure>
@@ -308,10 +308,67 @@
 <p>明显顺序有误，应该调整一下顺序。改完之后yield test就通了。</p>
 <p>写到这里我真的心情复杂，这么难发现的坑怎么不再文档里面说？？气愤之时继续往下做，突然发现后面文档里面有写要调整结构体顺序。。。原来是我没看完文档，只看了第一部分就开始做，结果绕了大弯。而且糊里糊涂地把后面的内容都做完了。。。不过虽然走了弯路耗时长了一点，但相应的理解也更深刻了。算是吸取个教训，以后要看完文档再动手。</p>
 <p>最后的etrace轻松完成，至此第一阶段完成，耗时4小时。（大部分时间在走弯路。。。）</p>
-<h5 id="必答题-理解上下文结构体的前世今生"><a href="#必答题-理解上下文结构体的前世今生" class="headerlink" title="必答题- 理解上下文结构体的前世今生"></a>必答题- 理解上下文结构体的前世今生</h5><p><strong>你会在<code>__am_irq_handle()</code>中看到有一个上下文结构指针<code>c</code>, <code>c</code>指向的上下文结构究竟在哪里? 这个上下文结构又是怎么来的? 具体地, 这个上下文结构有很多成员, 每一个成员究竟在哪里赋值的? <code>$ISA-nemu.h</code>, <code>trap.S</code>, 上述讲义文字, 以及你刚刚在NEMU中实现的新指令, 这四部分内容又有什么联系?</strong></p>
+<h5 id="必答题-理解上下文结构体的前世今生"><a href="#必答题-理解上下文结构体的前世今生" class="headerlink" title="必答题- 理解上下文结构体的前世今生"></a>必答题- 理解上下文结构体的前世今生</h5><blockquote>
+<p>你会在<code>__am_irq_handle()</code>中看到有一个上下文结构指针<code>c</code>, <code>c</code>指向的上下文结构究竟在哪里? 这个上下文结构又是怎么来的? 具体地, 这个上下文结构有很多成员, 每一个成员究竟在哪里赋值的? <code>$ISA-nemu.h</code>, <code>trap.S</code>, 上述讲义文字, 以及你刚刚在NEMU中实现的新指令, 这四部分内容又有什么联系?</p>
+</blockquote>
 <p>上下文结构体在__am_asm_trap()函数的调用栈中。阅读trap.S的代码可以知道，32个通用寄存器、三个CSR依次被压入栈中，依次完成Context结构体的赋值。之后作为参数传入__am_irq_handle()函数。</p>
-<h5 id="必答题-理解穿越时空的旅程"><a href="#必答题-理解穿越时空的旅程" class="headerlink" title="必答题 - 理解穿越时空的旅程"></a>必答题 - 理解穿越时空的旅程</h5><p><strong>从<code>yield test</code>调用<code>yield()</code>开始, 到从<code>yield()</code>返回的期间, 这一趟旅程具体经历了什么? 软(AM, <code>yield test</code>)硬(NEMU)件是如何相互协助来完成这趟旅程的? 你需要解释这一过程中的每一处细节, 包括涉及的每一行汇编代码&#x2F;C代码的行为, 尤其是一些比较关键的指令&#x2F;变量. 事实上, 上文的必答题”理解上下文结构体的前世今生”已经涵盖了这趟旅程中的一部分, 你可以把它的回答包含进来.</strong></p>
+<h5 id="必答题-理解穿越时空的旅程"><a href="#必答题-理解穿越时空的旅程" class="headerlink" title="必答题 - 理解穿越时空的旅程"></a>必答题 - 理解穿越时空的旅程</h5><blockquote>
+<p>从<code>yield test</code>调用<code>yield()</code>开始, 到从<code>yield()</code>返回的期间, 这一趟旅程具体经历了什么? 软(AM, <code>yield test</code>)硬(NEMU)件是如何相互协助来完成这趟旅程的? 你需要解释这一过程中的每一处细节, 包括涉及的每一行汇编代码&#x2F;C代码的行为, 尤其是一些比较关键的指令&#x2F;变量. 事实上, 上文的必答题”理解上下文结构体的前世今生”已经涵盖了这趟旅程中的一部分, 你可以把它的回答包含进来.</p>
+</blockquote>
 <p>yield test中，首先调用cte_init()进行初始化，具体操作为：<br>1、将__am_asm_trap()函数的地址存在mtvec寄存器中。<br> 2、注册回调函数simple_trap。<br> 然后进入hello_intr()函数，输出一些信息。然后进入循环调用yield()函数。yield()函数使用内联汇编”li a7 -1”指令将异常号存在a7中，然后执行指令ecall。ecall指令依次完成一下操作：<br> 1、CSR[mepc] &lt;- pc<br> 2、CSR[mcause] &lt;- a7<br> 3、PC &lt;- CSR[mtvec]<br> 这时PC将会指向__am_asm_trap函数并执行。此函数首先会将32个通用寄存器、3个CSR的值压入栈中，构成Context结构体c，将该结构体作为参数调用__am_irq_handle()函数。此函数会定义一个Event结构体，根据c中储存有的mcause值，设置Event结构体的事件编号，再以Context和Event两个结构体为参数调用之前注册的回调函数simple_trap()。此函数会根据Event结构体中的事件编号识别事件，做出相应的输出。由于循环很大，程序会不断输出y，之后退出异常响应是否正确实现不得而知。</p>
+<h2 id="PA3-2"><a href="#PA3-2" class="headerlink" title="PA3-2"></a>PA3-2</h2><p>PA3第二阶段主要是引入操作系统nanos-lite，实现操作系统加载用户程序和系统调用。目前nanos-lite的功能很简陋，大概看一下main.c就大致明白它的工作流程了：初始化设备和存储器，加载程序，最后触发yield自陷。</p>
+<p>我们的第一个任务时使操作系统能加载程序，即实现loader()。这里的程序指的是ELF文件，它存放在硬盘(ramdisk.img)。我们需要解析ELF文件，并将其加载到运行时内存。解析ELF可以按照以下流程：</p>
+<ul>
+<li><p>读取ELF头，根据魔数e_ident检查是否为ELF文件。</p>
+</li>
+<li><p>从ELF头获取程序头program header的位移e_phoff和程序头的数量e_phnum。</p>
+</li>
+<li><p>逐个读取程序头，判断其类型是否为PT_LOAD。</p>
+</li>
+<li><p>若是，将该节加载到内存。加载的地址、长度都包含在程序头里面了。</p>
+</li>
+<li><p>完成加载，loader()函数返回程序入口e_entry。</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">uintptr_t</span> <span class="title function_">loader</span><span class="params">(PCB *pcb, <span class="type">const</span> <span class="type">char</span> *filename)</span> &#123;</span><br><span class="line">  <span class="type">uint32_t</span> phdr_size = <span class="keyword">sizeof</span>(Elf_Phdr);</span><br><span class="line">  Elf_Ehdr *ehdr = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Elf_Ehdr));</span><br><span class="line">  Elf_Phdr *phdr = <span class="built_in">malloc</span>(phdr_size);</span><br><span class="line">  ramdisk_read((<span class="type">void</span>*)ehdr, <span class="number">0</span>, <span class="keyword">sizeof</span>(Elf_Ehdr));</span><br><span class="line">  assert(*(<span class="type">uint32_t</span> *)ehdr-&gt;e_ident == <span class="number">0x464c457f</span>);</span><br><span class="line">  assert(EXPECT_TYPE == ehdr-&gt;e_machine);</span><br><span class="line">  <span class="type">uint32_t</span> phdr_num = ehdr-&gt;e_phnum;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; phdr_num; i++) &#123;</span><br><span class="line">    ramdisk_read((<span class="type">void</span>*)phdr, ehdr-&gt;e_phoff + i * phdr_size, phdr_size);</span><br><span class="line">    <span class="keyword">if</span>(phdr-&gt;p_type != PT_LOAD) <span class="keyword">continue</span>;</span><br><span class="line">    ramdisk_read((<span class="type">void</span>*)phdr-&gt;p_vaddr, phdr-&gt;p_offset, phdr-&gt;p_filesz);</span><br><span class="line">    <span class="built_in">memset</span>((<span class="type">void</span>*)phdr-&gt;p_vaddr + phdr-&gt;p_filesz, <span class="number">0</span>, phdr-&gt;p_memsz - phdr-&gt;p_filesz);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ehdr-&gt;e_entry;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后在init_proc()里调用naive_uload()，naive_uload()会加载硬盘中的程序，并获取入口地址，跳转到入口地址执行。这样操作系统就能够加载用户程序并执行了。</p>
+<p>接下来编译并在nanos运行dummy。第一次编译dummy可能需要重启ternimal，应该刚配置的NAVY_HOME环境变量还没生效，Makefile还无法识别。</p>
+<p>dummy程序会触发系统调用。触发系统调用和上一阶段实现的自陷都是用ecall指令实现的，如何区分它们？阅读源码可知，系统调用前会往GPR1(a7)里面填入type，yield()在ecall之前也会往a7里填入-1。因此，我们可以根据a7里的值区分EVENT_YIELD和EVENT_SYSCALL。而寄存器内容都保存在上下文信息c里面了，我们很容易读取。因此，修改cte.c内代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Context* __am_irq_handle(Context *c) &#123;</span><br><span class="line">  <span class="keyword">if</span> (user_handler) &#123;</span><br><span class="line">    Event ev = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">switch</span> (c-&gt;mcause) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="number">11</span>: </span><br><span class="line">        <span class="keyword">if</span>(c-&gt;GPR1 == <span class="number">-1</span>) ev.event = EVENT_YIELD;</span><br><span class="line">        <span class="keyword">else</span> ev.event = EVENT_SYSCALL;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">default</span>: ev.event = EVENT_ERROR; <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    c = user_handler(ev, c);</span><br><span class="line">    assert(c != <span class="literal">NULL</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>确定事件类型之后会调用注册的回调函数。在nanos中为do_event()。这里做点简单判断就行了，如果是EVENT_SYSCALL就交给do_syscall()处理。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> Context* <span class="title function_">do_event</span><span class="params">(Event e, Context* c)</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span> (e.event) &#123;</span><br><span class="line">    <span class="keyword">case</span> EVENT_YIELD: <span class="built_in">printf</span>(<span class="string">&quot;Event: yield!\n&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> EVENT_SYSCALL: do_syscall(c); <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>: panic(<span class="string">&quot;Unhandled eventdd ID = %d&quot;</span>, e.event);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>系统调用也有不同的类型。在do_syscall里，我们只需要根据GPR1识别系统调用类型，然后把任务分配给给个sys_xxx()函数实现系统调用即可。实现sys_yield和sys_exit，dummy就可以通了。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">void</span> <span class="title function_">sys_yield</span><span class="params">(Context *c)</span> &#123;</span><br><span class="line">  yield();</span><br><span class="line">  c-&gt;GPRx = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">static</span> <span class="type">void</span> <span class="title function_">sys_exit</span><span class="params">(Context *c)</span> &#123;</span><br><span class="line">  halt(c-&gt;GPR1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来实现标准输出sys_write，这里按照手册写就可以。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">void</span> <span class="title function_">sys_write</span><span class="params">(Context *c)</span> &#123;</span><br><span class="line">  <span class="type">int</span> fd = (<span class="type">int</span>)c-&gt;GPR2;</span><br><span class="line">  <span class="type">void</span> *buf = (<span class="type">void</span> *)c-&gt;GPR3;</span><br><span class="line">  <span class="type">size_t</span> count = (<span class="type">size_t</span>)c-&gt;GPR4;</span><br><span class="line">  <span class="keyword">if</span>(fd == <span class="number">1</span> || fd == <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">      putch(((<span class="type">char</span> *)buf)[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  c-&gt;GPRx = count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>另外，我们还需要给用户程序提供标准输入的接口_write()，把系统调用抽象成一个屏蔽底层细节的接口。其实将系统调用做个封装。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> _write(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> count) &#123;</span><br><span class="line">  <span class="keyword">return</span> _syscall_(SYS_write, fd, (<span class="type">intptr_t</span>)buf, count); <span class="comment">//记得设返回值，不然printf会重复输出。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后是实现堆区管理。这里的用户接口是_sbrk(int increment)，参数是请求分配的长度。它负责维护program break，即当前堆区终点。其工作方式如下：</p>
+<ul>
+<li>将program break初始化到end位置。</li>
+<li>被调用时，计算新的program break &#x3D; program_bread + increment。</li>
+<li>通过SYS_brk向操作系统请求分配到新program break的堆空间。</li>
+<li>若系统调用返回0，分配成功，更新program break，并将旧program break的值作为返回值返回。</li>
+<li>若失败，返回-1。</li>
+</ul>
+<p>这里end的使用方法需要查手册。end是一个被放在程序数据段结尾的字符，&amp;end可以读出它的地址，即数据段结尾地址，也就是堆区起点。实现如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="type">char</span> end;</span><br><span class="line"><span class="type">void</span> *program_break = <span class="literal">NULL</span>;</span><br><span class="line"><span class="type">void</span> *_sbrk(<span class="type">intptr_t</span> increment) &#123;</span><br><span class="line">  <span class="keyword">if</span> (program_break == <span class="literal">NULL</span>) &#123;</span><br><span class="line">    program_break = &amp;end; <span class="comment">//如果是第一次被调用，要初始化program_break</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">void</span> *addr = program_break + increment;</span><br><span class="line">  <span class="keyword">if</span> (_syscall_(SYS_brk, (<span class="type">intptr_t</span>)addr, <span class="number">0</span>, <span class="number">0</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">    program_break = addr;</span><br><span class="line">    <span class="keyword">return</span> addr - increment;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (<span class="type">void</span> *)<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">static</span> <span class="type">void</span> <span class="title function_">sys_brk</span><span class="params">(Context *c)</span> &#123;</span><br><span class="line">  c-&gt;GPRx = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时运行hello就可以顺利输出字符串了。</p>
+<p>PA3-2 over!</p>
+<h5 id="必答题-hello程序是什么-它从而何来-要到哪里去"><a href="#必答题-hello程序是什么-它从而何来-要到哪里去" class="headerlink" title="必答题 - hello程序是什么, 它从而何来, 要到哪里去"></a>必答题 - hello程序是什么, 它从而何来, 要到哪里去</h5><blockquote>
+<p>我们知道<code>navy-apps/tests/hello/hello.c</code>只是一个C源文件, 它会被编译链接成一个ELF文件. 那么, hello程序一开始在哪里? 它是怎么出现内存中的? 为什么会出现在目前的内存位置? 它的第一条指令在哪里? 究竟是怎么执行到它的第一条指令的? hello程序在不断地打印字符串, 每一个字符又是经历了什么才会最终出现在终端上?</p>
+</blockquote>
+<p>hello被编译成ELF文件后，我们将它放进了硬盘(ramdisk.img)里，然后nanos在执行到init_proc()时，调用naive_uload()，naive_uload()又调用loader()加载ramdisk.img里面的hello程序。loader()会依次读取hello的ELF头和program header，根据从program header获取需要加载的内容在ELF中的位置、要加载到的内存位置、需加载的文件长度等信息，根据这些信息将程序加载到内存空间。它的第一条指令由ELF头的e_entry指示，它是loader函数的返回值。naive_uload获取到入口地址之后就跳转到第一条指令开始执行。</p>
+<p>hello通过printf()输出字符串。printf在经过一系列逻辑处理之后，通过标准输出的用户接口_write()。这个函数会将参数储存在规定的寄存器中，然后触发SYS_write的系统调用。当程序运行到ecall时，跳转到中断响应程序。识别事件类型为系统调用后，交给nanos注册的回调函数do_event处理。do_event识别系统调用类型为SYS_write，调用sys_write，最后通过putch一个个输出字符。</p>
 
     
 
