@@ -26,7 +26,7 @@
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/img/head.jpg">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -214,12 +214,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <span id="more"></span>
-
-<p>​		近日常思考今后的学习方向，是研究技术搞开发，还是研究算法搞理论。不是算法学不起，学习技术更有性价比。学习算法成本高风险大。但若学有所成，不论是对学业还是未来工作都大有所益。故算法这条道虽难走，但亦值得一试。犹豫之时，忽忆起前日前辈经验分享会上一席话：“你们才大二，有的是试错的机会。如果犹豫走哪个方向，不如都试一试。“既然如此，即可放手一搏，研究算法之道。既定下决心，记于此处，以自勉。</p>
-<p>​		今日起，日刷力扣五题，并力肝算法导论一书。每周末小记本周学习心得与收获，总结反思，亦可记录成长的足迹。</p>
-<p>​		“行路难！行路难！多歧路，今安在？”惟愿“长风破浪会有时，直挂云帆济沧海”！</p>
-
+    <p>近日思绪繁多，终得明朗，记于此。</p>
+    
+    <a class="article-more-a" href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/#more">more >></a>
+    
     
 
     
@@ -547,11 +545,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ics-pa</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">ics-pa</a>
               </li>
             
             <div class="clearfix"></div>
@@ -690,6 +688,56 @@
   
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
+  
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "haru/02";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+      
+    },
+    mobile: {
+       show: false, 
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
   
   
 </body>
