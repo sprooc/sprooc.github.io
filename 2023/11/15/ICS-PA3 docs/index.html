@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://sprooc.github.io/2023/11/15/ICS-PA3%20docs/1818d9d700c49467344ebf58e7b25e3.png">
 <meta property="og:image" content="http://sprooc.github.io/2023/11/15/ICS-PA3%20docs/95de1c1a4545547ca9a098de6b929a2.png">
 <meta property="article:published_time" content="2023-11-15T13:00:16.000Z">
-<meta property="article:modified_time" content="2023-11-21T14:46:42.752Z">
+<meta property="article:modified_time" content="2023-11-21T14:53:20.942Z">
 <meta property="article:author" content="Sprooc">
 <meta property="article:tag" content="ics-pa">
 <meta name="twitter:card" content="summary">
@@ -545,7 +545,7 @@
 <h5 id="必答题-理解计算机系统"><a href="#必答题-理解计算机系统" class="headerlink" title="必答题 - 理解计算机系统"></a>必答题 - 理解计算机系统</h5><blockquote>
 <p>仙剑奇侠传究竟如何运行 运行仙剑奇侠传时会播放启动动画, 动画里仙鹤在群山中飞过. 这一动画是通过<code>navy-apps/apps/pal/repo/src/main.c</code>中的<code>PAL_SplashScreen()</code>函数播放的. 阅读这一函数, 可以得知仙鹤的像素信息存放在数据文件<code>mgo.mkf</code>中. 请回答以下问题: 库函数, libos, Nanos-lite, AM, NEMU是如何相互协助, 来帮助仙剑奇侠传的代码从<code>mgo.mkf</code>文件中读出仙鹤的像素信息, 并且更新到屏幕上? 换一种PA的经典问法: 这个过程究竟经历了些什么? (Hint: 合理使用各种trace工具, 可以帮助你更容易地理解仙剑奇侠传的行为)</p>
 </blockquote>
-<p>每一次更新画面，先从mgo.mkf中读取此帧的像素信息，用SDL_BlieSurface()等函数填充Surface的缓冲区，最后调用SDL_UpdateRect()更新画面。SDL_UpdateRect()读取相应信息之后调用NDL_DrawRect()，NDL_DrawRect()通过系统调用打开显存设备文件，往显存里面写入画面数据。用户程序最终会调用libos里的__syscall__()函数发起系统调用，然后转移到nanos执行。nanos通过fb_write()函数处理这个写入显存的操作。它会调用AM提供的接口io_write()往设备寄存器AM_GPU_FBDRAW写入数据。这段指令在机器代码中被会被翻译成往FB_ADDR这个地址里写入数据。当Nemu执行到这个写指令时，会发现这个地址映射到显存，故并不实际地往里面写数据，而是调用SDL库把画面显示到屏幕上。到此完成了更新屏幕画面的全过程。</p>
+<p>每一次更新画面，先从mgo.mkf中读取此帧的像素信息，用SDL_BlitSurface()等函数填充Surface的缓冲区，最后调用SDL_UpdateRect()更新画面。SDL_UpdateRect()读取相应信息之后调用NDL_DrawRect()，NDL_DrawRect()通过系统调用打开显存设备文件，往显存里面写入画面数据。用户程序最终会调用libos里的__syscall__()函数发起系统调用，然后转移到nanos执行。nanos通过fb_write()函数处理这个写入显存的操作。它会调用AM提供的接口io_write()往设备寄存器AM_GPU_FBDRAW写入数据。这段指令在机器代码中被会被翻译成往FB_ADDR这个地址里写入数据。当Nemu执行到这个写指令时，会发现这个地址映射到显存，故并不实际地往里面写数据，而是调用SDL库把画面显示到屏幕上。到此完成了更新屏幕画面的全过程。</p>
 <p>PA3到此结束！</p>
 
     
@@ -653,6 +653,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          20231128小记
+        
+      </div>
+    </a>
   
   
     <a href="/2023/11/15/Hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -811,6 +820,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ics-pa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

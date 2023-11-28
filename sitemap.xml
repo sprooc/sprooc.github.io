@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sprooc.github.io/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/</loc>
+    
+    <lastmod>2023-11-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://sprooc.github.io/2023/11/15/ICS-PA3%20docs/</loc>
     
     <lastmod>2023-11-21</lastmod>
@@ -31,7 +40,7 @@
 
   <url>
     <loc>http://sprooc.github.io/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <lastmod>2023-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,7 +48,14 @@
   
   <url>
     <loc>http://sprooc.github.io/tags/ics-pa/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <lastmod>2023-11-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://sprooc.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2023-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
