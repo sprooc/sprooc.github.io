@@ -93,9 +93,9 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/" target="_blank">主页</a></li>
+				<li><a href="/" >主页</a></li>
 			
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" >随笔</a></li>
 			
 			</ul>
 		</nav>
@@ -114,8 +114,8 @@
 			<div class="social">
 				
 					
-						<a class="github" href="https://github.com/sprooc" 
-												title="GitHub" target="_blank"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" rel="noopener" href="https://github.com/sprooc" 
+												title="GitHub" ><i class="icon-github"></i></a>
 					
 				
 			</div>
@@ -196,8 +196,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" target="_blank">一些数学</a>
-  
+	  <a class="article-title" href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/">一些数学</a>
+	
     </h1>
   
 
@@ -219,20 +219,9 @@
     
     <p><img src="https://sprooc.github.io/2023/12/05/一些数学/11.jpg" alt="11" style="zoom:14%;" /></p>
 <hr>
-<!---more-->
-<p>快速幂</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">pow</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> ans = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (; b; b &gt;&gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = (LL)ans * a % m;</span><br><span class="line">    a = (LL)a * a % m;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>龟速乘</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">mul</span><span class="params">(LL a, LL b, LL p)</span> </span>&#123;</span><br><span class="line">  a %= p;</span><br><span class="line">  b %= p;</span><br><span class="line">  LL c = (<span class="type">double</span>)a * b / p;</span><br><span class="line">  LL x = a * b;</span><br><span class="line">  LL y = c * p;</span><br><span class="line">  LL ans = (LL)(x % p) - (LL)(y % p);</span><br><span class="line">  <span class="keyword">if</span> (ans &lt; <span class="number">0</span>) ans += p;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>等差数列</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> e, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (e == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">if</span> (e % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (LL)(<span class="number">1</span> + <span class="built_in">pow</span>(p, e / <span class="number">2</span>, m)) * <span class="built_in">sum</span>(p, e / <span class="number">2</span>, m) % m;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">return</span> ((LL)(<span class="number">1</span> + <span class="built_in">pow</span>(p, e / <span class="number">2</span>, m)) * <span class="built_in">sum</span>(p, e / <span class="number">2</span>, m) % m +</span><br><span class="line">            <span class="built_in">pow</span>(p, e - <span class="number">1</span>, m)) % m;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>分解质因数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> s = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= a / i; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (a % i != <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">  p[s] = i; c[s] = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (a % i == <span class="number">0</span>) &#123;</span><br><span class="line">    a /= i; c[s]++;</span><br><span class="line">  &#125;</span><br><span class="line">  s++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (a &gt; <span class="number">1</span>) &#123;</span><br><span class="line">  p[s] = a; c[s++]++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>相关题目：</p>
-<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/99/">97. 约数之和 - AcWing题库</a><br><a target="_blank" rel="noopener" href="http://poj.org/problem?id=1995">1995 — Raising Modulo Numbers (poj.org)</a></p>
-<p>参考文章：</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/591377294">ACM——常见的几种分解质因子的方法 - 知乎 (zhihu.com)</a></p>
-
+    
+    <a class="article-more-a" href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/#more">more >></a>
+    
     
 
     
@@ -248,7 +237,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法 数学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
         		</li>
       		
 		</ul>
@@ -292,8 +285,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/" target="_blank">20231203周记</a>
-  
+	  <a class="article-title" href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/">20231203周记</a>
+	
     </h1>
   
 
@@ -376,8 +369,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/" target="_blank">石子合并问题</a>
-  
+	  <a class="article-title" href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/">石子合并问题</a>
+	
     </h1>
   
 
@@ -397,7 +390,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><img src="https://sprooc.github.io/2023/12/03/石子合并问题/4d6b538ca4c9f39ddc627fb2cba1674b.jpg" alt="4d6b538ca4c9f39ddc627fb2cba1674b" style="text-align: center;zoom:40%;" /></p>
+    <p><img src="https://sprooc.github.io/2023/12/03/石子合并问题/4d6b538ca4c9f39ddc627fb2cba1674b.jpg" alt="4d6b538ca4c9f39ddc627fb2cba1674b" style="align: center;zoom:20%;" /></p>
 <hr>
     
     <a class="article-more-a" href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/#more">more >></a>
@@ -465,8 +458,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/" target="_blank">Sparse Table(稀疏表)</a>
-  
+	  <a class="article-title" href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/">Sparse Table(稀疏表)</a>
+	
     </h1>
   
 
@@ -553,8 +546,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/11/28/leetcode-315-%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0/" target="_blank">[leetcode]315. 计算右侧小于当前元素的个数</a>
-  
+	  <a class="article-title" href="/2023/11/28/leetcode-315-%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0/">[leetcode]315. 计算右侧小于当前元素的个数</a>
+	
     </h1>
   
 
@@ -638,8 +631,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/" target="_blank">20231128小记</a>
-  
+	  <a class="article-title" href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/">20231128小记</a>
+	
     </h1>
   
 
@@ -722,8 +715,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/11/15/ICS-PA3%20docs/" target="_blank">ICS-PA3 实验记录</a>
-  
+	  <a class="article-title" href="/2023/11/15/ICS-PA3%20docs/">ICS-PA3 实验记录</a>
+	
     </h1>
   
 
@@ -806,8 +799,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/11/15/Hello-world/" target="_blank">Hello, world!</a>
-  
+	  <a class="article-title" href="/2023/11/15/Hello-world/">Hello, world!</a>
+	
     </h1>
   
 
@@ -914,7 +907,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -990,10 +983,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
@@ -1002,15 +991,19 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ics-pa</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">算法 数学</a>
               </li>
             
             <div class="clearfix"></div>
