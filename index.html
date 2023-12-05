@@ -188,6 +188,103 @@
             
 
   
+    <article id="post-一些数学" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" target="_blank">一些数学</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" class="archive-article-date">
+        <time datetime="2023-12-05T13:16:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-05</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><img src="https://sprooc.github.io/2023/12/05/一些数学/11.jpg" alt="11" style="zoom:14%;" /></p>
+<hr>
+<!---more>
+快速幂
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">pow</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> ans = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (; b; b &gt;&gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = (LL)ans * a % m;</span><br><span class="line">    a = (LL)a * a % m;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>龟速乘</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">mul</span><span class="params">(LL a, LL b, LL p)</span> </span>&#123;</span><br><span class="line">  a %= p;</span><br><span class="line">  b %= p;</span><br><span class="line">  LL c = (<span class="type">double</span>)a * b / p;</span><br><span class="line">  LL x = a * b;</span><br><span class="line">  LL y = c * p;</span><br><span class="line">  LL ans = (LL)(x % p) - (LL)(y % p);</span><br><span class="line">  <span class="keyword">if</span> (ans &lt; <span class="number">0</span>) ans += p;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>等差数列</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> p, <span class="type">int</span> e, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (e == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">if</span> (e % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (LL)(<span class="number">1</span> + <span class="built_in">pow</span>(p, e / <span class="number">2</span>, m)) * <span class="built_in">sum</span>(p, e / <span class="number">2</span>, m) % m;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">return</span> ((LL)(<span class="number">1</span> + <span class="built_in">pow</span>(p, e / <span class="number">2</span>, m)) * <span class="built_in">sum</span>(p, e / <span class="number">2</span>, m) % m +</span><br><span class="line">            <span class="built_in">pow</span>(p, e - <span class="number">1</span>, m)) % m;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分解质因数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> s = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= a / i; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (a % i != <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">  p[s] = i; c[s] = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (a % i == <span class="number">0</span>) &#123;</span><br><span class="line">    a /= i; c[s]++;</span><br><span class="line">  &#125;</span><br><span class="line">  s++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (a &gt; <span class="number">1</span>) &#123;</span><br><span class="line">  p[s] = a; c[s++]++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>相关题目：</p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/description/99/">97. 约数之和 - AcWing题库</a><br><a target="_blank" rel="noopener" href="http://poj.org/problem?id=1995">1995 — Raising Modulo Numbers (poj.org)</a></p>
+<p>参考文章：</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/591377294">ACM——常见的几种分解质因子的方法 - 知乎 (zhihu.com)</a></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法 数学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20231203周记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -912,6 +1009,10 @@
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">算法 数学</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -1101,6 +1202,22 @@
 
   
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
