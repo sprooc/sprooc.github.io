@@ -11,14 +11,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="快速幂 12345678int pow(int a, int b, int m) &#123;  int ans &#x3D; 1;  for (; b; b &gt;&gt;&#x3D; 1) &#123;    if (b &amp; 1) ans &#x3D; (LL)ans * a % m;    a &#x3D; (LL)a * a % m;  &#125;  return ans;&#125; 龟速乘 12345678">
+<meta property="og:type" content="article">
 <meta property="og:title" content="一些数学">
 <meta property="og:url" content="http://sprooc.github.io/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/index.html">
 <meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="快速幂 12345678int pow(int a, int b, int m) &#123;  int ans &#x3D; 1;  for (; b; b &gt;&gt;&#x3D; 1) &#123;    if (b &amp; 1) ans &#x3D; (LL)ans * a % m;    a &#x3D; (LL)a * a % m;  &#125;  return ans;&#125; 龟速乘 12345678">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sprooc.github.io/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/11.jpg">
 <meta property="article:published_time" content="2023-12-05T13:16:42.000Z">
-<meta property="article:modified_time" content="2023-12-05T13:19:46.665Z">
+<meta property="article:modified_time" content="2023-12-05T13:23:05.008Z">
 <meta property="article:author" content="Sprooc">
 <meta property="article:tag" content="算法 数学">
 <meta name="twitter:card" content="summary">
@@ -219,7 +221,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">0字</span>
+      <span class="post-count">240字</span>
     </span>
   </span>
 
@@ -241,9 +243,8 @@
     
     <p><img src="https://sprooc.github.io/2023/12/05/一些数学/11.jpg" alt="11" style="zoom:14%;" /></p>
 <hr>
-<!---more>
-快速幂
-
+<!---more-->
+<p>快速幂</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">pow</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> ans = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (; b; b &gt;&gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = (LL)ans * a % m;</span><br><span class="line">    a = (LL)a * a % m;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>龟速乘</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">mul</span><span class="params">(LL a, LL b, LL p)</span> </span>&#123;</span><br><span class="line">  a %= p;</span><br><span class="line">  b %= p;</span><br><span class="line">  LL c = (<span class="type">double</span>)a * b / p;</span><br><span class="line">  LL x = a * b;</span><br><span class="line">  LL y = c * p;</span><br><span class="line">  LL ans = (LL)(x % p) - (LL)(y % p);</span><br><span class="line">  <span class="keyword">if</span> (ans &lt; <span class="number">0</span>) ans += p;</span><br><span class="line">  <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
