@@ -7,17 +7,43 @@
   <meta name="google-site-verification" content="pR8QTiIMEpajCwoYodeqCvhI31PB9cT7MTg3xvqomRg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>Tag: 随笔 | Sprooc</title>
+  <title>《计算机组织结构》期末复习-第7讲-内部存储器 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sprooc">
-<meta property="og:url" content="http://sprooc.github.io/tags/%E9%9A%8F%E7%AC%94/index.html">
+  <meta name="description" content="第7讲-内部存储器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《计算机组织结构》期末复习-第7讲-内部存储器">
+<meta property="og:url" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
 <meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="第7讲-内部存储器">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231211215347325.png">
+<meta property="og:image" content="https://pica.zhimg.com/80/v2-eea6e461a97e4273e93fcec13276ebba_720w.webp?source=1def8aca">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-0cf2e34ec4c12654f5c11156192d7406_720w.webp?source=1def8aca">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-1995e8bd1afa8bd20bac2f4098ae6cce_720w.webp?source=1def8aca">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/03ce4ce3bddda304f78a7874c4fbc21.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/cpt7-4.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/6aee1147c0a2b1dcbb6aad2260ac01a.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/c45a7bcd8f2fe3922ee186b9169abe8.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/95b95b545a8e205757cc1393d05ab4a.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/b55108f28bef2e7de730bce977c3680.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/70d77704608eec0f638c9073f3ed293.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/0f98bebd96a8cbcd7ee9b3b692a4aec.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/f94ea025cf9e0640b3c9ed1137bf7ba.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212180159945.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e95c8b405fbb5f2f6a13581cd132445.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e408d144336de24dd3b59c2a6482d6c.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192727683.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192717520.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/d9de3049edd4019913d6b9fecaec64e.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/762c7f6add775ffee42a7e0c099b8b4.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/399904474e1ad0c8309a6027406e9b7.png">
+<meta property="article:published_time" content="2023-12-11T13:52:04.000Z">
+<meta property="article:modified_time" content="2023-12-12T12:06:43.434Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231211215347325.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -181,151 +207,602 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《计算机组织结构》期末复习-第7讲-内部存储器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-10T13:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/">20231210周记</a>
-	
+    <h1 class="article-title" itemprop="name">
+      《计算机组织结构》期末复习-第7讲-内部存储器
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-03T09:19:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-03</time>
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
+        <time datetime="2023-12-11T13:52:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-11</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/">20231203周记</a>
-	
-    </h1>
   
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">12分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="第7讲-内部存储器"><a href="#第7讲-内部存储器" class="headerlink" title="第7讲-内部存储器"></a>第7讲-内部存储器</h2><span id="more"></span>
+<h3 id="存储器（Memory）"><a href="#存储器（Memory）" class="headerlink" title="存储器（Memory）"></a>存储器（Memory）</h3><ol>
+<li>定义：存储器（Memory）由一定数量的单元构成，每个单元可以被唯一标识，每个单元都<br>   有存储一个数值的能力<ul>
+<li>地址：单元的唯一标识符（采用二进制）</li>
+<li>地址空间：可唯一标识的单元总数</li>
+<li>寻址能力：存储在每个单元中的信息的位数，即内存中能被单独识别并独立存放一个数据的最小内存空间<br>— 大多数存储器是字节（8bit）寻址的，32位计算机的最大寻址空间为4GB</li>
+</ul>
+</li>
+<li>层次结构<ul>
+<li>主板内存储器：寄存器，Cache，主存。</li>
+<li>主板外存储器：磁盘，CD-ROM，CD-RW，DVD-RW，DVD-RAM。</li>
+<li>离线存储器：磁带</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231211215347325.png" alt="image-20231211215347325" style="zoom:100%;" /></p>
+<h3 id="AND-OR锁存器"><a href="#AND-OR锁存器" class="headerlink" title="AND-OR锁存器"></a>AND-OR锁存器</h3><p>参考文章：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/373693400">谁能告诉我AND-OR锁存器原理？ - 知乎 (zhihu.com)</a></p>
+<p>先解释OR锁</p>
+<p><strong>OR锁：</strong></p>
+<p><img src="https://pica.zhimg.com/80/v2-eea6e461a97e4273e93fcec13276ebba_720w.webp?source=1def8aca" alt="img"></p>
+<p>OR门B输入和输出连接。</p>
+<p>INIT为初始状态A=B=0；</p>
+<p>当A=1，B=0时，OUTPUT变为1同时将B变为1；</p>
+<p>此时，当A变回0，OUTPUT仍为1（被锁住）。</p>
+<p><strong>AND锁：</strong></p>
+<p><img src="https://pic1.zhimg.com/80/v2-0cf2e34ec4c12654f5c11156192d7406_720w.webp?source=1def8aca" alt="img"></p>
+<p>AND门B输入和输出连接。</p>
+<p>INIT为初始状态A=B=1；</p>
+<p>当A=0，B=1时，OUTPUT变为0同时将B变为0；</p>
+<p>此时，当A变回1，OUTPUT仍为0（被锁住）。</p>
+<p><strong>AND-OR锁存器：</strong></p>
+<p><img src="https://picx.zhimg.com/80/v2-1995e8bd1afa8bd20bac2f4098ae6cce_720w.webp?source=1def8aca" alt="img"></p>
+<p>锁存器有两个输入SET和RESET，其<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=电路&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A1093469618}">电路</a>如上图连接。</p>
+<p>INIT为初始状态SET=RESET=0，最终输出OUTPUT=0；</p>
+<p>当SET=1，RESET=0（SET激活、RESET未激活）时，将输出变为1，锁住（可看出SET变为0，结果不变）</p>
+<p>此时RESET激活（SET=1，RESET=1），将输出重新变为0，即为重置。</p>
+<h3 id="半导体存储器"><a href="#半导体存储器" class="headerlink" title="半导体存储器"></a>半导体存储器</h3><ol>
+<li><p>用半导体芯片作主存储器是目前的主流做法</p>
+</li>
+<li><p>位元（memory cell）</p>
+<ul>
+<li>半导体存储器的基本元件，用于存储1位数据</li>
+<li>特性<ol>
+<li>呈现两种稳态（或半稳态）：分别表示二进制的0和1</li>
+<li>它们能够至少被写入（write）数据一次：用来设置状态</li>
+<li>它们能够被读取（read）来获得状态信息  </li>
+</ol>
+</li>
+<li>操作<br><img src="03ce4ce3bddda304f78a7874c4fbc21.png" alt="03ce4ce3bddda304f78a7874c4fbc21"></li>
+</ul>
+</li>
+<li><p>半导体存储器类型</p>
+</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">存储器类型</th>
+<th style="text-align:center">种类</th>
+<th style="text-align:center">可擦除性</th>
+<th style="text-align:center">写机制</th>
+<th style="text-align:center">易失性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">随机存取存储器（RAM）</td>
+<td style="text-align:center">读写存储器</td>
+<td style="text-align:center">电可擦除，字节级</td>
+<td style="text-align:center">电</td>
+<td style="text-align:center">易失</td>
+</tr>
+<tr>
+<td style="text-align:center">只读存储器（ROM）</td>
+<td style="text-align:center">只读存储器</td>
+<td style="text-align:center">不可擦除</td>
+<td style="text-align:center">掩膜</td>
+<td style="text-align:center">非易失</td>
+</tr>
+<tr>
+<td style="text-align:center">可编程ROM（PROM）</td>
+<td style="text-align:center">只读存储器</td>
+<td style="text-align:center">不可能</td>
+<td style="text-align:center">电</td>
+<td style="text-align:center">非易失</td>
+</tr>
+<tr>
+<td style="text-align:center">可擦除ROM（EPROM）</td>
+<td style="text-align:center">主要进行读的存储器</td>
+<td style="text-align:center">紫外线可擦除，芯片级</td>
+<td style="text-align:center">电</td>
+<td style="text-align:center">非易失</td>
+</tr>
+<tr>
+<td style="text-align:center">电可擦除PROM（EEPROM）</td>
+<td style="text-align:center">主要进行读的存储器</td>
+<td style="text-align:center">电可擦除，字节级</td>
+<td style="text-align:center">电</td>
+<td style="text-align:center">非易失</td>
+</tr>
+<tr>
+<td style="text-align:center">快闪存储器</td>
+<td style="text-align:center">主要进行读的存储器</td>
+<td style="text-align:center">电可擦除，块级</td>
+<td style="text-align:center">电</td>
+<td style="text-align:center">非易失</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="随机存取存储器（RAM）"><a href="#随机存取存储器（RAM）" class="headerlink" title="随机存取存储器（RAM）"></a>随机存取存储器（RAM）</h4><ol>
+<li>Random-Access Memory（RAM）<ul>
+<li>随机访问：对存储器中任意数据的访问所花费的时间与数据所在位置无关</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>可以简单快速地进行读/写操作</li>
+<li>易失的（Volatile）</li>
+</ul>
+</li>
+<li><p>类型</p>
+<ul>
+<li>静态RAM（SRAM）：Static RAM（1963年由Robert Norman在仙童发明）</li>
+<li>动态RAM（DRAM）：Dynamic RAM（1967年由Robert Dennard在IBM发明）</li>
+</ul>
+</li>
+<li><p>静态RAM（SRAM）</p>
+<ol>
+<li>用传统的触发器逻辑门结构来存储二进制。只要有电源供电，SRAM就会保存数据（断电信息丢失）。常用于Cache。      </li>
+<li>典型结构：六管静态MOS管存储元件   <ol>
+<li>状态   <ul>
+<li>1状态：C1点为高电平，C2点为低电平，此时T2、T3导通，T1、T4截止。   </li>
+<li>0状态：C1点为低电平，C2点为高电平，此时T2、T3截止，T1、T4导通。   </li>
+</ul>
+</li>
+<li>信息保持：字选择线（地址线）加低电平，T5、T6截止，触发器与外界隔离，信息保持不变。</li>
+<li>读出：首先在两根位线上加高电平，地址线加高电平，T5、T6导通。若为状态1，T2导通，所以有电流从位线$\overline{\text{B}}$经过T6、T2流入地，位线$\overline{\text{B}}$上产生负脉冲。反之，若为状态0，位线B上产生负脉冲。</li>
+<li>写入：地址线加高电平，T5、T6导通。若写入1，位线$\overline{\text{B}}$加低电平，T3导通，T1截止，C1电位升高，完成写1.若写入，位线B加低电平，T4导通，T2截止，C2电位升高，完成写0.   </li>
+<li>即使元件不读写时，保持状态1时，T2、T3导通，仍有电流经T3、T2流向地线，因此功耗大。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="cpt7-4.png" alt="img"></p>
+<ol>
+<li><p>动态RAM（DRAM）</p>
+<ol>
+<li>DRAM的存储单元把数据存储为电容上的电荷。电容上的电荷存在或不存在被解释为状态1或0。   </li>
+<li>写入：字选择线加高电平，T导通。若写1，位线加高电平，给电容充电；若写0，位线加低电平，给电容放点。   </li>
+<li>读出：字选择线加高电平，T导通。若原存1，电容放点，位线产生电流；若原存0，则无电流流过。放电后，电容点位下降，需要重写，成为“再生”操作。由于电容放点产生的电流不会很大，需要放大器增大电流。</li>
+<li>电容存在漏电效应，一段时间后电荷会流失，导致数据丢失。因此需要定时刷新。<br><img src="6aee1147c0a2b1dcbb6aad2260ac01a.png" alt="6aee1147c0a2b1dcbb6aad2260ac01a"></li>
+</ol>
+</li>
+<li><p>SRAM与DRAM的对比</p>
+</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">SRAM</th>
+<th style="text-align:center">DRAM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>易失性</strong></td>
+<td style="text-align:center">易失</td>
+<td style="text-align:center">易失</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>存储单元</strong></td>
+<td style="text-align:center">双稳态触发器</td>
+<td style="text-align:center">电容</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>集成度</strong></td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">高</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>功耗</strong></td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">低</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>速度</strong></td>
+<td style="text-align:center">快</td>
+<td style="text-align:center">慢</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>刷新</strong></td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>价格</strong></td>
+<td style="text-align:center">$1/MB</td>
+<td style="text-align:center">$1/GB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="只读存储器（ROM）"><a href="#只读存储器（ROM）" class="headerlink" title="只读存储器（ROM）"></a>只读存储器（ROM）</h4><ol>
+<li>只读存储器（ROM）<ol>
+<li>Read-only memory（ROM），一种可以长期保存信息的存储器，具有断电后信息仍可继续保存的特点，在正常工作时只可读取数据，而不能写入数据。</li>
+<li>特性<ul>
+<li>非易失性：不要求供电来维持数据</li>
+<li>可读，但不能写入新数据</li>
+</ul>
+</li>
+<li>应用：微程序设计，常用函数的库子例程，系统程序，函数表</li>
+<li>问题：<ul>
+<li>数据插入步骤包含了相对较大的固定成本，不论制造的是特定ROM的一个还是几千个副本。</li>
+<li>无出错处理机会：如果有一位出错，整批的ROM芯片只能报废。</li>
+<li>用户无法写入数据：唯一的数据写入机会再出厂时完成。   </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>可编程ROM（PROM）<ol>
+<li>Programmable ROM（PROM），写处理的执行是电气化的，可以由供应商或客户在原始芯片制作出来后执行。<br><img src="c45a7bcd8f2fe3922ee186b9169abe8.png" alt="c45a7bcd8f2fe3922ee186b9169abe8" style="zoom:50%;" /></li>
+<li>特性<ul>
+<li>非易失的</li>
+<li>只能被写入一次。写入过程使用电信号执行，需要特殊设备来完成写或编程过程。   </li>
+</ul>
+</li>
+<li>与ROM的对比<ul>
+<li>PROM提供了灵活性和方便性。</li>
+<li>ROM在大批量生产领域仍具有吸引力。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="以读为主存储器"><a href="#以读为主存储器" class="headerlink" title="以读为主存储器"></a>以读为主存储器</h4><ol>
+<li>Read-Mostly Memory</li>
+<li>特性<ul>
+<li>非易失的</li>
+<li>写操作与读操作相比，较为困难</li>
+</ul>
+</li>
+<li>应用：读操作比写操作频繁地多且又需要非易失性存储器的场景</li>
+<li>类型：EPROM、EEPROM、闪存</li>
+<li>光可擦除可编程只读存储器（EPROM）<ol>
+<li>Erasable programmable read-only memory（EPROM）</li>
+<li>特性<ul>
+<li>电写入（1- &gt;0）：漏极和选择栅加高压，电子温度上升变为热电子，上升穿过氧化层，进入浮栅。P型半导体的负电子被浮栅中的电子排斥，原理绝缘层，效应管不导通，数据被写入0。</li>
+<li>光擦除（0-&gt;1)：将封装芯片暴露在紫外线下，照射使电子获得能量，逃出浮栅，场效应管导通，所有单元变回状态1。每次擦除需要约20分钟。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="95b95b545a8e205757cc1393d05ab4a.png" alt="95b95b545a8e205757cc1393d05ab4a" style="zoom: 50%;" /></p>
+<ol>
+<li><p>电可擦除可编程只读存储器（EEPROM）</p>
+<ol>
+<li>Electrically erasable programmable read-only memory（EEPROM）。目前用于车载摄像头和传感器出厂设置、安全气囊的弹出记录以及需要长时间通电的工业自动化设备和服务器的数据记录系统等；在DDR SDRAM中也会使用EEPROM，用于保存内存的相关信息，计算机会在开机自检时会读取这些信息</li>
+<li>特性<ul>
+<li>可以随时写入而不删除之前的内容；只更新寻址到的一个或多个字节。</li>
+<li>电写入（1-&gt;0）：源极和漏极接地，控制栅接高电平，电子进入浮栅。写操作每字节需要大约5ms，而读一个字节大约0.5微秒。</li>
+<li>电擦除（0-&gt;1）：源极和控制栅接地，漏极接高电平，浮栅中电子进入衬底。每次擦除仅需4~6ms，可擦除百万次。</li>
+</ul>
+</li>
+</ol>
+<p><img src="b55108f28bef2e7de730bce977c3680.png" alt="b55108f28bef2e7de730bce977c3680" style="zoom:50%;" /></p>
+</li>
+<li><p>快闪存储器（Flash Memory）</p>
+<ol>
+<li>特性<ul>
+<li>电可擦除：与EEPROM原理类似，优于EPROM。</li>
+<li>可以在块级擦除，不能在字节级擦除：优于EPROM，不如EEPROM。</li>
+<li>需要先擦除再写入。</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>NOR Flash：数据线和地址线分开，可以读任意字节。</li>
+<li>NAND Flash：数据线可地址线共用，只能按页读取。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="70d77704608eec0f638c9073f3ed293.png" alt="70d77704608eec0f638c9073f3ed293" style="zoom:50%;" /></p>
+<ol>
+<li>各类ROM 对比</li>
+</ol>
+<p><img src="0f98bebd96a8cbcd7ee9b3b692a4aec.png" alt="0f98bebd96a8cbcd7ee9b3b692a4aec" style="zoom:67%;" /></p>
+<h3 id="从位元到主存"><a href="#从位元到主存" class="headerlink" title="从位元到主存"></a>从位元到主存</h3><h4 id="寻址单元"><a href="#寻址单元" class="headerlink" title="寻址单元"></a>寻址单元</h4><ol>
+<li>寻址单元（Addressable unit）：由若干相同地址的位元组成。</li>
+<li>寻址模式：字节（Byte）：常用；字（Word）：专门用途的计算机。</li>
+</ol>
+<h4 id="芯片"><a href="#芯片" class="headerlink" title="芯片"></a>芯片</h4><ol>
+<li>芯片引脚<ul>
+<li>Address：A0 - A19</li>
+<li>Data：D0 - D7</li>
+<li>Vcc：电源</li>
+<li>Vss：地线</li>
+<li>CE：芯片允许引脚</li>
+<li>Vpp：程序电压</li>
+<li>WE：写允许</li>
+<li>OE：读允许</li>
+<li>RAS：行地址选通</li>
+<li>CAS：列地址选通</li>
+</ul>
+</li>
+</ol>
+<p><img src="f94ea025cf9e0640b3c9ed1137bf7ba.png" alt="f94ea025cf9e0640b3c9ed1137bf7ba" style="zoom:70%;" /></p>
+<ol>
+<li>存储阵列（Memory Array）：由大量寻址单元组成</li>
+</ol>
+<p><img src="image-20231212180159945.png" alt="image-20231212180159945" style="zoom: 50%;" /></p>
+<ol>
+<li><p>如何寻址</p>
+<ol>
+<li>获得总线控制权。</li>
+<li>CPU向存储阵列发送地址。</li>
+<li>时序和控制单元将地址分解为行地址或列地址。</li>
+<li>向行地址缓冲器发出行地址。</li>
+<li>行译码器选中行。</li>
+<li>数据进入行放大器。</li>
+<li>向列地址缓冲区发出列地址。</li>
+<li>列译码器选出对应列。</li>
+<li>数据进入数据输入缓冲区。</li>
+</ol>
+</li>
+<li><p>如何刷新</p>
+<ol>
+<li>约束：刷新会占用片选线、地址线、地址译码器</li>
+<li>刷新时只给各芯片送行地址和RAS信号，这样一行的所有元素被选中并进行读出操作。因此刷新按行进行，一次可刷新一行。2048x2038x4位的芯片只要2048次刷新。</li>
+<li>三种刷新方式<ul>
+<li>集中式刷新<ul>
+<li>停止读写操作，并逐行刷新</li>
+<li>刷新时无法操作内存（死区）</li>
+</ul>
+</li>
+<li>分散式刷新<ul>
+<li>在每个存储周期中，当读写操作完成时进行刷新</li>
+<li>一次读写刷新一行，逐行刷新</li>
+<li>会增加每个存储周期的时间</li>
+</ul>
+</li>
+<li>异步刷新<ul>
+<li>每一行各自以固定间隔（小于最大刷新周期，毫秒级）刷新</li>
+<li>将DRAM的刷新安排在CPU对指令的译码阶段，可有效避免死区</li>
+<li>效率高：常用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="DDR-DRAM"><a href="#DDR-DRAM" class="headerlink" title="DDR DRAM"></a>DDR DRAM</h4><ol>
+<li>异步DRAM与同步DRAM<ul>
+<li>异步DRAM：传统DRAM是异步的。读写操作时，处理器向内存提供地址和控制电平。接着进入访问延迟时间，这段时间内DRAM执行各种内部功能，如激活行和列地址线的高电容，读取数据，以及通过输出缓冲将数据输出，处理器只能等待这段延迟，即存取时间，从而降低了系统性能。</li>
+<li>同步DRAM：SDRAM在系统时钟控制下移入和移出数据。处理器或其他主机发出指令和地址信息，并有SDRAM锁存。然后SDRAM在一定的时钟周期后响应。同时，当SDRAM处理请求时，主设备可以安全地执行其他任务。</li>
+</ul>
+</li>
+<li>DRAM读写周期<ol>
+<li>读周期<br>（1）行地址必须在$\overline{\text{RAS}}$信号有效之前送到芯片的地址输入端。<br>（2）$\overline{\text{CAS}}$信号应滞后$\overline{\text{RAS}}$一段时间,并滞后列地址送到芯片地址输入端的时间。<br>（3）$\overline{\text{RAS}}$、$\overline{\text{CAS}}$的时延分别为 t<sub>RAS</sub>和 <sub>CAS</sub>，它们应有足够的宽度。<br>（4）$\overline{\text{WE}}$信号为高电平，并在$\overline{\text{CAS}}$有效之前建立。<br>（5）每次读后要再生，即重新写人一次。<ol>
+<li>写周期：在写周期中,$\overline{\text{RAS}}$与$\overline{\text{CAS}}$之间的关系以及与地址信息间的关系和读周期相同但还有两点不同。<br>（1）$\overline{\text{WE}}$信号为低电平，并在$\overline{\text{CAS}}$信号有效之前建立。（$\overline{\text{WE}}$上有一条上划线，表示取反，$\overline{\text{WE}}$=0时，表示写使能有效）<br>（2）写数据必须在$\overline{\text{CAS}}$有效之前出现在D端。<br><img src="e95c8b405fbb5f2f6a13581cd132445.png" alt="e95c8b405fbb5f2f6a13581cd132445" style="zoom:60%;" /></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>SDRAM读写<br>​    SDRAM的每一步操作都在外部系统时钟CLK 的控制下进行支持突发(burst)传输方式。只要在第一次存取时给出首地址，以后按地址顺序读写即可，而不再需要地址建立时间和行列预充电时间就能快速连续地从行缓冲器(row buffer)中输出一连串数据。行缓冲器用来缓存指定行中每一行的数据，通常用SRAM 元件实现。内部的工作方式寄存器(也称模式寄存器)可用来设置传送数据的长度以及从收到读命令(与CAS 信号同时发出)到开始传送数据的延迟时间等前者称为突发长度(burst length，BL)，后者称为CAS潜伏期(CAS latency，CL)。根据所设定的 BL和CL，CPU 可以确定何时开始从总线上取数以及连续取多少个数据在开始的第一个数据读出后，同一行的所有数据都被送到行缓冲器中，因此，以后每个时钟可从SDRAM读取一个数据，并在下一个时钟内通过总线传送到 CPU。<br><img src="e408d144336de24dd3b59c2a6482d6c.png" alt="e408d144336de24dd3b59c2a6482d6c" style="zoom:50%;" /></p>
+</li>
+<li><p>DDR SDRAM</p>
+<ul>
+<li>Double Data Rate：每个时钟周期发送两次数据，一次在时钟脉冲的上升沿，一次在下降沿。</li>
+<li>通过三种途径获得更高的数据速率，DDR -&gt; DDR2 -&gt;  DDR3 -&gt; DDR4 -&gt; DDR5<ul>
+<li>数据传输被同步到时钟的上升沿和下降沿，而不仅仅在上升沿，使得数据速率加倍。</li>
+<li>使用更高的总线时钟频率。</li>
+<li>使用缓冲方案。</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-20231212192727683.png" alt="image-20231212192727683"><br><img src="image-20231212192717520.png" alt="image-20231212192717520"></p>
+</li>
+</ol>
+<p><img src="d9de3049edd4019913d6b9fecaec64e.png" alt="d9de3049edd4019913d6b9fecaec64e"></p>
+<p><img src="762c7f6add775ffee42a7e0c099b8b4.png" alt="762c7f6add775ffee42a7e0c099b8b4"></p>
+<h4 id="模块组织"><a href="#模块组织" class="headerlink" title="模块组织"></a>模块组织</h4><ol>
+<li>位扩展：地址线不变，数据线增加<ul>
+<li>使用8 块4K*1 bit 的芯片组成4K*8 bit的存储器</li>
+</ul>
+</li>
+<li>字扩展：地址线增加，数据线不变<ul>
+<li>使用4 个16K*8 bit 的芯片组成64K*8bit 的存储器</li>
+</ul>
+</li>
+<li>字、位同时扩展：地址线增加，数据线增加<ul>
+<li>使用8 个16K*4 bit 的芯片组成64K*8bit 的存储器</li>
+</ul>
+</li>
+</ol>
+<p><img src="399904474e1ad0c8309a6027406e9b7.png" alt="399904474e1ad0c8309a6027406e9b7"></p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Sprooc
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://sprooc.github.io/2023/12/11/《计算机组织结构》期末复习-第7讲-内部存储器/" title="《计算机组织结构》期末复习-第7讲-内部存储器" target="_blank">http://sprooc.github.io/2023/12/11/《计算机组织结构》期末复习-第7讲-内部存储器/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-11-28T11:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-28</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          《计算机组织结构》期末复习-第8讲-高速缓冲存储器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20231210周记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/">20231128小记</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
 
 
           </div>
@@ -366,9 +843,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

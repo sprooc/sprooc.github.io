@@ -7,17 +7,26 @@
   <meta name="google-site-verification" content="pR8QTiIMEpajCwoYodeqCvhI31PB9cT7MTg3xvqomRg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>Tag: 随笔 | Sprooc</title>
+  <title>《计算机组织结构》期末复习-第8讲-高速缓冲存储器 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sprooc">
-<meta property="og:url" content="http://sprooc.github.io/tags/%E9%9A%8F%E7%AC%94/index.html">
+  <meta name="description" content="第8讲-高速缓冲存储器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《计算机组织结构》期末复习-第8讲-高速缓冲存储器">
+<meta property="og:url" content="http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
 <meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="第8讲-高速缓冲存储器">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/74050a5ff91819f99d4608f61d2be55.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/eb4b064e6488289e1eafa9b63784dab-17023862155193.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/ccd0f4d2f8dd8ee56fa0a949f118f48.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/5ba3c5f66e0dde4ee4c57550709aa73.png">
+<meta property="article:published_time" content="2023-12-12T12:11:57.000Z">
+<meta property="article:modified_time" content="2023-12-12T14:24:26.247Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/74050a5ff91819f99d4608f61d2be55.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -181,151 +190,460 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《计算机组织结构》期末复习-第8讲-高速缓冲存储器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-10T13:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/">20231210周记</a>
-	
+    <h1 class="article-title" itemprop="name">
+      《计算机组织结构》期末复习-第8讲-高速缓冲存储器
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-03T09:19:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-03</time>
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
+        <time datetime="2023-12-12T12:11:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-12</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/">20231203周记</a>
-	
-    </h1>
   
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.8k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">10分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="第8讲-高速缓冲存储器"><a href="#第8讲-高速缓冲存储器" class="headerlink" title="第8讲-高速缓冲存储器"></a>第8讲-高速缓冲存储器</h2><span id="more"></span>
+<h3 id="Cache的目的和基本思路"><a href="#Cache的目的和基本思路" class="headerlink" title="Cache的目的和基本思路"></a>Cache的目的和基本思路</h3><ol>
+<li>问题：CPU的速度比内存的速度快，且两者差距不断扩大—内存墙。</li>
+<li>解决：CPU和内存之间增加Cache。<ul>
+<li>解决内存墙带来的CPU和主存协作问题</li>
+<li>在使用主存（相对大而慢）之余，添加一块小而快的cache</li>
+<li>Cache位于CPU和主存之间，可以集成在CPU内部或作为主板上的一个模块</li>
+<li>Cache中存放了主存中的部分信息的“副本”</li>
+</ul>
+</li>
+</ol>
+<p><img src="74050a5ff91819f99d4608f61d2be55.png" alt="74050a5ff91819f99d4608f61d2be55" style="zoom:75%;" /></p>
+<h3 id="Cache的工作流程"><a href="#Cache的工作流程" class="headerlink" title="Cache的工作流程"></a>Cache的工作流程</h3><ol>
+<li><p>检查（Check）：当CPU试图访问主存中的某个字时，首先检查这个字是否在cache中</p>
+</li>
+<li><p>检查后分两种情况处理：</p>
+<ul>
+<li>命中（Hit）：如果在cache中，则把这个字传送给CPU</li>
+<li>未命中（Miss）：如果不在cache中, 则将主存中包含这个字固定大小的块（block）读入cache中，然后再从cache传送该字给CPU</li>
+</ul>
+</li>
+<li><p>如何判断是命中还是未命中?</p>
+<ul>
+<li>Cache通过标记（tags）来标识其内容在主存中的对应位置</li>
+</ul>
+</li>
+<li><p>局部性原理</p>
+<ul>
+<li>定义：处理器频繁访问主存中相同位置或者相邻存储位置的现象。</li>
+<li>时间局部性：在相对较短的时间周期内，重复访问特定的信息（也就是访问相同存储位置的信息）</li>
+<li>空间局部性：在相对较短的时间周期内，访问相邻存储位置的数据<ul>
+<li>顺序局部性：当数据被线性排列和访问时，出现的空间局部性的一种<br>特殊情况</li>
+<li>例如：遍历一维数组中的元素</li>
+</ul>
+</li>
+<li>利用“时间局部性”：将未命中的数据在返回给CPU的同时存放在Cache中，以便再次访问时命中。</li>
+<li>利用“空间局部性”：将包含所访问的字的块存储到Cache中，以便在访问相邻数据时命中。</li>
+</ul>
+</li>
+<li><p>平均访问时间</p>
+<ul>
+<li>假设p是命中率， 𝑇<sub>c</sub> 是cache的访问时间， 𝑇<sub>M</sub> 是主存的访问时间，使用cache时的<br>平均访问时间𝑇<sub>A</sub>为<script type="math/tex; mode=display">
+𝑇_{A} = 𝑝×𝑇_{C} + (1 − 𝑝) × (𝑇_{C} + 𝑇_{M})
+= 𝑇_{C} + (1 − 𝑝)×𝑇_{M}</script></li>
+<li>命中率p越大， 𝑇<sub>c</sub>越小， 效果越好。</li>
+<li>如果想要𝑇<sub>A</sub>&lt; 𝑇<sub>M</sub>, 必须要求p&gt;𝑇<sub>C</sub> /𝑇<sub>M</sub>。</li>
+<li>难点：cache的容量远远小于主存的容量（随机访问时𝑝 = Cache容量/主存容量）</li>
+</ul>
+</li>
+<li><p>Cache未命中的原因</p>
+<ol>
+<li>义务失效（Compulsory Miss）/ 冷启动失效（Cold Start Miss）<ul>
+<li>第一次访问一个块时</li>
+<li>例如：第一次访问一个数组，会发生义务失效</li>
+</ul>
+</li>
+<li>容量失效（Capacity Miss）<ul>
+<li>Cache无法保存程序访问所需的所有数据块，则当某数据块被替换后，又重新被访问，则发生失效</li>
+<li>例如： cache大小为8KB，如果需要重复访问一个16KB大小的数组，数组无法全部放入cache，会发生容量失效</li>
+</ul>
+</li>
+<li>冲突失效（Conflict Miss）<ul>
+<li>多个存储器位置映射到同一Cache位置</li>
+<li>例如：有两个4KB大小的数组都映射到了相同的地址，需要来回访问，则发生冲突失效</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Cache的设计要素"><a href="#Cache的设计要素" class="headerlink" title="Cache的设计要素"></a>Cache的设计要素</h3><h4 id="映射功能"><a href="#映射功能" class="headerlink" title="映射功能"></a>映射功能</h4><ol>
+<li>实现主存块到cache行的映射</li>
+<li>块号，块内地址</li>
+<li>映射方式的选择会影响cache的组织结构<ul>
+<li>直接映射</li>
+<li>关联映射</li>
+<li>组关联映射</li>
+</ul>
+</li>
+<li>直接映射<ul>
+<li>把每个主存块映射到唯一可能得高速缓存行。<script type="math/tex; mode=display">i = j\mod m</script>其中：i=高速缓存行号，j=主存块号，m=高速缓存行数</li>
+<li>优点：简单且便宜</li>
+<li>缺点：对任何给定的块都只有固定的高速缓存位置。因此，如果一个程序重复访问两个需要映射到同一行中且来自不同块的字，则这两个块不断地被交换到cache中，cache的命中率将会降低，即发生冲突失效。称为抖动现象。</li>
+<li>适合大容量cache：行数变多，发生冲突失效的概率降低； 硬件电路简单，增大容量对𝑇<sub>c</sub>的影响不明显</li>
+<li>地址计算：<ul>
+<li>地址长度 =（s+w）位</li>
+<li>块大小 =  行大小 = 2<sup>w</sup></li>
+<li>主存中块的数量 = 2<sup>s</sup></li>
+<li>Cache中的行数 = m = 2<sup>r</sup></li>
+<li>Cache容量 = 行大小 * 行数 = 2<sup>w+r</sup></li>
+<li>标记长度 = s - r</li>
+<li>Cache行号长度 = r</li>
+<li>块内地址长度 = w</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="eb4b064e6488289e1eafa9b63784dab-17023862155193.png" alt="eb4b064e6488289e1eafa9b63784dab"></p>
+<ol>
+<li>关联映射（全相联映射）<ul>
+<li>允许每个主存块加载到任何高速缓存行</li>
+<li>优点：避免抖动。</li>
+<li>缺点：实现复杂；搜索代价大。</li>
+<li>适合容量较小的Cache：小容量更容易发生冲突失效；小容量检查的时间短。</li>
+<li>地址计算：<ul>
+<li>地址长度 = （s + w）位</li>
+<li>标记长度 = s</li>
+<li>快内地址长度 = w</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="ccd0f4d2f8dd8ee56fa0a949f118f48.png" alt="ccd0f4d2f8dd8ee56fa0a949f118f48"></p>
+<ol>
+<li><p>组关联映射</p>
+<ul>
+<li>一种折中方案，结合了直接映射和关联映射的优点和缺点。</li>
+<li>k路组相联映射<script type="math/tex; mode=display">m=v\times k</script><script type="math/tex; mode=display">i=j \mod v</script>其中，i=cache组号，j=主存块号，v=cache组数，m=cache行数，k=每组行数。</li>
+<li>地址计算<ul>
+<li>地址长度 = （s+w）位</li>
+<li>组中行数 = k</li>
+<li>组数 = v = 2<sup>d</sup></li>
+<li>Cache中行数 = m = k*v</li>
+<li>标记长度 = s - d</li>
+<li>组号长度 = d </li>
+<li>块内地址长度 = w<img src="《计算机组织结构》期末复习-第8讲-高速缓冲存储器/5ba3c5f66e0dde4ee4c57550709aa73.png" alt="5ba3c5f66e0dde4ee4c57550709aa73" style="zoom:67%;" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三种映射方式比较</p>
+<ul>
+<li>关联度（Correlation）：一个主存块映射到cache中可能存放的位置个数<ul>
+<li>直接映射：1</li>
+<li>关联映射：m</li>
+<li>组关联映射：k</li>
+</ul>
+</li>
+<li>关联度越低，命中率越低，</li>
+<li>关联度越低，判断是否命中的时间越短。</li>
+<li>关联度越低，标记所占额外空间开销越小。</li>
+</ul>
+</li>
+</ol>
+<h4 id="替换策略"><a href="#替换策略" class="headerlink" title="替换策略"></a>替换策略</h4><ol>
+<li>一旦cache行被占用，当新的数据块装入cache中时，原先存放的数据块将会被替换掉。</li>
+<li>对于直接映射，每个数据块都只有唯一对应的行可以放置，没有选择的机会。</li>
+<li>对于关联映射和组关联映射，每个数据块被允许在多个行中选择一个进行放置，就需要替换算法来决定替换哪一行中的数据块</li>
+<li>常用替换策略：<ul>
+<li>最近最少使用算法（Least Recently Used, LRU）</li>
+<li>先进先出算法（First In First Out, FIFO）</li>
+<li>最不经常使用算法（Least Frequently Used, LFU）</li>
+<li>随机替换算法（Random）</li>
+</ul>
+</li>
+<li>最近最少使用算法（LRU）<ul>
+<li>替换掉在cache中最长时间未被访问的数据块。</li>
+<li>实现：每个cache行添加LRU位，长度为log<sub>2</sub>k位。<ul>
+<li>命中时，被访问的行的计数器清零，比其低的计数器加 1，其余不变。</li>
+<li>未命中且该组还有空闲行时，则新装入的行的计数器设为0，其余全加1。</li>
+<li>未命中且该组无空闲行时，计数值最大的那一行中的主存块被淘汰新装入的行的计数器设为0，其余加1。从计数器变化规则可以看出，计数值越高的行中的主存块越是最近最少用。</li>
+</ul>
+</li>
+<li>缺点：当程序中的分块局部化范围(即程序中某段时间集中访问的存储区)超过了 cache 组的大小时，命中率可能变得很低。例如，假设上述例子中的访存地址流是1，2，3，4，1，2，3，4，1，2，34而cache每组只有3行，那么命中率为0。这种现象称为颠簸(pingpong)或抖动(thrashing)</li>
+</ul>
+</li>
+<li>先进先出算法（FIFO）<ul>
+<li>策略：替换掉在Cache中停留时间最长的块。</li>
+<li>实现：时间片轮转法或环形缓冲技术。<ul>
+<li>每行包含<strong>一</strong>个标识位</li>
+<li>当同一组中的某行被替换时，将其标识位设为1，同时将其下一行的标识位设为0</li>
+<li>如果被替换的是该组中的最后一行，则将该组中的第一行的标识位设为0</li>
+<li>当将新的数据块读入该组时，替换掉标识位为0的行中的数据块</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>最不经常使用算法（LFU）<ul>
+<li>策略：替换掉cache中被访问次数最少的数据块。</li>
+<li>实现：为每一行设置计数器</li>
+</ul>
+</li>
+<li>随机替换算法（Random）<ul>
+<li>策略：随机替换cache中的数据块</li>
+<li>实现：随机替换</li>
+<li>性能上只稍逊于其他算法，而且代价低。</li>
+</ul>
+</li>
+</ol>
+<h4 id="写策略"><a href="#写策略" class="headerlink" title="写策略"></a>写策略</h4><ol>
+<li><p>缓存命中时的写策略。当cache中的某个数据块被替换时，需要考虑该数据块是否被修改。</p>
+<ul>
+<li>如果没被修改，则该数据块可以直接被替换掉。</li>
+<li>如果被修改，则在替换掉该数据块之前，必须将修改后的数据块写回到主存中对应位置。</li>
+<li>写直达（Write Through）：所有写操作都同时对cache和主存进行。<ul>
+<li>优点：确保主存中的数据总是和cache中的数据一致，总是最新的（例如多CPU同步的场景）。</li>
+<li>缺点：产生大量的主存访问，减慢写操作。</li>
+</ul>
+</li>
+<li>写回法（Write Back）：先更新cache中的数据，当cache中某个数据块被替换时，如果它被修改了，才被写回主存。<ul>
+<li>利用一个脏位（dirty bit）或者使用位（use bit）来表示块是否被修改。</li>
+<li>优点：减少了访问主存的次数。</li>
+<li>缺点：部分主存数据可能不是最新的（例如未发生替换但需要读主存的场景）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>缓存未命中时的写策略。</p>
+<ul>
+<li>写不分配（Write Non-Allocate）：直接将数据写入主存，无需读入cache。<ul>
+<li>优点：避免cache和主存中的数据不一致。</li>
+<li>通常搭配：写直达。</li>
+</ul>
+</li>
+<li>写分配（Write Allocate）：将数据所在的块读入cache后，在cache中更新内容。<ul>
+<li>优点：利用了cache的高速特性，减少写内存次数。</li>
+<li>通常搭配：写回法。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="行大小"><a href="#行大小" class="headerlink" title="行大小"></a>行大小</h4><ol>
+<li>假设从行的大小为一个字开始，随着行大小的逐步增大，则Cache命中率会增加<ul>
+<li>数据块中包含了更多周围的数据，每次会有更多的数据作为一个块装入cache中</li>
+<li>利用了空间局部性</li>
+</ul>
+</li>
+<li>当行大小变得较大之后，继续增加行大小，则Cache命中率会下降<ul>
+<li>当Cache容量一定的前提下，较大的行会导致Cache中的行数变少，导致装入cache中的数据块数量减少，进而造成数据块被频繁替换</li>
+<li>每个数据块中包含的数据在主存中位置变远，被使用的可能性减小</li>
+</ul>
+</li>
+<li>行大小与命中率之间的关系较为复杂<ul>
+<li>行太小，行数太多反时间局部性</li>
+<li>行太大，行数太少反空间局部性</li>
+</ul>
+</li>
+</ol>
+<h4 id="Cache数目"><a href="#Cache数目" class="headerlink" title="Cache数目"></a>Cache数目</h4><ol>
+<li><p>一级v.s.多级</p>
+<ul>
+<li>一级<ul>
+<li>将cache与处理器置于同一芯片（片内cache）</li>
+<li>减少处理器在外部总线上的活动，从而减少了执行时间</li>
+</ul>
+</li>
+<li>多级<ul>
+<li>当L1未命中时，减少处理器对总线上DRAM或ROM的访问</li>
+<li>使用单独的数据路径，代替系统总线在L2缓存和处理器之间传输数据，部分处理器将L2 cache结合到处理器芯片上</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>统一v.s.分立</p>
+<ul>
+<li>统一（指令数据混合式）<ul>
+<li>更高的命中率，在获取指令和数据的负载之间自动进行平衡。</li>
+<li>只需要设计和实现一个cache。</li>
+</ul>
+</li>
+<li>分立（指令和数据分离）<ul>
+<li>消除cache在指令的取值/译码单元和执行单元之间的竞争，在任何基于指令流水线的设计中都是重要的。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Sprooc
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://sprooc.github.io/2023/12/12/《计算机组织结构》期末复习-第8讲-高速缓冲存储器/" title="《计算机组织结构》期末复习-第8讲-高速缓冲存储器" target="_blank">http://sprooc.github.io/2023/12/12/《计算机组织结构》期末复习-第8讲-高速缓冲存储器/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-11-28T11:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-28</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《计算机组织结构》期末复习-第7讲-内部存储器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/11/28/20231128%E5%B0%8F%E8%AE%B0/">20231128小记</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
 
 
           </div>
@@ -366,9 +684,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
