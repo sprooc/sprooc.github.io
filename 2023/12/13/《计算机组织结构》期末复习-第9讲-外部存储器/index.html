@@ -7,17 +7,28 @@
   <meta name="google-site-verification" content="pR8QTiIMEpajCwoYodeqCvhI31PB9cT7MTg3xvqomRg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>Archives: 2023/12 | Sprooc</title>
+  <title>《计算机组织结构》期末复习-第9讲-外部存储器 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sprooc">
-<meta property="og:url" content="http://sprooc.github.io/archives/2023/12/index.html">
+  <meta name="description" content="第9讲-外部存储器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《计算机组织结构》期末复习-第9讲-外部存储器">
+<meta property="og:url" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
 <meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="第9讲-外部存储器">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e20e1bd3a341940ab123750d324233a.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/bcb749bfc52178b14ab2f9ae805d7f6.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/8d555856ec333a4a99944c32925294f.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231213204908276.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231213212222255.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/3d2877d801e717f0a82870495705abe.png">
+<meta property="article:published_time" content="2023-12-13T12:04:46.000Z">
+<meta property="article:modified_time" content="2023-12-13T14:25:47.215Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e20e1bd3a341940ab123750d324233a.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -181,377 +192,445 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《计算机组织结构》期末复习-第9讲-外部存储器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      《计算机组织结构》期末复习-第9讲-外部存储器
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
         <time datetime="2023-12-13T12:04:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-13</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第9讲-外部存储器</a>
-	
-    </h1>
   
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">10分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="第9讲-外部存储器"><a href="#第9讲-外部存储器" class="headerlink" title="第9讲-外部存储器"></a>第9讲-外部存储器</h2><span id="more"></span>
+<h4 id="外部存储器"><a href="#外部存储器" class="headerlink" title="外部存储器"></a>外部存储器</h4><ol>
+<li>特性：用于存储不经常使用的、数据量较大的信息；非易失。</li>
+<li>类型：<ul>
+<li>磁盘存储器（magnetic disk disk）</li>
+<li>光存储器（optical memory memory）</li>
+<li>磁带（magnetic tape tape）</li>
+<li>U盘（USB flash disk disk）</li>
+<li>固态硬盘（solid state disk disk，SSD）</li>
+</ul>
+</li>
+</ol>
+<h4 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h4><ol>
+<li>磁盘是由涂有可磁化材料的非磁性材料（基材）构成的圆形盘片<ul>
+<li>基材：铝、铝合金、玻璃</li>
+<li>玻璃基材的优势（稳定可靠、为存储更多信息提供基础）<ul>
+<li>改善磁膜表面的均匀性，提高磁盘的可靠性</li>
+<li>显著减少整体表面瑕疵，以帮助减少读写错误</li>
+<li>能够支持（磁头）较低的飞行高度</li>
+<li>更高的硬度，使磁盘转动时更加稳定</li>
+<li>更强的抗冲击和抗损伤能力</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>类型：硬盘、软盘</li>
+<li>磁头：对盘片进行读写操作的装置<ul>
+<li>磁盘存储器每个盘片表面有一个读写磁头，所有磁头通过机械方式固定在一起，同时移动。在任何时候，所有磁头都位于距磁盘中心等距离的磁道上。</li>
+<li>磁头必须产生或感应足够大的电磁场，以便正确地读写</li>
+<li>磁头越窄，电磁感应能力越弱，离盘片的距离就越近</li>
+<li>更高的数据密度需要更窄的磁头和更窄的磁道，这将导致更高的出错风险</li>
+<li>硬盘必须密封</li>
+<li>温彻斯特磁头（Winchester head head）<ul>
+<li>磁头实际上是一个空气动力箔片，当磁盘静止时，它轻轻地停留在盘片的表面上</li>
+<li>旋转圆盘时产生的空气压力足以使箔片上升到盘片表面上方<br><img src="e20e1bd3a341940ab123750d324233a.png" alt="e20e1bd3a341940ab123750d324233a" style="zoom: 80%;" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>读写机制<ul>
+<li>在读或写操作期间，磁头静止，而盘片在其下方旋转</li>
+<li>磁头的数量<ul>
+<li>单磁头：读写公用同一个磁头（软盘、早期硬盘）</li>
+<li>双磁头：使用一个单独的磁头进行读写（当代硬盘）</li>
+</ul>
+</li>
+<li>写入机制<ul>
+<li>电流脉冲被发送到写入磁头</li>
+<li>变化的电流激发出磁场</li>
+<li>产生的磁性图案被记录在下面的盘片表面上</li>
+<li>反转电流方向，则记录介质上的磁化方向也会反转，由此区分0和1</li>
+</ul>
+</li>
+<li>读取机制<ul>
+<li>旧的磁盘系统使用单磁头，当磁盘在磁头下方旋转时，会产生与记录的磁极相同的电流，根据电流方向读取数据。</li>
+<li>现代磁盘用单独的读磁头<ul>
+<li>读取磁头是由一个部分屏蔽的磁阻（MRMR）敏感器组成，其电阻取决于在其下移动的介质的磁化方向</li>
+<li>恒定电流通过MR 敏感器时，通过电压信号检测其电阻变化</li>
+<li>MR传感器允许更高频率的操作，实现更高的存储密度和更快的操作速度<br><img src="bcb749bfc52178b14ab2f9ae805d7f6.png" alt="bcb749bfc52178b14ab2f9ae805d7f6"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据组织<ul>
+<li>盘片上的数据组织呈现为一组同心圆环，称为<strong>磁道</strong>（track）。</li>
+<li>数据以<strong>扇区</strong>（sector）的形式传输到磁盘或从传出磁盘（一般为512字节）。</li>
+<li>相邻磁道之间有间隙（gapgap），相邻的扇区之间也留有间隙，否则磁场容易相互影响。</li>
+<li>磁道编号从外往里递增（0~N N），磁头静止时停在磁道0 外侧。</li>
+<li>扇区划分<ul>
+<li>恒定角速度（Constant angular velocity, CAV)：增大记录在盘片区域上的信息位的间隔，使得磁盘能够以恒定的速度扫描信息，即恒定的数据传输率<ul>
+<li>优点：能以磁道号和扇区号直接寻址各个数据块</li>
+<li>缺点：磁盘存储容量受到了最内层磁道所能实现的最大记录密度的限制</li>
+</ul>
+</li>
+<li>多带式记录 / 多重区域记录（Multiple zone recording）：将盘面划分为多个同心圆区域，每个区域中各磁道的扇区数量是相同的，距离中心较远的分区包含的扇区数多于距离中心较近的分区<ul>
+<li>优点：提升存储容量</li>
+<li>缺点：需要更复杂的电路<br><img src="8d555856ec333a4a99944c32925294f.png" alt="8d555856ec333a4a99944c32925294f" style="zoom:80%;" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>所有盘片上处于相同的相对位置的一组磁道被称为柱面(cylinder)</li>
+</ul>
+</li>
+<li>格式化<ul>
+<li>磁道必须有一些起始点和辨别每个扇区起点及终点的方法</li>
+<li>格式化时，会附有一些仅被磁盘驱动器使用而不被用户存取的额外数据<br><img src="image-20231213204908276.png" alt="image-20231213204908276" style="zoom:40%;" /></li>
+<li>低级格式化/物理格式化：创建硬盘扇区（sector）使硬盘具备存储能力的操作<ul>
+<li>清除数据（如果硬盘分过区，所有区都会被清除）</li>
+<li>有损：是一种损伤性操作，它对硬盘寿命有影响</li>
+<li>建议场景：硬盘受到外部强磁体、强磁场的影响而受到物理性损伤的情况</li>
+</ul>
+</li>
+<li>高级格式化 逻辑格式化：根据用户选定的文件系统（如FAT12 、FAT16 、FAT32 、exFAT 、NTFS 、EXT2 、EXT3 等），在磁盘的特定区域写入特定数据，以达到初始化磁盘或磁盘分区、清除原磁盘或磁盘分区中所有文件的一个操作<ul>
+<li>快速格式化：会删除目标磁盘上原有的文件分配表和根目录，不检测坏道，不备份数据，它格式化的速度很快，但不是很稳定。</li>
+<li>一般 完全格式化：会清除目标磁盘上的所有的数据（非物理的）。重新生成引导信息、初始化文件分配表、标注逻辑坏道，一样不备份数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>I/O访问时间<ul>
+<li>寻道时间（seek time time）：初始启动时间，以及当访问臂达到速度后，遍历需跨越的磁道所需花费的时间。不是线性函数，而是包含了建立时间（把磁头放置到目标磁道之后，直到确认磁道标识的时间）。</li>
+<li>旋转延迟（rotational delay delay）：等待响应扇区的起始处到达磁头所需的时间<ul>
+<li>通常是磁道旋转半周所需的时间</li>
+</ul>
+</li>
+<li>传送时间（transfer time time）：数据传输所需的时间，取决于磁盘的旋转速度。<br>T = 传送时间，b = 传送字节数，N = 每磁道的字节数，r = 旋转速率，单位是转/秒。<script type="math/tex; mode=display">
+T=\frac{b}{r N}</script></li>
+<li>平均访问时间(T<sub>s</sub>是平均寻道时间)<script type="math/tex; mode=display">
+T_{a}=T_{S} + \frac{1}{2r}+\frac{b}{rN}</script></li>
+<li>当连续访问多个相邻的磁道时，跨越磁道：<ul>
+<li>对于每个磁道都需要考虑旋转延迟</li>
+<li>通常只需要考虑第一个磁道的寻道时间，但在明确知道跨越每个磁道需要的时间时需要考虑</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>磁头寻道/磁盘调度<ul>
+<li>目标：当有多个访问磁盘任务时，使得平均寻道时间最小。</li>
+<li>常见的磁头寻道 磁盘调度算法<ul>
+<li>先来先服务（First Come First Service Service，FCFSFCFS）</li>
+<li>最短寻道时间优先（Shortest Seek Time First First，SSTFSSTF）</li>
+<li>扫描/电梯（SCANS）</li>
+<li>LOOK</li>
+<li>循环扫描（C-SCAN）</li>
+<li>C-LOOK</li>
+</ul>
+</li>
+<li>先来先服务（FCFSFCFS）<ul>
+<li>按照请求访问磁盘的先后次序进行处理</li>
+<li>优点：公平简单</li>
+<li>缺点：如果有大量访问磁盘的任务，且请求访问的磁道很分散，则性能上很差，寻道时间长</li>
+</ul>
+</li>
+<li>最短寻道时间优先（SSTF）<ul>
+<li>优先处理起始位置与当前磁头位置最接近的读写任务</li>
+<li>优点：每次的寻道时间最短（局部最优），平均寻道时间缩短</li>
+<li>缺点：可能产生饥饿现象，尤其是位于两端的磁道请求</li>
+</ul>
+</li>
+<li>扫描/电梯（SCAN）<ul>
+<li>总是按照一个方向进行磁盘调度，直到该方向上的边缘，然后改变方向</li>
+<li>优点：性能较好，平均寻道时间短，不会产生饥饿现象</li>
+<li>缺点：只有到最边上的磁道才能改变磁头的移动方向，对于各个位置磁道响应频率不平均</li>
+</ul>
+</li>
+<li>循环扫描（C-SCAN）<ul>
+<li>只有磁头朝某个方向移动时才会响应请求，移动到边缘后立即让磁头返回起点，返回途中不做任何处理</li>
+<li>优点：与SCAN 算法相比，对于各位置磁道的响应频率平均</li>
+<li>缺点：与SCAN 算法相比，平均寻道时间更长</li>
+</ul>
+</li>
+<li>LOOK<ul>
+<li>SCAN算法的升级，只要磁头移动方向上不再有请求就立即改变磁头的方向</li>
+</ul>
+</li>
+<li>C-LOOK<ul>
+<li>C-SCAN 算法的改进，只要在磁头移动方向上不再有请求，就立即让磁头返回起<h4 id="光存储器"><a href="#光存储器" class="headerlink" title="光存储器"></a>光存储器</h4></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>光存储器产品<ul>
+<li>光盘（Compact disk，CD）</li>
+<li>光盘只读存储器（CD read only memory，CD-ROM）</li>
+<li>可刻录光盘（CD recordable，CD-R）</li>
+<li>可重写光盘（CD rewritable，CD-RW）</li>
+<li>数字多功能光盘（digital versatile disk，DVD）</li>
+<li>可刻录DVD（DVD recordable，DVD-R）</li>
+<li>可重写DVD（DVD rewritable，DVD-RW）</li>
+<li>高清晰视频光盘（High definition video disk，Blu Ray DVD）<br><img src="image-20231213212222255.png" alt="image-20231213212222255" style="zoom:67%;" /></li>
+</ul>
+</li>
+<li>CD和CD-ROM<ul>
+<li>CD和CD-ROM 采用类似的技术，但CD-ROM 更加耐用且有纠错功能</li>
+<li>制造方法<ul>
+<li>用精密聚焦的高强度激光束制造一个母盘</li>
+<li>以母盘作为模板压印出聚碳酸酯的复制品</li>
+<li>在凹坑表面上镀上一层高反射材料（一般采用铝，HQCD 采用银合金）</li>
+<li>使用丙烯酸树脂保护高反射材料</li>
+<li>在丙烯酸树脂层上用丝网印刷术印制标签</li>
+</ul>
+</li>
+<li>通过安装在光盘播放器或驱动装置内的低强度激光束从CD 或CD ROM 处读取信息<ul>
+<li>如果激光束照在凹坑（pit）上，由于凹坑表面有些不平，因此光被散射，反射回低强度的激光</li>
+<li>如果激光束照在台 面（land）上，台的表面光滑平坦，反射回来的是高强度的激光</li>
+<li>光电传感器检测凹坑和台之间的变化，凹坑的起点或终点代表“11”，没有高度变化则记为“00”。</li>
+</ul>
+</li>
+<li>盘片上包含一条单螺旋的轨道，轨道上的所有扇区长度相同<ul>
+<li>从内向外扫描，角速度逐渐变小</li>
+<li>凹坑被激光以恒定线速度读出<br><img src="3d2877d801e717f0a82870495705abe.png" alt="3d2877d801e717f0a82870495705abe" style="zoom:80%;" />       </li>
+</ul>
+</li>
+<li>优点<ul>
+<li>存储有信息的光盘可以廉价地进行大规模复制</li>
+<li>光盘更换方便</li>
+<li>寿命长       </li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>它是只读的，不能更改</li>
+<li>其存取时间比磁盘存储器慢得多</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CD-R（写一次）<ul>
+<li>包含了一个染色层，用于改变反射率，并且由高强度激光激活</li>
+<li>生成的盘既能在 CD R 驱动器上也能在CD ROM 驱动器上读出</li>
+</ul>
+</li>
+<li>CD-RW（写多次）<ul>
+<li>使用了一种在两种不同相位状态下有两种显著不同反射率的材料，激光束能改变这种材料的相位状态</li>
+<li>材料老化最终会永久失去相位可变的特性，当前的材料可用于50 万次到100 万次的擦除</li>
+</ul>
+</li>
+<li>数字多功能光盘（DVD）<ul>
+<li>DVD vs.CD<ul>
+<li>DVD上的位组装更紧密：光道间隙，凹坑间距（容量达到4.7GB）</li>
+<li>DVD采用双层结构：设有半反射层，可以通过调整焦距读取每一层（容量达到8.5GB）</li>
+<li>DVD-ROM 可以用两面记录数据（容量达到17GB17GB）</li>
+<li>DVD的激光束更细，所以能读DVD 的设备可以读CDCD，但反过来不行</li>
+</ul>
+</li>
+<li>DVD-R 和DVD-RW</li>
+</ul>
+</li>
+<li>高清晰光盘<ul>
+<li>通过使用更短波长的激光（在蓝 紫光范围），可以实现更高的位密度（数据凹坑相对更小）<h4 id="磁带"><a href="#磁带" class="headerlink" title="磁带"></a>磁带</h4></li>
+</ul>
+</li>
+<li>使用与磁盘类似的记录和读取技术</li>
+<li>记录：介质是柔韧的聚酯薄膜带，外涂磁性材料</li>
+<li>读取<ul>
+<li>磁带：顺序读取（sequential accessaccess）</li>
+<li>磁盘：直接读取（direct accessaccess）</li>
+<li>并行记录 vs. 串行记录（蛇形记录）</li>
+<li>并行+串行<br>&lt;img src=image-20231213220640293.png” alt=”image-20231213220640293” style=”zoom:67%;” /&gt;<h4 id="U盘和固态硬盘"><a href="#U盘和固态硬盘" class="headerlink" title="U盘和固态硬盘"></a>U盘和固态硬盘</h4></li>
+</ul>
+</li>
+<li>U盘（USB flash disk disk）<ul>
+<li>采用了快闪存储器，属于非易失性半导体存储器</li>
+<li>相比于软盘和光盘：体积小，容量大，携带方便，寿命长达数年</li>
+</ul>
+</li>
+<li>固态硬盘（Solid State Disk/Drive Drive）<ul>
+<li>与U 盘没有本质区别：容量更大，存储性能更好</li>
+<li>与硬磁盘存储器相比：抗振性好，无噪声，能耗低，发热量低</li>
+</ul>
+</li>
+</ol>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Sprooc
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://sprooc.github.io/2023/12/13/《计算机组织结构》期末复习-第9讲-外部存储器/" title="《计算机组织结构》期末复习-第9讲-外部存储器" target="_blank">http://sprooc.github.io/2023/12/13/《计算机组织结构》期末复习-第9讲-外部存储器/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-12-12T12:11:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-12</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《计算机组织结构》期末复习-第8讲-高速缓冲存储器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第8讲-高速缓冲存储器</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-12-11T13:52:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第7讲-内部存储器</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-10T13:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/">20231210周记</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/08/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2023-12-08T11:22:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/08/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0/">《计算机组织结构》机试复习</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" class="archive-article-date">
-        <time datetime="2023-12-05T13:16:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-05</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/">一些数学</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-03T09:19:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/03/20231203%E5%91%A8%E8%AE%B0/">20231203周记</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2023-12-03T02:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/">石子合并问题</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/" class="archive-article-date">
-        <time datetime="2023-12-01T02:43:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-01</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/">Sparse Table(稀疏表)</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -592,8 +671,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
