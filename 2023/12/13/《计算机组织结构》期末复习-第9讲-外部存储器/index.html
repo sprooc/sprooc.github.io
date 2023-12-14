@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231213212222255.png">
 <meta property="og:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/3d2877d801e717f0a82870495705abe.png">
 <meta property="article:published_time" content="2023-12-13T12:04:46.000Z">
-<meta property="article:modified_time" content="2023-12-13T14:25:47.215Z">
+<meta property="article:modified_time" content="2023-12-14T14:30:45.545Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://sprooc.github.io/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e20e1bd3a341940ab123750d324233a.png">
@@ -313,8 +313,8 @@
 <li>数据组织<ul>
 <li>盘片上的数据组织呈现为一组同心圆环，称为<strong>磁道</strong>（track）。</li>
 <li>数据以<strong>扇区</strong>（sector）的形式传输到磁盘或从传出磁盘（一般为512字节）。</li>
-<li>相邻磁道之间有间隙（gapgap），相邻的扇区之间也留有间隙，否则磁场容易相互影响。</li>
-<li>磁道编号从外往里递增（0~N N），磁头静止时停在磁道0 外侧。</li>
+<li>相邻磁道之间有间隙（gap），相邻的扇区之间也留有间隙，否则磁场容易相互影响。</li>
+<li>磁道编号从外往里递增（0~N），磁头静止时停在磁道0 外侧。</li>
 <li>扇区划分<ul>
 <li>恒定角速度（Constant angular velocity, CAV)：增大记录在盘片区域上的信息位的间隔，使得磁盘能够以恒定的速度扫描信息，即恒定的数据传输率<ul>
 <li>优点：能以磁道号和扇区号直接寻址各个数据块</li>
@@ -482,8 +482,8 @@ T_{a}=T_{S} + \frac{1}{2r}+\frac{b}{rN}</script></li>
 <li>使用与磁盘类似的记录和读取技术</li>
 <li>记录：介质是柔韧的聚酯薄膜带，外涂磁性材料</li>
 <li>读取<ul>
-<li>磁带：顺序读取（sequential accessaccess）</li>
-<li>磁盘：直接读取（direct accessaccess）</li>
+<li>磁带：顺序读取（sequential access）</li>
+<li>磁盘：直接读取（direct access）</li>
 <li>并行记录 vs. 串行记录（蛇形记录）</li>
 <li>并行+串行<br>&lt;img src=image-20231213220640293.png” alt=”image-20231213220640293” style=”zoom:67%;” /&gt;<h4 id="U盘和固态硬盘"><a href="#U盘和固态硬盘" class="headerlink" title="U盘和固态硬盘"></a>U盘和固态硬盘</h4></li>
 </ul>
@@ -971,6 +971,22 @@ T_{a}=T_{S} + \frac{1}{2r}+\frac{b}{rN}</script></li>
 
   
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
