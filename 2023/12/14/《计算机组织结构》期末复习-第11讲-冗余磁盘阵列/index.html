@@ -7,23 +7,31 @@
   <meta name="google-site-verification" content="pR8QTiIMEpajCwoYodeqCvhI31PB9cT7MTg3xvqomRg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>Sparse Table(稀疏表) | Sprooc</title>
+  <title>《计算机组织结构》期末复习-第11讲-冗余磁盘阵列 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Sparse Table简称ST，用于对一组静态数据进行区间查询。">
+  <meta name="description" content="第11讲-冗余磁盘阵列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sparse Table(稀疏表)">
-<meta property="og:url" content="http://sprooc.github.io/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/index.html">
+<meta property="og:title" content="《计算机组织结构》期末复习-第11讲-冗余磁盘阵列">
+<meta property="og:url" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/index.html">
 <meta property="og:site_name" content="Sprooc">
-<meta property="og:description" content="Sparse Table简称ST，用于对一组静态数据进行区间查询。">
+<meta property="og:description" content="第11讲-冗余磁盘阵列">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-01T02:43:41.000Z">
-<meta property="article:modified_time" content="2023-12-03T10:06:33.808Z">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214210403441.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214211106615.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214211547297.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214211853938.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214213556398.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214220525181.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214220514240.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214220725519.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214221752126.png">
+<meta property="article:published_time" content="2023-12-14T12:23:49.000Z">
+<meta property="article:modified_time" content="2023-12-14T14:27:35.542Z">
 <meta property="article:author" content="Sprooc">
-<meta property="article:tag" content="算法">
-<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214210403441.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -187,14 +195,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Sparse Table(稀疏表)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-《计算机组织结构》期末复习-第11讲-冗余磁盘阵列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Sparse Table(稀疏表)
+      《计算机组织结构》期末复习-第11讲-冗余磁盘阵列
     </h1>
   
 
@@ -206,8 +214,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/" class="archive-article-date">
-        <time datetime="2023-12-01T02:43:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-01</time>
+<a href="/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/" class="archive-article-date">
+        <time datetime="2023-12-14T12:23:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-14</time>
 </a>
 
   
@@ -220,7 +228,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">582字</span>
+      <span class="post-count">1.7k字</span>
     </span>
   </span>
 
@@ -229,7 +237,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -240,24 +248,157 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Sparse Table简称ST，用于对一组静态数据进行区间查询。</p>
-<span id="more"></span>
-<p>例如：</p>
-<ul>
-<li>RMQ：区间最大（最小）值</li>
-<li>RGQ：区间最大公因数</li>
+    <h2 id="第11讲-冗余磁盘阵列"><a href="#第11讲-冗余磁盘阵列" class="headerlink" title="第11讲-冗余磁盘阵列"></a>第11讲-冗余磁盘阵列</h2><span id="more"></span>
+<h3 id="RAID简介"><a href="#RAID简介" class="headerlink" title="RAID简介"></a>RAID简介</h3><ol>
+<li>冗余磁盘阵列/独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
+<li>基本思想<ul>
+<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
+<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
+<li>采用数据冗余来进行错误恢复以提高系统可靠性</li>
 </ul>
-<p>这两个问题都可以用线段树解决。但线段树的查询时间是O(logn)，ST可以在O(1)时间内完成查询。代价是是ST不能对数组进行动态维护，数组在查询之前就固定下来。因此，如果需要动态维护数组，用线段树；反之，用ST。</p>
-<p>什么样的问题可以用ST解决？例如说，求区间最小值，我们可以先把一个区间分成两个小区间，两个小区间的的最小值就是大区间的最小值。最大公因数也同理，求一个大区间的最大公因数，先求两个小区间的最大公因数，再求这两个数的最大公因数就是大区间的最大公因数。类似这类问题都能用ST解决。形式化的，ST能解决的问题为：</p>
-<ul>
-<li><p>求数组的某一区间S的某一性质F(S)，性质F满足：</p>
-<script type="math/tex; mode=display">
-若{s_1}\cup {s_2}=S，则F(S)=F(F(s_1),F(s_2)).</script><p>可以验证，min和gcd都满足以上要求。</p>
-<p>详细内容参照<a href="[ST稀疏表(Sparse Table">这篇文章</a>算法笔记-CSDN博客](<a target="_blank" rel="noopener" href="https://blog.csdn.net/narcissus2_/article/details/89423591))。">https://blog.csdn.net/narcissus2_/article/details/89423591))。</a></p>
+</li>
+<li>特性<ul>
+<li>由一组物理磁盘驱动器组成，被视为单个逻辑驱动器。</li>
+<li>数据是分布在多个物理磁盘上，分布方案称为条带。</li>
+<li>冗余磁盘容量用于存储奇偶校验信息，保证磁盘万一损坏时能恢复数据。</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231214210403441.png" alt="image-20231214210403441" style="zoom:80%;" /></p>
+<h3 id="RAID-0"><a href="#RAID-0" class="headerlink" title="RAID 0"></a>RAID 0</h3><ol>
+<li>数据以条带的形式在可用的磁盘上分布</li>
+<li>不采用冗余来改善性能（不是RAID 家族中的真正成员）</li>
+<li>用途<ul>
+<li>高数据传输率</li>
+<li>高速响应I/O 请求：两个I/O 请求所需要的数据块可能在不同的磁盘上.如果条的大小相对较大，那么单个IO请求只涉及单个磁盘访问，则多个等待的IO请求就可以被并行处理，减少了每个请求的排队时间。</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231214211106615.png" alt="image-20231214211106615" style="zoom:80%;" /></p>
+<h3 id="RAID-1"><a href="#RAID-1" class="headerlink" title="RAID 1"></a>RAID 1</h3><ol>
+<li>采用了数据条带，采用简单地备份所有数据的方法来实现冗余。</li>
+<li>优点<ul>
+<li>高速响应I/O 请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应。</li>
+<li>读请求可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个。</li>
+<li>写请求需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘。</li>
+<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>价格昂贵（一半的容量）。</li>
+</ul>
+</li>
+<li>用途<ul>
+<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
+<li>与RAID 0 相比<ul>
+<li>如果有大批的读请求，则RAID 1 能实现高速的I/O 速率，性能可以达到RAID 0<br>的两倍</li>
+<li>如果I/O 请求有相当大的部分是写请求，则它不比RAID 0 的性能好多少</li>
+</ul>
 </li>
 </ul>
-<p>下面是代码（read函数是快速读入一个整数的函数，只是用来过洛谷的oj）。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 100001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="keyword">return</span> b == <span class="number">0</span> ? a : <span class="built_in">gcd</span>(b, a % b); &#125;</span><br><span class="line"><span class="type">int</span> arr[N];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">21</span>][N];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">  <span class="type">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">  <span class="keyword">while</span> (ch &lt; <span class="string">&#x27;0&#x27;</span> || ch &gt; <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (ch == <span class="string">&#x27;-&#x27;</span>) f = <span class="number">-1</span>;</span><br><span class="line">    ch = <span class="built_in">getchar</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">    x = x * <span class="number">10</span> + ch - <span class="number">48</span>;</span><br><span class="line">    ch = <span class="built_in">getchar</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> s = <span class="built_in">log2</span>(n);</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= s; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= n - (<span class="number">1</span> &lt;&lt; i); j++) &#123;</span><br><span class="line">      dp[i][j] = <span class="built_in">gcd</span>(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j + (<span class="number">1</span> &lt;&lt; (i - <span class="number">1</span>))]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> k = <span class="built_in">log2</span>(r - l + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">gcd</span>(dp[k][l], dp[k][r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> m;</span><br><span class="line">  n = <span class="built_in">read</span>();</span><br><span class="line">  m = <span class="built_in">read</span>();</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    dp[<span class="number">0</span>][i] = <span class="built_in">read</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">init</span>();</span><br><span class="line">  <span class="type">int</span> l, r;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">    l = <span class="built_in">read</span>();</span><br><span class="line">    r = <span class="built_in">read</span>();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">query</span>(l - <span class="number">1</span>, r - <span class="number">1</span>));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="image-20231214211547297.png" alt="image-20231214211547297" style="zoom:80%;" /></p>
+<ol>
+<li>RAID 01 vs. RAID 10<ul>
+<li>RAID 01= RAID 0+1：先做RAID 0，再做RAID 1</li>
+<li>RAID 10= RAID 1+0：先做RAID 1，再做RAID 0</li>
+<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的容错能力</li>
+<li>若Disk 0 和Disk 1 坏掉<ul>
+<li>RAID 01：两个RAID 0均无法工作，整个体统无法工作。</li>
+<li>RAID 10：两个RAID 1失去了校验功能，但仍可读写信息，系统可以正常工作。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231214211853938.png" alt="image-20231214211853938" style="zoom:67%;" /></p>
+<h3 id="RDIA-2"><a href="#RDIA-2" class="headerlink" title="RDIA 2"></a>RDIA 2</h3><ol>
+<li>采用并行存取技术</li>
+<li>目标:所有磁盘都参与每个I/O 请求的执行</li>
+<li>特点<ul>
+<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
+<li>采用数据条带：条带非常小，经常只有一个字节或一个字</li>
+</ul>
+</li>
+<li>纠错：对位于同一条带的各个数据盘上的数据位计算校验码（通常采用海明码），校验码存储在该条带中多个校验盘的对应位置</li>
+<li>访问<ul>
+<li>读取：获取请求的数据和对应的校验码</li>
+<li>写入：所有数据盘和校验盘都被访问</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>冗余盘依然比较多，价格较贵</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高可靠性的情况没有意义（实际基本弃用）</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231214213556398.png" alt="image-20231214213556398"></p>
+<h3 id="RAID-3"><a href="#RAID-3" class="headerlink" title="RAID 3"></a>RAID 3</h3><ol>
+<li>采用并行存取技术<ul>
+<li>各个驱动器的轴同步旋转</li>
+<li>采用非常小的数据条带</li>
+</ul>
+</li>
+<li>校验：对所有数据盘上同一位置的数据计算奇偶校验码<ul>
+<li>当某一磁盘损坏时，可以用于重构数据𝑏<sub>0</sub>= 𝑃(𝑏) ⨁ 𝑏<sub>1</sub> ⨁ 𝑏<sub>2</sub> ⨁ 𝑏<sub>3</sub></li>
+</ul>
+</li>
+<li>优点：能够获得非常高的数据传输率，对于大量读请求，性能改善特别明显</li>
+<li>缺点：一次只能执行一个I/O 请求，在面向多个IO 请求时，性能将受损</li>
+</ol>
+<p><img src="image-20231214220525181.png" alt="image-20231214220525181"></p>
+<h3 id="RAID-4"><a href="#RAID-4" class="headerlink" title="RAID 4"></a>RAID 4</h3><ol>
+<li>采用独立存取技术<ul>
+<li>每个磁盘成员的操作是独立的，各个I/O 请求能够并行处理</li>
+<li>采用相对较大的数据条带（常见的是4KB） </li>
+</ul>
+</li>
+<li>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在奇偶校验盘的对应条带上</li>
+<li>性能<ul>
+<li>当执行较小规模的I/O 写请求时，RAID 4 会遭遇写损失<ul>
+<li>对于每一次写操作，阵列管理软件不仅要修改用户数据，而且要修改相应的校验位<br>𝑃’(𝐵) =  𝑃(𝐵)⨁𝐵<sub>0</sub>⨁ 𝐵’<sub>0</sub></li>
+</ul>
+</li>
+<li>当涉及所有磁盘的数据条带的较大I/O 写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
+<li>每一次写操作必须涉及到唯一的校验盘，校验盘会成为瓶颈（实际基本弃用）</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231214220514240.png" alt="image-20231214220514240" style="zoom:80%;" /></p>
+<h3 id="RAID-5"><a href="#RAID-5" class="headerlink" title="RAID 5"></a>RAID 5</h3><ol>
+<li><p>与RAID 4 组织方式相似（常用）</p>
+</li>
+<li><p>在所有磁盘上都分布了奇偶校验条带</p>
+<ul>
+<li>避免潜在的I/O 瓶颈问题</li>
+</ul>
+</li>
+<li><p>访问时的“两读两写”：读在写前，读写不需要并行</p>
+<p>  𝑃’(𝐵) =  𝑃(𝐵)⨁𝐵<sub>0</sub>⨁ 𝐵’<sub>0</sub></p>
+</li>
+</ol>
+<p><img src="image-20231214220725519.png" alt="image-20231214220725519" style="zoom:80%;" /></p>
+<ol>
+<li>RAID 50<ul>
+<li>RAID 5 与RAID 0 的组合，先作RAID 5，再作RAID 0，也就是对多组RAID 5 彼此构成条带访问</li>
+<li>RAID 50 在底层的任一组或多组RAID 5 中出现1 颗硬盘损坏时，仍能维持运作；如果任一组RAID 5 中出现2 颗或2 颗以上硬盘损毁，整组RAID 50 就会失效</li>
+<li>RAID 50 由于在上层把多组RAID 5 进行条带化，性能比起单纯的RAID 5 高，但容量利用率比RAID 5 要低</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231214221752126.png" alt="image-20231214221752126" style="zoom:80%;" /></p>
+<h3 id="RAID-6"><a href="#RAID-6" class="headerlink" title="RAID 6"></a>RAID 6</h3><ol>
+<li>采用两种不同的校验码，并将校验码以分开的块存于不同的磁盘中</li>
+<li>优点：提升数据可用性：只有在平均修复时间间隔内3 个磁盘都出了故障，才会造成数据丢失</li>
+<li>缺点：写损失：每次写都要影响两个校验块（读3 个写3 个磁盘）</li>
+</ol>
+<h3 id="RAID比较"><a href="#RAID比较" class="headerlink" title="RAID比较"></a>RAID比较</h3><ol>
+<li>RAID 0：提升I/O 响应能力，但数据可用性低</li>
+<li>RAID 1：提升数据可用性，但容量利用率低</li>
+<li>RAID 2和 RAID3：提升数据可用性和数据传输率，但一次只能处理一个I/O 请求</li>
+<li>RAID 4和 RAID 5 和 RAID 6：提升数据可用性和读速率，但写速率受限</li>
+</ol>
 
     
 
@@ -272,7 +413,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://sprooc.github.io/2023/12/01/Sparse Table(稀疏表)/" title="Sparse Table(稀疏表)" target="_blank">http://sprooc.github.io/2023/12/01/Sparse Table(稀疏表)/</a>
+          <a href="http://sprooc.github.io/2023/12/14/《计算机组织结构》期末复习-第11讲-冗余磁盘阵列/" title="《计算机组织结构》期末复习-第11讲-冗余磁盘阵列" target="_blank">http://sprooc.github.io/2023/12/14/《计算机组织结构》期末复习-第11讲-冗余磁盘阵列/</a>
         </li>
         
         <li>
@@ -289,21 +430,6 @@
   <div class="article-info article-info-index">
     
     
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
     
 
     
@@ -354,7 +480,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -369,18 +495,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          石子合并问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/11/28/leetcode-315-%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">[leetcode]315. 计算右侧小于当前元素的个数</div>
+    <a href="/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC10%E8%AE%B2-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《计算机组织结构》期末复习-第10讲-数据校验码</div>
       <i class="icon-circle-right"></i>
     </a>
   

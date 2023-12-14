@@ -7,22 +7,16 @@
   <meta name="google-site-verification" content="pR8QTiIMEpajCwoYodeqCvhI31PB9cT7MTg3xvqomRg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>Sparse Table(稀疏表) | Sprooc</title>
+  <title>Archives: 2023/12 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Sparse Table简称ST，用于对一组静态数据进行区间查询。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Sparse Table(稀疏表)">
-<meta property="og:url" content="http://sprooc.github.io/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Sprooc">
+<meta property="og:url" content="http://sprooc.github.io/archives/2023/12/page/2/index.html">
 <meta property="og:site_name" content="Sprooc">
-<meta property="og:description" content="Sparse Table简称ST，用于对一组静态数据进行区间查询。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-01T02:43:41.000Z">
-<meta property="article:modified_time" content="2023-12-03T10:06:33.808Z">
 <meta property="article:author" content="Sprooc">
-<meta property="article:tag" content="算法">
-<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
@@ -187,108 +181,41 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Sparse Table(稀疏表)" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-  
-  
-    <h1 class="article-title" itemprop="name">
-      Sparse Table(稀疏表)
-    </h1>
-  
-
-
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
 <a href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/" class="archive-article-date">
         <time datetime="2023-12-01T02:43:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-01</time>
 </a>
 
+        </div>
+    	 
   
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/">Sparse Table(稀疏表)</a>
+	
+    </h1>
   
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">582字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
-    </span>
-  </span>
-</div>
 
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Sparse Table简称ST，用于对一组静态数据进行区间查询。</p>
-<span id="more"></span>
-<p>例如：</p>
-<ul>
-<li>RMQ：区间最大（最小）值</li>
-<li>RGQ：区间最大公因数</li>
-</ul>
-<p>这两个问题都可以用线段树解决。但线段树的查询时间是O(logn)，ST可以在O(1)时间内完成查询。代价是是ST不能对数组进行动态维护，数组在查询之前就固定下来。因此，如果需要动态维护数组，用线段树；反之，用ST。</p>
-<p>什么样的问题可以用ST解决？例如说，求区间最小值，我们可以先把一个区间分成两个小区间，两个小区间的的最小值就是大区间的最小值。最大公因数也同理，求一个大区间的最大公因数，先求两个小区间的最大公因数，再求这两个数的最大公因数就是大区间的最大公因数。类似这类问题都能用ST解决。形式化的，ST能解决的问题为：</p>
-<ul>
-<li><p>求数组的某一区间S的某一性质F(S)，性质F满足：</p>
-<script type="math/tex; mode=display">
-若{s_1}\cup {s_2}=S，则F(S)=F(F(s_1),F(s_2)).</script><p>可以验证，min和gcd都满足以上要求。</p>
-<p>详细内容参照<a href="[ST稀疏表(Sparse Table">这篇文章</a>算法笔记-CSDN博客](<a target="_blank" rel="noopener" href="https://blog.csdn.net/narcissus2_/article/details/89423591))。">https://blog.csdn.net/narcissus2_/article/details/89423591))。</a></p>
-</li>
-</ul>
-<p>下面是代码（read函数是快速读入一个整数的函数，只是用来过洛谷的oj）。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 100001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="keyword">return</span> b == <span class="number">0</span> ? a : <span class="built_in">gcd</span>(b, a % b); &#125;</span><br><span class="line"><span class="type">int</span> arr[N];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">21</span>][N];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">  <span class="type">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">  <span class="keyword">while</span> (ch &lt; <span class="string">&#x27;0&#x27;</span> || ch &gt; <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (ch == <span class="string">&#x27;-&#x27;</span>) f = <span class="number">-1</span>;</span><br><span class="line">    ch = <span class="built_in">getchar</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">    x = x * <span class="number">10</span> + ch - <span class="number">48</span>;</span><br><span class="line">    ch = <span class="built_in">getchar</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> s = <span class="built_in">log2</span>(n);</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= s; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= n - (<span class="number">1</span> &lt;&lt; i); j++) &#123;</span><br><span class="line">      dp[i][j] = <span class="built_in">gcd</span>(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j + (<span class="number">1</span> &lt;&lt; (i - <span class="number">1</span>))]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> k = <span class="built_in">log2</span>(r - l + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">gcd</span>(dp[k][l], dp[k][r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> m;</span><br><span class="line">  n = <span class="built_in">read</span>();</span><br><span class="line">  m = <span class="built_in">read</span>();</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    dp[<span class="number">0</span>][i] = <span class="built_in">read</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">init</span>();</span><br><span class="line">  <span class="type">int</span> l, r;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">    l = <span class="built_in">read</span>();</span><br><span class="line">    r = <span class="built_in">read</span>();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">query</span>(l - <span class="number">1</span>, r - <span class="number">1</span>));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-    
-
-    
-
-    
-    <div class="declare"> 
-      <ul class="post-copyright">
-        <li>
-          <strong>本文作者：</strong>
-          Sprooc
-        </li>
-        <li>
-          <strong>本文链接：</strong>
-          <a href="http://sprooc.github.io/2023/12/01/Sparse Table(稀疏表)/" title="Sparse Table(稀疏表)" target="_blank">http://sprooc.github.io/2023/12/01/Sparse Table(稀疏表)/</a>
-        </li>
-        
-        <li>
-          <strong>版权声明： </strong>
+        <div class="article-info info-on-right">
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
-        </li>
-        
-      </ul>
-    </div>
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -304,116 +231,23 @@
 		</ul>
 	</div>
 
-    
+          
 
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/01/Sparse%20Table(%E7%A8%80%E7%96%8F%E8%A1%A8)/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
-  
-    <a href="/2023/12/03/%E7%9F%B3%E5%AD%90%E5%90%88%E5%B9%B6%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          石子合并问题
-        
-      </div>
-    </a>
   
   
-    <a href="/2023/11/28/leetcode-315-%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">[leetcode]315. 计算右侧小于当前元素的个数</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2023/12/">&laquo; Prev</a><a class="page-number" href="/archives/2023/12/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
 
           </div>
@@ -454,8 +288,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
