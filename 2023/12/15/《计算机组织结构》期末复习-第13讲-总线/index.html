@@ -7,17 +7,38 @@
   <meta name="google-site-verification" content="pR8QTiIMEpajCwoYodeqCvhI31PB9cT7MTg3xvqomRg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>Archives: 2023 | Sprooc</title>
+  <title>《计算机组织结构》期末复习-第13讲-总线 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sprooc">
-<meta property="og:url" content="http://sprooc.github.io/archives/2023/index.html">
+  <meta name="description" content="第13讲-总线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《计算机组织结构》期末复习-第13讲-总线">
+<meta property="og:url" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/index.html">
 <meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="第13讲-总线">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/image-20231215210246332.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/ee7ff247291e6eb2fe3605d298a6306.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/7b58c5908dbf8d0490b1137f3f1369f.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/a45b0f7154ac47e6ea3bd4ea0b74939.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/862036a6fe5287ef6b619355bd58ab3.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/99abe6d1946854ea2c3d21c573b4ad3.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/8008a65b2bba709b69858ae51276bf4.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/446d584b9e1f4c178ab54809754e0cf.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/e5dc9f1eaeedae7136286233700c9c2.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/d7157e052b62e7d824e1d4dfaf3089d.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/40ff86dbaedcc381a249137d805f48c.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/9194fe1c796dde6aa125281c54a038c.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/a4017a70126bfc3ae01d13b8c418ac4.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/8ba12b322f24cb25b416dee800eb747.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/9a3f8dc17b40122e261822c986ab632.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/d43da1decbed8bba82ae3b3f586a29d.png">
+<meta property="article:published_time" content="2023-12-15T12:57:33.000Z">
+<meta property="article:modified_time" content="2023-12-15T14:37:13.667Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/image-20231215210246332.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -181,372 +202,522 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《计算机组织结构》期末复习-第13讲-总线" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      《计算机组织结构》期末复习-第13讲-总线
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/" class="archive-article-date">
         <time datetime="2023-12-15T12:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-15</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/">《计算机组织结构》期末复习-第13讲-总线</a>
-	
-    </h1>
   
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">11分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="第13讲-总线"><a href="#第13讲-总线" class="headerlink" title="第13讲-总线"></a>第13讲-总线</h2><span id="more"></span>
+<h3 id="总线概述"><a href="#总线概述" class="headerlink" title="总线概述"></a>总线概述</h3><ol>
+<li><p>类型</p>
+<ul>
+<li>芯片内部总线：连接芯片内部的各个部分<ul>
+<li>例：CPU 中连接寄存器、ALU 等部分</li>
+</ul>
+</li>
+<li>系统总线：连接CPU 、存储器、IO 控制器和其他功能设备</li>
+<li>通信总线：连接主机和I/O 设备，或连接不同的计算机系统</li>
+</ul>
+</li>
+<li><p>总线结构</p>
+<ul>
+<li>数据线：在系统组件之间传输数据<ul>
+<li>数据线的数量决定了一次可以传输的数据的大小</li>
+</ul>
+</li>
+<li>地址线：在数据线和地址I/O 端口上指定数据的来源和去向<ul>
+<li>地址线的数量决定了寻址空间的大小</li>
+</ul>
+</li>
+<li>控制线：控制对数据线和地址线的存取和使用</li>
+<li>时钟（clock）：用于总线同步操作</li>
+<li>总线请求（bus request）：表示模块需要获得对总线的控制</li>
+<li>总线允许（bus grant）：发出请求的设备已经被允许控制总线</li>
+<li>中断请求（interrupt request）：表示某个中断正在悬而未决</li>
+<li>中断响应（interrupt ACK）：未决的终端请求被响应</li>
+<li>存储器读（memory read）：从存储器读数据到总线</li>
+<li>存储器写（memory write）：将数据从总线写入存储器</li>
+<li>I/O读（I/O read）：从I/O 端口读数据到总线</li>
+<li>I/O写（I/O write）：将数据从总线写入I/O 端口</li>
+</ul>
+</li>
+</ol>
+<p><img src="image-20231215210246332.png" alt="image-20231215210246332" style="zoom:70%;" /></p>
+<ol>
+<li>总线上数据传输的特点<ul>
+<li>总线可以被多个设备监听，但同一时刻只能由一个设备发送数据<ul>
+<li>如果同一时刻多个设备同时发送数据，会造成数据之间的混淆</li>
+<li>使用总线进行数据传输<ul>
+<li>如果连在总线上的某个设备希望向另一个设备发送数据，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线传送数据</li>
+</ul>
+</li>
+<li>如果连在总线上的某个设备希望向另一个组件请求数据，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线向另一个设备发送请求，等待另一个设备发送数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当总线在被使用过程中，其它设备不可以抢占</li>
+</ul>
+</li>
+</ol>
+<h3 id="设计要素"><a href="#设计要素" class="headerlink" title="设计要素"></a>设计要素</h3><ol>
+<li><p>用途：专用总线，复用总线</p>
+<ul>
+<li>专用（dedicated）总线：始终只负责一项功能，或始终分配给特定的计算机组件<ul>
+<li>优点：高吞吐量，减少总线冲突</li>
+<li>缺点：增加了系统的规模和成本</li>
+</ul>
+</li>
+<li>复用（multiplexed）总线：将同一线路用于多种用途<ul>
+<li>优点：使用的布线数量少，节省空间和成本</li>
+<li>缺点：每个模块需要更复杂的控制电路，且共享可能会降低性能</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>仲裁（arbitration）：当多个设备需要与总线通信时，通过某种策略选择一个设备</p>
+<ul>
+<li>平衡因素<ul>
+<li>优先级：优先级高的设备优先被服务</li>
+<li>公平性：优先级最低的设备不能一直被延迟</li>
+</ul>
+</li>
+<li>仲裁方案<ul>
+<li>集中式（centralized）：由仲裁器（arbiter）或总线控制器（bus controller）负责分配总线使用权<ul>
+<li>链式查询/菊花链（daisy chain）</li>
+<li>计数器查询（query by a counter）</li>
+<li>独立请求（independently request）</li>
+</ul>
+</li>
+<li>分布式（distributed）：每个设备都包含访问控制逻辑，各设备共同作用分享总线<ul>
+<li>自举式（self selection）</li>
+<li>冲突检测（collision detection）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>链式查询<ul>
+<li>所有的设备都是串行连接的，并将允许信号从优先级最高的设备下发到优先级最低的设备。</li>
+<li>总线仲裁器收到请求后，在总线不忙的前提下，发起允许信号。</li>
+<li>如果某个设备收到了允许信号并且发起了总线请求，该设备将总线设置为繁忙状态，允许信号将不再被进一步传递。</li>
+<li>优点：确定优先级很简单；可以很灵活地添加设备。</li>
+<li>缺点：不能保证公平性；对电路故障敏感；限制总线的速度。<br><img src="ee7ff247291e6eb2fe3605d298a6306.png" alt="ee7ff247291e6eb2fe3605d298a6306" style="zoom:80%;" /></li>
+</ul>
+</li>
+<li>计数器查询 <ul>
+<li>将总线允许线替换为设备ID（地址）线          </li>
+<li>当总线仲裁器收到总线请求信号，判断总线空闲时，计数器开始计数，计数值通过设备ID 线发向各个部件          </li>
+<li>如果当前发送请求的设备ID 等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为繁忙          </li>
+<li>优点<ul>
+<li>通过使用不同的初始计数，可以灵活地确定设备优先级<ul>
+<li>强调优先级：从1 开始</li>
+<li>强调公平性：从下一个设备的ID 开始   </li>
+<li>对电路故障不敏感   </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>需要添加设备ID 线             </li>
+<li>需要解码和比较设备ID 信号           </li>
+<li>限制总线的速度              </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="7b58c5908dbf8d0490b1137f3f1369f.png" alt="7b58c5908dbf8d0490b1137f3f1369f" style="zoom: 90%;" /></p>
+<ul>
+<li><p>独立请求</p>
+<ul>
+<li>每个设备都有自己的总线请求线和总线允许线</li>
+<li>当一个设备请求总线时，它通过总线请求线将请求信号发送给总线仲裁器</li>
+<li><p>总线仲裁器决定哪个设备可以使用总线</p>
+<ul>
+<li>确定策略：固定优先级，公平链式，LRU，FIFO</li>
+</ul>
+</li>
+<li><p>优点：快速响应；可编程的优先级</p>
+</li>
+<li>缺点：复杂的控制逻辑；更多的控制线路</li>
+</ul>
+</li>
+</ul>
+<p><img src="a45b0f7154ac47e6ea3bd4ea0b74939.png" alt="a45b0f7154ac47e6ea3bd4ea0b74939" style="zoom:85%;" /></p>
+<ul>
+<li>自举式<ul>
+<li>固定优先级</li>
+<li>每个设备在其总线请求线上发送请求</li>
+<li>最低优先级的设备没有请求线</li>
+<li>每个设备自行判断自己是否在请求总线的设备中优先级最高</li>
+</ul>
+</li>
+</ul>
+<p><img src="862036a6fe5287ef6b619355bd58ab3.png" alt="862036a6fe5287ef6b619355bd58ab3" style="zoom:75%;" /></p>
+<ul>
+<li>冲突检测<ul>
+<li>当一个设备想要使用总线时，它会检查总线是否繁忙</li>
+<li>如果总线空闲，设备使用总线</li>
+<li>冲突：如果两个设备发现总线空闲，它们可能同时使用总线</li>
+<li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
+<li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机时间间隔后再次请求总线</li>
+</ul>
+<ol>
+<li>时序（timing）</li>
+</ol>
+</li>
+<li>确定每个总线事务的开始和结束时间</li>
+<li>总线事务：地址+ 数据+ … + 数据</li>
+<li>同步时序：事件的发生由时钟决定<ul>
+<li>优点：更容易实现和测试</li>
+<li>缺点：所有设备共享同一个时钟；总线长度受到时钟偏差的限制 </li>
+</ul>
+</li>
+<li>异步时序：一个事件的发生取决于前一个事件的发生（顺序）<ul>
+<li>握手策略<br><img src="99abe6d1946854ea2c3d21c573b4ad3.png" alt="99abe6d1946854ea2c3d21c573b4ad3"> </li>
+<li>异步数据传输     <ol>
+<li>CPU设置地址并设置 ReadReq 线</li>
+<li>存储器读取相应地址并设置Ack 线</li>
+<li>CPU释放地址线和ReadReq 线</li>
+<li>存储器释放Ack 线</li>
+<li>存储器将数据传到数据线并设置DataRdy 线</li>
+<li>CPU读取数据并设置Ack 线</li>
+<li>存储器释放数据线和dataRdy 线 CPU 释放Ack 线<br><img src="8008a65b2bba709b69858ae51276bf4.png" alt="8008a65b2bba709b69858ae51276bf4" style="zoom:80%;" />     </li>
+</ol>
+</li>
+<li>优点：可以灵活地协调速度不同的设备</li>
+<li>缺点：接口逻辑复杂；对噪声敏感（被误认为信号）     </li>
+</ul>
+</li>
+<li>半同步：同步时序和异步时序相结合     <ul>
+<li>为了减少噪声的影响，在异步计时中使用时钟     </li>
+<li>准备和响应信号在时钟上升沿有效     </li>
+<li>半同步通信集同步与异步通信之优点，既保留了同步通信的基本特点     <ul>
+<li>所有的地址、命令、数据信号的发出时间，都严格参照系统时钟的某个前沿开始，而接收方都采用系统时钟后沿时刻来进行判断识别。</li>
+<li>同时又像异步通信那样，允许不同速度的模块和谐地工作。为此增设了一条“等待”( )响应信号线。     </li>
+</ul>
+</li>
+<li>半同步时序的读命令     <ul>
+<li>主模块在T1发出地址，T2发出命令       </li>
+<li>从模块工作速度较慢，无法在下一时钟周期时刻提供数据，则必须在T3之前通知主模块，使其进入等待状态，此刻，从模块置$\overline{\text{WAIT}}$为低电平有效。主模块在测得$\overline{\text{WAIT}}$有效，则不立即从数据线上取数。       </li>
+<li>主模块等待，直到测得$\overline{\text{WAIT}}$为高电平即等待无效时，主模块即把此刻的下一周期当作正常周期T3，即时获取数据，T4结束传输。<br><img src="446d584b9e1f4c178ab54809754e0cf.png" alt="img" style="zoom:80%;" /></li>
+</ul>
+</li>
+<li>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/iteye_21199/article/details/82200294">总线的半同步通信-CSDN博客</a>            </li>
+</ul>
+</li>
+<li>分离事务：设备准备数据期间释放总线   <ul>
+<li>将一个总线事件分离为两个过程</li>
+<li>优点：增加总线利用率</li>
+<li>缺点：增加每个总线事件的持续时间和系统复杂度<br><img src="e5dc9f1eaeedae7136286233700c9c2.png" alt="e5dc9f1eaeedae7136286233700c9c2" style="zoom:85%;" />   </li>
+</ul>
+<ol>
+<li>总线带宽（bandwidth）：总线的最大数据传输速率。不要考虑总线仲裁、地址传输等因素。 </li>
+<li>数据传输速率（data transfer rate）：考虑地址传输、握手等因素。</li>
+</ol>
+</li>
+<li>例题1：假设同步总线的时钟周期为50 ns，每次传输需要一个时钟周期，异步总线每次握手需要40 ns 。两个总线都是32 位宽，内存的数据准备时间为200 ns 。当从存储器中读出一个32 位的字时，计算两个总线的数据传输速率。<ul>
+<li>同步总线<ul>
+<li>发送指令和地址到内存：50ns</li>
+<li>内存准备数据：200ns</li>
+<li>将数据传输到CPU：50ns</li>
+<li>数据传输速率= 32bit / (50 + 200 + 50)ns = 106.7Mbps</li>
+</ul>
+</li>
+<li>异步总线<ul>
+<li>步骤1：40 ns</li>
+<li>步骤2 、3 、4 / 数据准备：max(40ns* 3,200ns) = 200ns</li>
+<li>步骤5 、6 、7：40ns * 3 = 120ns</li>
+<li>数据传输速率= 32bit / (40 + 200 + 120)ns = 88.9Mbps<br><img src="d7157e052b62e7d824e1d4dfaf3089d.png" alt="d7157e052b62e7d824e1d4dfaf3089d"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>例题2：假设同步总线的时钟周期为50 ns，每次传输需要一个时钟周期，异步总线每次握手需要40 ns 。两个总线都是32 位宽，存储器的数据准备时间为230 ns 。当从存储器中读出一个32 位的字时，计算两个总线的数据传输速率。<ul>
+<li>同步总线：数据传输速率= 32bit / (50 + <strong>250</strong> + 50)ns = 91.4Mbps<ul>
+<li>数据准备时间是250，因为必须必须是完整的时钟周期</li>
+</ul>
+</li>
+<li>异步总线：数据传输速率= 32bit / (40 + 230 + 120)ns = 82.1Mbps</li>
+</ul>
+</li>
+<li>例题3：假设系统具有以下特征<br>1.它支持访问大小为4 到16 个字（每个字32 位）的块<br>2.同步总线具有64 位宽和200MHz 时钟频率，需要1 个时钟周期来传输地址或64 位数据<br>3.在两个总线事务之间有2 个空闲时钟周期<br>4.内存访问时准备前4 个字需要200ns，后面每4 个字准备需要20ns<br>5.当前面的数据在总线上传输时，内存可以同时读取后面的数据<br>如果读取256 个字，分别计算每次传输4 个字和16 个字时的数据传输速率、传输时间和每秒总线事务数<ul>
+<li>每次传输4 个字<ul>
+<li>总线事务：地址+ 4 个字<ul>
+<li>地址传输：1 个时钟周期</li>
+<li>数据准备：200ns (40 个时钟周期）</li>
+<li>数据传输：2 个时钟周期</li>
+<li>空闲：2 个时钟周期</li>
+</ul>
+</li>
+<li>总共：256 / 4 * (1 + 40 + 2 + 2) = 2880 个时钟周期</li>
+<li>传输时间= 2880 * 5ns = 14400ns</li>
+<li>每秒总线事务数= (256 / 4) * (1s / 14400ns) = 4.44M</li>
+<li>数据传输速率= 256 * 32bit / 14400ns = 568.9Mbps</li>
+</ul>
+</li>
+<li>每次传输16 个字<ul>
+<li>总线事务：地址+ 16 个字<ul>
+<li>地址传输：1 个时钟周期</li>
+<li>数据准备（前4 个字）：200ns（40 个时钟周期）</li>
+<li>数据传输：2 个时钟周期（同时读取后4 个字：20ns）</li>
+<li>空闲：2 个时钟周期</li>
+</ul>
+</li>
+<li>总共：256 / 16 <em> (1 + 40 + 3</em>max(2, 4)+ 2 + 2) = 912 个时钟周期</li>
+<li>传输时间= 912 * 5ns = 4560ns</li>
+<li>每秒总线事务数= 16 * 1s / 4560ns = 3.51M</li>
+<li>数据传输速率= 256 * 32bit / 4560ns = 1796.5Mbps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>提高总线的数据传输率<ul>
+<li>提高时钟频率（时钟周期数不变的情况下）</li>
+<li>增加数据总线宽度<ul>
+<li>每次传输更多的数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+<li>块传输<ul>
+<li>传输一次地址就传输一块数据（成本：高复杂性）</li>
+</ul>
+</li>
+<li>分离总线事务<ul>
+<li>减少总线空闲时间（成本：复杂性高，增加每个事务的持续时间）</li>
+</ul>
+</li>
+<li>分离地址线和数据线<ul>
+<li>同时传输地址和数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>总线层次结构</p>
+<ul>
+<li>单总线结构：CPU、存储器和I/O 模块都连接到一条系统总线<ul>
+<li>优点：简单，易于扩展</li>
+<li>缺点：连接的设备越多，总线长度越大，传输延迟也就越大；聚集的传输请求接近总线容量时，总线成为瓶颈<br><img src="40ff86dbaedcc381a249137d805f48c.png" alt="40ff86dbaedcc381a249137d805f48c"></li>
+</ul>
+</li>
+<li>双总线结构I   <ul>
+<li>在CPU 和存储器中间增加一个存储器总线   </li>
+<li>优点：增加CPU 和存储器之间的传输效率，同时降低系统总线的负担<br><img src="9194fe1c796dde6aa125281c54a038c.png" alt="9194fe1c796dde6aa125281c54a038c" style="zoom:75%;" /></li>
+</ul>
+</li>
+<li>双总线结构II<ul>
+<li>将系统总线分为存储器总线、I/O 总线和IOP (input/output）</li>
+<li>优点：降低I/O 对总线的负担<br><img src="a4017a70126bfc3ae01d13b8c418ac4.png" alt="a4017a70126bfc3ae01d13b8c418ac4" style="zoom:80%;" /></li>
+</ul>
+</li>
+<li>多总线结构I<ul>
+<li>增加一个本地总线（local bus bus）来连接CPU 和cache</li>
+<li>优点：分离了CPU 和I/O 的交互<br><img src="8ba12b322f24cb25b416dee800eb747.png" alt="8ba12b322f24cb25b416dee800eb747" style="zoom:80%;" /></li>
+</ul>
+</li>
+<li>多总线结构II<ul>
+<li>将系统总线分为存储器总线、I/O 总线和DMA 总线</li>
+<li>优点：增加I/O 效率<br><img src="9a3f8dc17b40122e261822c986ab632.png" alt="9a3f8dc17b40122e261822c986ab632"></li>
+</ul>
+</li>
+<li>多总线结构III<ul>
+<li>增加一个高速I/O 总线来连接高速设备</li>
+<li>优点：增加I/O 交互效率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="d43da1decbed8bba82ae3b3f586a29d.png" alt="d43da1decbed8bba82ae3b3f586a29d" style="zoom:75%;" /></p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Sprooc
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://sprooc.github.io/2023/12/15/《计算机组织结构》期末复习-第13讲-总线/" title="《计算机组织结构》期末复习-第13讲-总线" target="_blank">http://sprooc.github.io/2023/12/15/《计算机组织结构》期末复习-第13讲-总线/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC12%E8%AE%B2-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-12-15T11:56:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-15</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC12%E8%AE%B2-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《计算机组织结构》期末复习-第12讲-虚拟存储器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC12%E8%AE%B2-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第12讲-虚拟存储器</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/" class="archive-article-date">
-        <time datetime="2023-12-14T12:23:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/">《计算机组织结构》期末复习-第11讲-冗余磁盘阵列</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC10%E8%AE%B2-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/" class="archive-article-date">
-        <time datetime="2023-12-14T05:49:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC10%E8%AE%B2-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/">《计算机组织结构》期末复习-第10讲-数据校验码</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-12-13T12:04:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/13/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC9%E8%AE%B2-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第9讲-外部存储器</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-12-12T12:11:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-12</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/12/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC8%E8%AE%B2-%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第8讲-高速缓冲存储器</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-12-11T13:52:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-11</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/">《计算机组织结构》期末复习-第7讲-内部存储器</a>
-	
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2023-12-10T13:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/10/20231210%E5%91%A8%E8%AE%B0/">20231210周记</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/08/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2023-12-08T11:22:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/08/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%BA%E8%AF%95%E5%A4%8D%E4%B9%A0/">《计算机组织结构》机试复习</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" class="archive-article-date">
-        <time datetime="2023-12-05T13:16:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-05</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/12/05/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/">一些数学</a>
-	
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a><a class="extend next" rel="next" href="/archives/2023/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -587,8 +758,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
