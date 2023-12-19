@@ -185,7 +185,7 @@ body {
     line-height: 1.5;
     color: #333;
     background-color: #fff;
-    min-height: 100%
+    min-height: 100%;
 }
 
 article,
@@ -756,7 +756,8 @@ html {
     position: absolute;
     right: 0;
     min-height: 100%;
-    background: url('/img/Animegirl.jpg') no-repeat 0% 20%/ cover;
+    /* background-image: url("http://s4687kszj.hd-bkt.clouddn.com/background.jpg?e=1700063290&token=L3mTWXzZCv3lvtTOkdIw4RDK_yPI9Iej65IzO6ff:m0i_V_nlyyb9Te-c7ISbOYIwMPQ= no-repeat 100% ;background-size:cover;opacity:0.7;filter:alpha(opacity=70)"); */
+    background-image: url("/img/Animegirl.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 100% 70%;
@@ -780,7 +781,7 @@ html {
 }
 
 .left-col {
-    /* background-color: linear-gradient(rgb(255, 255, 255)rgb(255, 255, 255)); */
+    /* /background-color: linear-gradient(rgb(255, 255, 255)rgb(255, 255, 255)); */
     /* background: #fff; */
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
         url('/img/Animegirl.jpg') no-repeat 0% 20%/ cover;
@@ -802,7 +803,6 @@ html {
 .left-col .overlay {
     width: 100%;
     height: 180px;
-    position: absolute
 }
 
 .left-col .intrude-less {
@@ -2112,11 +2112,10 @@ pre .id {
 
 .article {
     margin: 30px;
-    position: relative;
     border: 1px solid #ddd;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    background: rgba(255, 255, 255, 0.546);
+    background: rgba(255, 255, 255, 0.5);
     transition: all .2s ease-in
 }
 
@@ -2209,6 +2208,7 @@ pre .id {
 
 .article-inner {
     border-color: #d1d1d1
+        /* background-color: rgba(193, 194, 195,0.6); */
 }
 
 .article-inner h1 {
