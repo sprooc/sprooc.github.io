@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC10%E8%AE%B2-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/image-20231214142811606.png">
 <meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC10%E8%AE%B2-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/1349b08cd70575e934a3476e41fbb69.png">
 <meta property="article:published_time" content="2023-12-14T05:49:23.000Z">
-<meta property="article:modified_time" content="2023-12-14T14:28:52.000Z">
+<meta property="article:modified_time" content="2023-12-20T09:22:51.024Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC10%E8%AE%B2-%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/image-20231214142811606.png">
@@ -312,11 +312,13 @@
 <li>数据位划分<ul>
 <li>假定数据位为8位𝐷 = 𝐷8 … 𝐷2𝐷1, 校验码为4位𝐶 = 𝐶4𝐶3𝐶2𝐶1</li>
 <li>数据位/校验码与故障字的关系</li>
-<li>数据位划分<br>𝐶1 = 𝐷1 ⊕ 𝐷2 ⊕ 𝐷4 ⊕ 𝐷5 ⊕ 𝐷7<br>𝐶2 = 𝐷1 ⊕ 𝐷3 ⊕ 𝐷4 ⊕ 𝐷6 ⊕ 𝐷7<br>𝐶3 = 𝐷2 ⊕ 𝐷3 ⊕ 𝐷4 ⊕ 𝐷8<br>𝐶4 = 𝐷5 ⊕ 𝐷6 ⊕ 𝐷7 ⊕ 𝐷8<br><img src="1349b08cd70575e934a3476e41fbb69.png" alt="1349b08cd70575e934a3476e41fbb69" style="zoom:50%;" /><h3 id="码距和纠错理论"><a href="#码距和纠错理论" class="headerlink" title="码距和纠错理论"></a>码距和纠错理论</h3></li>
+<li>数据位划分<br>𝐶1 = 𝐷1 ⊕ 𝐷2 ⊕ 𝐷4 ⊕ 𝐷5 ⊕ 𝐷7<br>𝐶2 = 𝐷1 ⊕ 𝐷3 ⊕ 𝐷4 ⊕ 𝐷6 ⊕ 𝐷7<br>𝐶3 = 𝐷2 ⊕ 𝐷3 ⊕ 𝐷4 ⊕ 𝐷8<br>𝐶4 = 𝐷5 ⊕ 𝐷6 ⊕ 𝐷7 ⊕ 𝐷8<br><img src="1349b08cd70575e934a3476e41fbb69.png" alt="1349b08cd70575e934a3476e41fbb69" style="zoom:50%;" /></li>
 </ul>
 </li>
 </ul>
 </li>
+</ol>
+<h3 id="码距和纠错理论"><a href="#码距和纠错理论" class="headerlink" title="码距和纠错理论"></a>码距和纠错理论</h3><ol>
 <li>码距：同一编码中，任意两个合法编码之间不同二进制数位数的最小值<ul>
 <li>{0000, 0001, 0010, 0011} 码距为1</li>
 <li>{0000,0011} 码距为2 </li>
@@ -325,9 +327,11 @@
 <li>纠错理论：𝑳 - 𝟏 = 𝑫 + 𝑪 <ul>
 <li>𝐿是码距，𝐷 是检错位数，𝐶 是纠错位数</li>
 <li>奇偶校验的码距是2，1 位能检错，不能纠错</li>
-<li>海明码的码距是3，1 位能检错和纠错<h3 id="循环冗余校验"><a href="#循环冗余校验" class="headerlink" title="循环冗余校验"></a>循环冗余校验</h3></li>
+<li>海明码的码距是3，1 位能检错和纠错</li>
 </ul>
 </li>
+</ol>
+<h3 id="循环冗余校验"><a href="#循环冗余校验" class="headerlink" title="循环冗余校验"></a>循环冗余校验</h3><ol>
 <li>奇偶校验问题：额外成本很大；要求将数据分成字节</li>
 <li>循环冗余校验（Cyclic Redundancy Check, CRC）<ul>
 <li>适用于以流格式存储和传输大量数据</li>

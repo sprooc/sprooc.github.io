@@ -6,39 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://sprooc.github.io">
-  <title>《计算机组织结构》期末复习-第13讲-指令系统 | Sprooc</title>
+  <title>《计算机组织结构》期末复习-第14讲-指令系统 | Sprooc</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第13讲-指令系统">
+  <meta name="description" content="第14讲-指令系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《计算机组织结构》期末复习-第13讲-指令系统">
+<meta property="og:title" content="《计算机组织结构》期末复习-第14讲-指令系统">
 <meta property="og:url" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Sprooc">
-<meta property="og:description" content="第13讲-指令系统">
+<meta property="og:description" content="第14讲-指令系统">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215224433079.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/651034a6bb34e059875eb0098f8a0bd.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/31163908f89f4a44c5f0ff6053d7b3d.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215225455850.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215225551293.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215225656478.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215225740670.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215225810362.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/521f09061e51fd9fb6ac72c325b2545.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/bd7ded68154fce663598c44ebafe185.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/eeda2a141f785936e4bb0bcb8d753a3.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/7ba579c2a8dcf17e84bb69ea3c44ef4.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/b4e7fe96b05afc5716beeebe605ea5d.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/5631d9890ccaab93238948c8af96873.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/c8d29de812d20e07ed79cab5deca558.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/58df44c9b28ef764dbaf9d242d94406.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/ad44b934e146b4ccb0694ef4faec0b0.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215224433079.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/651034a6bb34e059875eb0098f8a0bd.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/31163908f89f4a44c5f0ff6053d7b3d.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225455850.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225551293.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225656478.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225740670.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225810362.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/521f09061e51fd9fb6ac72c325b2545.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/bd7ded68154fce663598c44ebafe185.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/eeda2a141f785936e4bb0bcb8d753a3.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/7ba579c2a8dcf17e84bb69ea3c44ef4.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/b4e7fe96b05afc5716beeebe605ea5d.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/5631d9890ccaab93238948c8af96873.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/c8d29de812d20e07ed79cab5deca558.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/58df44c9b28ef764dbaf9d242d94406.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/ad44b934e146b4ccb0694ef4faec0b0.png">
 <meta property="article:published_time" content="2023-12-15T14:40:49.000Z">
-<meta property="article:modified_time" content="2023-12-15T15:38:36.000Z">
+<meta property="article:modified_time" content="2023-12-20T09:48:18.211Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/image-20231215224433079.png">
+<meta name="twitter:image" content="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215224433079.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -190,7 +190,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      《计算机组织结构》期末复习-第13讲-指令系统
+      《计算机组织结构》期末复习-第14讲-指令系统
     </h1>
   
 
@@ -236,18 +236,16 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="第13讲-指令系统"><a href="#第13讲-指令系统" class="headerlink" title="第13讲-指令系统"></a>第13讲-指令系统</h2><span id="more"></span>
+    <h2 id="第14讲-指令系统"><a href="#第14讲-指令系统" class="headerlink" title="第14讲-指令系统"></a>第14讲-指令系统</h2><span id="more"></span>
 <h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ol>
-<li><p>指令的要素</p>
-<ul>
+<li>指令的要素<ul>
 <li>操作码：指定将要完成的操作</li>
 <li>源操作数引用：操作会涉及一个或多个源操作数，这是操作所需的输入</li>
 <li>结果操作数引用：操作可能会产生一个结果</li>
 <li>下一指令引用：告诉处理器这条指令执行完成后到哪儿去取下一条指令</li>
 </ul>
 </li>
-<li><p>指令表示</p>
-<ul>
+<li>指令表示<ul>
 <li>在计算机内部，指令由一个位串来表示</li>
 <li>指令格式：对应于指令的各要素，这个位串划分成几个字段<ul>
 <li>大多数指令集使用不止一种指令格式</li>
@@ -259,19 +257,23 @@
 </ul>
 </li>
 <li>操作数也可以用符号表示<ul>
-<li>用寄存器编号或内存地址替换操作数</li>
+<li>用寄存器编号或内存地址替换操作数<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215224433079.png" />
+</div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p><img src="image-20231215224433079.png" alt="image-20231215224433079"></p>
 </li>
-<li><p>指令格式<br><img src="651034a6bb34e059875eb0098f8a0bd.png" alt="651034a6bb34e059875eb0098f8a0bd" style="zoom:70%;" /></p>
-<ul>
+<li>指令格式<br><div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/651034a6bb34e059875eb0098f8a0bd.png" alt="651034a6bb34e059875eb0098f8a0bd" style="zoom:70%;" />
+</div><ul>
 <li>定长操作码：𝒏位操作码字段的指令系统最大能够表示𝟐 <sup>𝒏</sup> 条指令</li>
 <li>可变长操作码<ul>
-<li>扩展操作码：不同地址数的指令具有不同长度的操作码<br><img src="31163908f89f4a44c5f0ff6053d7b3d.png" alt="31163908f89f4a44c5f0ff6053d7b3d"><br>15条三地址指令操作码：0 0 0 0 ~ 1 1 1 0<br>15条二地址指令操作码：1 1 1 1 0 0 0 0 ~ 1 1 1 1 1 1 1 0<br>15条一地址指令操作码：1 1 1 1 1 1 1 1 0 0 0 0 ~ 1 1 1 1 1 1 1 1 1 1 1 0</li>
+<li>扩展操作码：不同地址数的指令具有不同长度的操作码<br><div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/31163908f89f4a44c5f0ff6053d7b3d.png" />
+</div><br>15条三地址指令操作码：0 0 0 0 ~ 1 1 1 0<br>15条二地址指令操作码：1 1 1 1 0 0 0 0 ~ 1 1 1 1 1 1 1 0<br>15条一地址指令操作码：1 1 1 1 1 1 1 1 0 0 0 0 ~ 1 1 1 1 1 1 1 1 1 1 1 0</li>
 </ul>
 </li>
 <li>指令格式通过它的各个构成部分来定义指令的位安排</li>
@@ -286,41 +288,45 @@
 </li>
 </ul>
 </li>
-<li><p>操作码</p>
-<ul>
+<li>操作码<ul>
 <li>差异：不同的计算机上操作码的数目变动是很大的</li>
 <li>共性：所有计算机上都会存在相同的常用操作类型</li>
 <li>数据传送<ul>
 <li>指明源和目标操作数的位置</li>
 <li>指明将要传送数据的长度</li>
-<li>指明每个操作数的寻址方式<br><img src="image-20231215225455850.png" alt="image-20231215225455850" style="zoom:80%;" /></li>
+<li>指明每个操作数的寻址方式<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225455850.png" alt="image-20231215225455850" style="zoom:80%;" />
+</div></li>
 </ul>
 </li>
 <li>算术运算<ul>
-<li>一条算术指令的执行会涉及数据传送操作，来为算术和逻辑单元准备输入，并传送逻辑单元的输出<br><img src="image-20231215225551293.png" alt="image-20231215225551293" style="zoom:80%;" /></li>
+<li>一条算术指令的执行会涉及数据传送操作，来为算术和逻辑单元准备输入，并传送逻辑单元的输出<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225551293.png" alt="image-20231215225551293" style="zoom:80%;" />
+</div></li>
 </ul>
 </li>
 <li>逻辑运算</li>
 <li>位操作：操作一个字或其它可寻址单元的中的个别位</li>
-<li>移位和旋转<br><img src="image-20231215225656478.png" alt="image-20231215225656478" style="zoom:80%;" /></li>
+<li>移位和旋转<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225656478.png" alt="image-20231215225656478" style="zoom:80%;" />
+</div></li>
 <li>输入/输出<ul>
-<li>各种输入/输出方法仅有少数输入/输出指令实现，具体操作由参数、代码或命令字指定</li>
+<li>各种输入/输出方法仅有少数输入/输出指令实现，具体操作由参数、代码或命令字指定<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225740670.png" alt="image-20231215225740670" style="zoom:80%;" />
+</div></li>
 </ul>
 </li>
-</ul>
-<p><img src="image-20231215225740670.png" alt="image-20231215225740670" style="zoom:80%;" /></p>
-<ul>
 <li>控制转移<ul>
 <li>分支指令（亦称为跳转指令）：把将要执行的下一条指令的地址作为它的操作数之一</li>
 <li>跳步指令：包含一个隐含地址，该隐含地址等于下一指令地址加上该指令长度之和</li>
-<li>过程调用指令：涉及由目前位置转移到过程的调用指令和由过程返回到调用发生位置的返回指令</li>
+<li>过程调用指令：涉及由目前位置转移到过程的调用指令和由过程返回到调用发生位置的返回指令<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/image-20231215225810362.png" alt="image-20231215225810362" style="zoom:70%;" />
+</div></li>
 </ul>
 </li>
 </ul>
-<p><img src="image-20231215225810362.png" alt="image-20231215225810362" style="zoom:70%;" /></p>
 </li>
-<li><p>操作数</p>
-<ul>
+<li>操作数<ul>
 <li>常见类型：地址、数值、字符、逻辑数据</li>
 <li>地址<ul>
 <li>一个指令需要有4 个地址引用：2 个源操作数，1 个目的操作数，以及下一指令地址<ul>
@@ -368,7 +374,9 @@
 </ul>
 </li>
 <li>大端序和小端序<ul>
-<li>假设有32 位的十六进制值1234567812345678，将它存储在可字节寻址的存储器地址184 处<br><img src="521f09061e51fd9fb6ac72c325b2545.png" alt="521f09061e51fd9fb6ac72c325b2545" style="zoom:75%;" /></li>
+<li>假设有32 位的十六进制值1234567812345678，将它存储在可字节寻址的存储器地址184 处<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/521f09061e51fd9fb6ac72c325b2545.png" alt="521f09061e51fd9fb6ac72c325b2545" style="zoom:75%;" />
+</div></li>
 <li>在两种策略中每个数据项有同样地址（范围）</li>
 <li>在任何一个给定的多字节值中，小端的字节排序是大端的反序，反之亦然</li>
 <li>端序不影响结构中数据项的次序</li>
@@ -376,8 +384,7 @@
 </li>
 </ul>
 </li>
-<li><p>寻址方式</p>
-<ul>
+<li>寻址方式<ul>
 <li>立即寻址<ul>
 <li>方式：操作数实际值出现在指令中</li>
 <li>用法：定义和使用常数或设置变量的初始值</li>
@@ -391,7 +398,9 @@
 <li>用法：早期计算机常用，在当代计算机体系结构中不多见</li>
 <li>算法：EA = A</li>
 <li>优点：只要求1 次存储器访问，且无需为生成地址而专门计算</li>
-<li>缺点：有限的地址空间<br><img src="bd7ded68154fce663598c44ebafe185.png" alt="bd7ded68154fce663598c44ebafe185" style="zoom:75%;" /></li>
+<li>缺点：有限的地址空间<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/bd7ded68154fce663598c44ebafe185.png" alt="bd7ded68154fce663598c44ebafe185" style="zoom:75%;" />
+</div></li>
 </ul>
 </li>
 <li>间接寻址<ul>
@@ -399,7 +408,9 @@
 <li>算法：EA = (A)</li>
 <li>优点：扩大了地址空间</li>
 <li>缺点：取操作数需要2 次访问存储器</li>
-<li>解释：地址引用的数量限制可能是有益的<br><img src="eeda2a141f785936e4bb0bcb8d753a3.png" alt="eeda2a141f785936e4bb0bcb8d753a3" style="zoom:75%;" /></li>
+<li>解释：地址引用的数量限制可能是有益的<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/eeda2a141f785936e4bb0bcb8d753a3.png" alt="eeda2a141f785936e4bb0bcb8d753a3" style="zoom:75%;" />
+</div></li>
 </ul>
 </li>
 <li>寄存器寻址<ul>
@@ -407,14 +418,18 @@
 <li>算法：EA = R</li>
 <li>优点：指令中仅需要一个较小的地址字段, 且不需要存储器访问</li>
 <li>缺点：地址空间十分有限</li>
-<li>解释：寄存器寻址只有在被有效使用的时候才有意义<br><img src="7ba579c2a8dcf17e84bb69ea3c44ef4.png" alt="7ba579c2a8dcf17e84bb69ea3c44ef4" style="zoom:75%;" /></li>
+<li>解释：寄存器寻址只有在被有效使用的时候才有意义<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/7ba579c2a8dcf17e84bb69ea3c44ef4.png" alt="7ba579c2a8dcf17e84bb69ea3c44ef4" style="zoom:75%;" />
+</div></li>
 </ul>
 </li>
 <li>寄存器间接寻址<ul>
 <li>方式：地址字段指示寄存器</li>
 <li>算法：EA = (R)</li>
 <li>优点：扩大了地址空间，比间接寻址少1 次存储器访问</li>
-<li>缺点：相对于寄存器寻址，需要多1 次存储器访问<br><img src="b4e7fe96b05afc5716beeebe605ea5d.png" alt="b4e7fe96b05afc5716beeebe605ea5d" style="zoom:75%;" /> </li>
+<li>缺点：相对于寄存器寻址，需要多1 次存储器访问<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/b4e7fe96b05afc5716beeebe605ea5d.png" alt="b4e7fe96b05afc5716beeebe605ea5d" style="zoom:75%;" /> 
+</div></li>
 </ul>
 </li>
 <li>偏移寻址<ul>
@@ -426,14 +441,18 @@
 <li>此指令后续的下一条指令的地址加上地址字段的值产生有效地址</li>
 <li>用法：大多数存储器访问都相对靠近正在执行的指令，相对寻址可节省指令中的地址位数；可用于转移控制指令。</li>
 <li>算法：EA = (PC) + A</li>
-<li>优点：利用程序局部性原理，节省指令中地址的位数<br><img src="5631d9890ccaab93238948c8af96873.png" alt="5631d9890ccaab93238948c8af96873" style="zoom:75%;" /></li>
+<li>优点：利用程序局部性原理，节省指令中地址的位数<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/5631d9890ccaab93238948c8af96873.png" alt="5631d9890ccaab93238948c8af96873" style="zoom:75%;" />
+</div></li>
 </ul>
 </li>
 <li>基址寄存器寻址<ul>
 <li>方式：被引用的寄存器含有一个存储器地址，地址字段含有一个相对于那个地址的偏移量（通常是无符号整数表示）</li>
 <li>寄存器引用可以是显式的，也可以是隐式的</li>
 <li>算法：EA = (B) + A</li>
-<li>用法：虚拟内存空间中的程序重定位<br><img src="c8d29de812d20e07ed79cab5deca558.png" alt="c8d29de812d20e07ed79cab5deca558" style="zoom:75%;" /></li>
+<li>用法：虚拟内存空间中的程序重定位<div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/c8d29de812d20e07ed79cab5deca558.png" alt="c8d29de812d20e07ed79cab5deca558" style="zoom:75%;" />
+</div></li>
 </ul>
 </li>
 <li>变址寻址<ul>
@@ -441,14 +460,18 @@
 <li>算法：EA = A + (IX)</li>
 <li>用法：为完成重复操作提供一种高效机制</li>
 <li>扩展：结合间接寻址和变址寻址<ul>
-<li>前变址：EA = (A + IX ))；后变址：EA = (A) + IX<br><img src="58df44c9b28ef764dbaf9d242d94406.png" alt="58df44c9b28ef764dbaf9d242d94406" style="zoom:75%;" /></li>
+<li>前变址：EA = (A + IX ))；后变址：EA = (A) + IX<div align="center">
+ <img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/58df44c9b28ef764dbaf9d242d94406.png" alt="58df44c9b28ef764dbaf9d242d94406" style="zoom:75%;" />
+</div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>栈寻址<ul>
 <li>方式：栈指针保存在寄存器中，对寄存器中栈位置的访问实际上是一种寄存器间接寻址方式</li>
-<li>解释：与栈相关的是一个指针，它的值是栈顶地址，或者当栈顶的两个元素已在CPU 寄存器内，此时栈顶指针指向栈顶的第三个元素<br><img src="ad44b934e146b4ccb0694ef4faec0b0.png" alt="ad44b934e146b4ccb0694ef4faec0b0" style="zoom:75%;" /></li>
+<li>解释：与栈相关的是一个指针，它的值是栈顶地址，或者当栈顶的两个元素已在CPU 寄存器内，此时栈顶指针指向栈顶的第三个元素<br><div align="center">
+<img src="https://sprooc.github.io/2023/12/15/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac13%e8%ae%b2-%e6%8c%87%e4%bb%a4%e7%b3%bb%e7%bb%9f/ad44b934e146b4ccb0694ef4faec0b0.png" alt="ad44b934e146b4ccb0694ef4faec0b0" style="zoom:75%;" />
+</div><h3 id="指令格式"><a href="#指令格式" class="headerlink" title="指令格式"></a>指令格式</h3></li>
 </ul>
 </li>
 </ul>
@@ -457,8 +480,6 @@
 </li>
 </ul>
 </li>
-</ol>
-<h3 id="指令格式"><a href="#指令格式" class="headerlink" title="指令格式"></a>指令格式</h3><ol>
 <li>指令格式的设计原则<ul>
 <li>指令尽量短<ul>
 <li>程序占用存储空间小</li>
@@ -563,7 +584,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://sprooc.github.io/2023/12/15/《计算机组织结构》期末复习-第13讲-指令系统/" title="《计算机组织结构》期末复习-第13讲-指令系统" target="_blank">http://sprooc.github.io/2023/12/15/《计算机组织结构》期末复习-第13讲-指令系统/</a>
+          <a href="http://sprooc.github.io/2023/12/15/《计算机组织结构》期末复习-第13讲-指令系统/" title="《计算机组织结构》期末复习-第14讲-指令系统" target="_blank">http://sprooc.github.io/2023/12/15/《计算机组织结构》期末复习-第13讲-指令系统/</a>
         </li>
         
         <li>

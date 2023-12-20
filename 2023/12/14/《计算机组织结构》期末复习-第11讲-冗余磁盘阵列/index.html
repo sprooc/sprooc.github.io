@@ -17,20 +17,20 @@
 <meta property="og:site_name" content="Sprooc">
 <meta property="og:description" content="第11讲-冗余磁盘阵列">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214210403441.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214211106615.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214211547297.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214211853938.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214213556398.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214220525181.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214220514240.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214220725519.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214221752126.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214210403441.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214211106615.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214211547297.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214211853938.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214213556398.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214220525181.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214220514240.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214220725519.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214221752126.png">
 <meta property="article:published_time" content="2023-12-14T12:23:49.000Z">
-<meta property="article:modified_time" content="2023-12-14T14:27:36.000Z">
+<meta property="article:modified_time" content="2023-12-20T09:55:39.714Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://sprooc.github.io/2023/12/14/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC11%E8%AE%B2-%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/image-20231214210403441.png">
+<meta name="twitter:image" content="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214210403441.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -240,21 +240,27 @@
 <li>特性<ul>
 <li>由一组物理磁盘驱动器组成，被视为单个逻辑驱动器。</li>
 <li>数据是分布在多个物理磁盘上，分布方案称为条带。</li>
-<li>冗余磁盘容量用于存储奇偶校验信息，保证磁盘万一损坏时能恢复数据。</li>
+<li>冗余磁盘容量用于存储奇偶校验信息，保证磁盘万一损坏时能恢复数据。<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214210403441.png" alt="image-20231214210403441" style="zoom:80%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231214210403441.png" alt="image-20231214210403441" style="zoom:80%;" /></p>
 <h3 id="RAID-0"><a href="#RAID-0" class="headerlink" title="RAID 0"></a>RAID 0</h3><ol>
 <li>数据以条带的形式在可用的磁盘上分布</li>
 <li>不采用冗余来改善性能（不是RAID 家族中的真正成员）</li>
 <li>用途<ul>
 <li>高数据传输率</li>
-<li>高速响应I/O 请求：两个I/O 请求所需要的数据块可能在不同的磁盘上.如果条的大小相对较大，那么单个IO请求只涉及单个磁盘访问，则多个等待的IO请求就可以被并行处理，减少了每个请求的排队时间。</li>
+<li>高速响应I/O 请求：两个I/O 请求所需要的数据块可能在不同的磁盘上.如果条的大小相对较大，那么单个IO请求只涉及单个磁盘访问，则多个等待的IO请求就可以被并行处理，减少了每个请求的排队时间。<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214211106615.png" alt="image-20231214211106615" style="zoom:80%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231214211106615.png" alt="image-20231214211106615" style="zoom:80%;" /></p>
 <h3 id="RAID-1"><a href="#RAID-1" class="headerlink" title="RAID 1"></a>RAID 1</h3><ol>
 <li>采用了数据条带，采用简单地备份所有数据的方法来实现冗余。</li>
 <li>优点<ul>
@@ -268,31 +274,36 @@
 <li>价格昂贵（一半的容量）。</li>
 </ul>
 </li>
-<li>用途<ul>
+<li><p>用途</p>
+<ul>
 <li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
 <li>与RAID 0 相比<ul>
 <li>如果有大批的读请求，则RAID 1 能实现高速的I/O 速率，性能可以达到RAID 0<br>的两倍</li>
-<li>如果I/O 请求有相当大的部分是写请求，则它不比RAID 0 的性能好多少</li>
-</ul>
+<li>如果I/O 请求有相当大的部分是写请求，则它不比RAID 0 的性能好多少<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214211547297.png" alt="image-20231214211547297" style="zoom:80%;" />
+</div>
 </li>
 </ul>
 </li>
-</ol>
-<p><img src="image-20231214211547297.png" alt="image-20231214211547297" style="zoom:80%;" /></p>
-<ol>
-<li>RAID 01 vs. RAID 10<ul>
+</ul>
+</li>
+<li><p>RAID 01 vs. RAID 10</p>
+<ul>
 <li>RAID 01= RAID 0+1：先做RAID 0，再做RAID 1</li>
 <li>RAID 10= RAID 1+0：先做RAID 1，再做RAID 0</li>
 <li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的容错能力</li>
 <li>若Disk 0 和Disk 1 坏掉<ul>
 <li>RAID 01：两个RAID 0均无法工作，整个体统无法工作。</li>
-<li>RAID 10：两个RAID 1失去了校验功能，但仍可读写信息，系统可以正常工作。</li>
+<li>RAID 10：两个RAID 1失去了校验功能，但仍可读写信息，系统可以正常工作。<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214211853938.png" alt="image-20231214211853938" style="zoom:67%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231214211853938.png" alt="image-20231214211853938" style="zoom:67%;" /></p>
 <h3 id="RDIA-2"><a href="#RDIA-2" class="headerlink" title="RDIA 2"></a>RDIA 2</h3><ol>
 <li>采用并行存取技术</li>
 <li>目标:所有磁盘都参与每个I/O 请求的执行</li>
@@ -309,11 +320,15 @@
 </li>
 <li>缺点<ul>
 <li>冗余盘依然比较多，价格较贵</li>
-<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高可靠性的情况没有意义（实际基本弃用）</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高可靠性的情况没有意义（实际基本弃用）<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214213556398.png" />
+</div>
+
+
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231214213556398.png" alt="image-20231214213556398"></p>
 <h3 id="RAID-3"><a href="#RAID-3" class="headerlink" title="RAID 3"></a>RAID 3</h3><ol>
 <li>采用并行存取技术<ul>
 <li>各个驱动器的轴同步旋转</li>
@@ -325,9 +340,13 @@
 </ul>
 </li>
 <li>优点：能够获得非常高的数据传输率，对于大量读请求，性能改善特别明显</li>
-<li>缺点：一次只能执行一个I/O 请求，在面向多个IO 请求时，性能将受损</li>
+<li>缺点：一次只能执行一个I/O 请求，在面向多个IO 请求时，性能将受损<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214220525181.png" />
+</div>
+
+
+</li>
 </ol>
-<p><img src="image-20231214220525181.png" alt="image-20231214220525181"></p>
 <h3 id="RAID-4"><a href="#RAID-4" class="headerlink" title="RAID 4"></a>RAID 4</h3><ol>
 <li>采用独立存取技术<ul>
 <li>每个磁盘成员的操作是独立的，各个I/O 请求能够并行处理</li>
@@ -341,33 +360,37 @@
 </ul>
 </li>
 <li>当涉及所有磁盘的数据条带的较大I/O 写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
-<li>每一次写操作必须涉及到唯一的校验盘，校验盘会成为瓶颈（实际基本弃用）</li>
+<li>每一次写操作必须涉及到唯一的校验盘，校验盘会成为瓶颈（实际基本弃用）<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214220514240.png" alt="image-20231214220514240" style="zoom:80%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231214220514240.png" alt="image-20231214220514240" style="zoom:80%;" /></p>
 <h3 id="RAID-5"><a href="#RAID-5" class="headerlink" title="RAID 5"></a>RAID 5</h3><ol>
-<li><p>与RAID 4 组织方式相似（常用）</p>
-</li>
-<li><p>在所有磁盘上都分布了奇偶校验条带</p>
-<ul>
+<li>与RAID 4 组织方式相似（常用）</li>
+<li>在所有磁盘上都分布了奇偶校验条带<ul>
 <li>避免潜在的I/O 瓶颈问题</li>
 </ul>
 </li>
-<li><p>访问时的“两读两写”：读在写前，读写不需要并行</p>
-<p>  𝑃’(𝐵) =  𝑃(𝐵)⨁𝐵<sub>0</sub>⨁ 𝐵’<sub>0</sub></p>
+<li><p>访问时的“两读两写”：读在写前，读写不需要并行<br>  𝑃’(𝐵) =  𝑃(𝐵)⨁𝐵<sub>0</sub>⨁ 𝐵’<sub>0</sub></p>
+<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214220725519.png" alt="image-20231214220725519" style="zoom:80%;" />
+</div>
 </li>
-</ol>
-<p><img src="image-20231214220725519.png" alt="image-20231214220725519" style="zoom:80%;" /></p>
-<ol>
-<li>RAID 50<ul>
+<li><p>RAID 50</p>
+<ul>
 <li>RAID 5 与RAID 0 的组合，先作RAID 5，再作RAID 0，也就是对多组RAID 5 彼此构成条带访问</li>
 <li>RAID 50 在底层的任一组或多组RAID 5 中出现1 颗硬盘损坏时，仍能维持运作；如果任一组RAID 5 中出现2 颗或2 颗以上硬盘损毁，整组RAID 50 就会失效</li>
-<li>RAID 50 由于在上层把多组RAID 5 进行条带化，性能比起单纯的RAID 5 高，但容量利用率比RAID 5 要低</li>
+<li>RAID 50 由于在上层把多组RAID 5 进行条带化，性能比起单纯的RAID 5 高，但容量利用率比RAID 5 要低<div align="center">
+<img src="https://sprooc.github.io/2023/12/14/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac11%e8%ae%b2-%e5%86%97%e4%bd%99%e7%a3%81%e7%9b%98%e9%98%b5%e5%88%97/image-20231214221752126.png" alt="image-20231214221752126" style="zoom:80%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231214221752126.png" alt="image-20231214221752126" style="zoom:80%;" /></p>
 <h3 id="RAID-6"><a href="#RAID-6" class="headerlink" title="RAID 6"></a>RAID 6</h3><ol>
 <li>采用两种不同的校验码，并将校验码以分开的块存于不同的磁盘中</li>
 <li>优点：提升数据可用性：只有在平均修复时间间隔内3 个磁盘都出了故障，才会造成数据丢失</li>

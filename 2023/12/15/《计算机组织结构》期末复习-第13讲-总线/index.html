@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/9a3f8dc17b40122e261822c986ab632.png">
 <meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/d43da1decbed8bba82ae3b3f586a29d.png">
 <meta property="article:published_time" content="2023-12-15T12:57:33.000Z">
-<meta property="article:modified_time" content="2023-12-15T14:37:14.000Z">
+<meta property="article:modified_time" content="2023-12-20T09:53:13.315Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/image-20231215210246332.png">
@@ -339,69 +339,58 @@
 </ul>
 </li>
 <li>计数器查询 <ul>
-<li>将总线允许线替换为设备ID（地址）线          </li>
-<li>当总线仲裁器收到总线请求信号，判断总线空闲时，计数器开始计数，计数值通过设备ID 线发向各个部件          </li>
-<li>如果当前发送请求的设备ID 等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为繁忙          </li>
+<li>将总线允许线替换为设备ID（地址）线 </li>
+<li>当总线仲裁器收到总线请求信号，判断总线空闲时，计数器开始计数，计数值通过设备ID 线发向各个部件</li>
+<li>如果当前发送请求的设备ID 等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为繁忙 </li>
 <li>优点<ul>
 <li>通过使用不同的初始计数，可以灵活地确定设备优先级<ul>
 <li>强调优先级：从1 开始</li>
-<li>强调公平性：从下一个设备的ID 开始   </li>
-<li>对电路故障不敏感   </li>
+<li>强调公平性：从下一个设备的ID 开始 </li>
+<li>对电路故障不敏感 </li>
 </ul>
 </li>
 </ul>
 </li>
 <li>缺点<ul>
-<li>需要添加设备ID 线             </li>
-<li>需要解码和比较设备ID 信号           </li>
-<li>限制总线的速度              </li>
+<li>需要添加设备ID 线</li>
+<li>需要解码和比较设备ID 信号</li>
+<li>限制总线的速<br><img src="7b58c5908dbf8d0490b1137f3f1369f.png" alt="7b58c5908dbf8d0490b1137f3f1369f" style="zoom: 90%;" /></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ol>
-<p><img src="7b58c5908dbf8d0490b1137f3f1369f.png" alt="7b58c5908dbf8d0490b1137f3f1369f" style="zoom: 90%;" /></p>
-<ul>
-<li><p>独立请求</p>
-<ul>
+<li>独立请求<ul>
 <li>每个设备都有自己的总线请求线和总线允许线</li>
 <li>当一个设备请求总线时，它通过总线请求线将请求信号发送给总线仲裁器</li>
-<li><p>总线仲裁器决定哪个设备可以使用总线</p>
-<ul>
+<li>总线仲裁器决定哪个设备可以使用总线<ul>
 <li>确定策略：固定优先级，公平链式，LRU，FIFO</li>
 </ul>
 </li>
-<li><p>优点：快速响应；可编程的优先级</p>
-</li>
-<li>缺点：复杂的控制逻辑；更多的控制线路</li>
+<li>优点：快速响应；可编程的优先级</li>
+<li>缺点：复杂的控制逻辑；更多的控制线路<br><img src="a45b0f7154ac47e6ea3bd4ea0b74939.png" alt="a45b0f7154ac47e6ea3bd4ea0b74939" style="zoom:85%;" /></li>
 </ul>
 </li>
-</ul>
-<p><img src="a45b0f7154ac47e6ea3bd4ea0b74939.png" alt="a45b0f7154ac47e6ea3bd4ea0b74939" style="zoom:85%;" /></p>
-<ul>
-<li>自举式<ul>
+<li>自举式</li>
 <li>固定优先级</li>
-<li>每个设备在其总线请求线上发送请求</li>
+<li>每个设备在其总线请求线上发送请求<ul>
 <li>最低优先级的设备没有请求线</li>
-<li>每个设备自行判断自己是否在请求总线的设备中优先级最高</li>
 </ul>
 </li>
-</ul>
-<p><img src="862036a6fe5287ef6b619355bd58ab3.png" alt="862036a6fe5287ef6b619355bd58ab3" style="zoom:75%;" /></p>
-<ul>
-<li>冲突检测<ul>
-<li>当一个设备想要使用总线时，它会检查总线是否繁忙</li>
+<li>每个设备自行判断自己是否在请求总线的设备中优先级最高<br><img src="862036a6fe5287ef6b619355bd58ab3.png" alt="862036a6fe5287ef6b619355bd58ab3" style="zoom:75%;" /></li>
+<li>冲突检测</li>
+<li>当一个设备想要使用总线时，它会检查总线是否繁忙<ul>
 <li>如果总线空闲，设备使用总线</li>
-<li>冲突：如果两个设备发现总线空闲，它们可能同时使用总线</li>
+</ul>
+</li>
+<li>冲突：如果两个设备发现总线空闲，它们可能同时使用总线<ul>
 <li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
 <li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机时间间隔后再次请求总线</li>
 </ul>
-<ol>
-<li>时序（timing）</li>
-</ol>
 </li>
+</ul>
+</li>
+<li><p>时序（timing）</p>
+<ul>
 <li>确定每个总线事务的开始和结束时间</li>
 <li>总线事务：地址+ 数据+ … + 数据</li>
 <li>同步时序：事件的发生由时钟决定<ul>
@@ -445,13 +434,14 @@
 <li>分离事务：设备准备数据期间释放总线   <ul>
 <li>将一个总线事件分离为两个过程</li>
 <li>优点：增加总线利用率</li>
-<li>缺点：增加每个总线事件的持续时间和系统复杂度<br><img src="e5dc9f1eaeedae7136286233700c9c2.png" alt="e5dc9f1eaeedae7136286233700c9c2" style="zoom:85%;" />   </li>
+<li>缺点：增加每个总线事件的持续时间和系统复杂度<br><img src="e5dc9f1eaeedae7136286233700c9c2.png" alt="e5dc9f1eaeedae7136286233700c9c2" style="zoom:85%;" /></li>
 </ul>
-<ol>
-<li>总线带宽（bandwidth）：总线的最大数据传输速率。不要考虑总线仲裁、地址传输等因素。 </li>
-<li>数据传输速率（data transfer rate）：考虑地址传输、握手等因素。</li>
-</ol>
 </li>
+</ul>
+</li>
+<li><p>总线带宽（bandwidth）：总线的最大数据传输速率。不要考虑总线仲裁、地址传输等因素。 </p>
+</li>
+<li>数据传输速率（data transfer rate）：考虑地址传输、握手等因素。<ul>
 <li>例题1：假设同步总线的时钟周期为50 ns，每次传输需要一个时钟周期，异步总线每次握手需要40 ns 。两个总线都是32 位宽，内存的数据准备时间为200 ns 。当从存储器中读出一个32 位的字时，计算两个总线的数据传输速率。<ul>
 <li>同步总线<ul>
 <li>发送指令和地址到内存：50ns</li>
@@ -529,9 +519,8 @@
 </ul>
 </li>
 </ul>
-<ol>
-<li><p>总线层次结构</p>
-<ul>
+</li>
+<li>总线层次结构<ul>
 <li>单总线结构：CPU、存储器和I/O 模块都连接到一条系统总线<ul>
 <li>优点：简单，易于扩展</li>
 <li>缺点：连接的设备越多，总线长度越大，传输延迟也就越大；聚集的传输请求接近总线容量时，总线成为瓶颈<br><img src="40ff86dbaedcc381a249137d805f48c.png" alt="40ff86dbaedcc381a249137d805f48c"></li>
@@ -666,7 +655,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          《计算机组织结构》期末复习-第13讲-指令系统
+          《计算机组织结构》期末复习-第14讲-指令系统
         
       </div>
     </a>

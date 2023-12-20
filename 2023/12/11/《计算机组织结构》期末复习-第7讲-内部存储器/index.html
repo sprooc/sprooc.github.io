@@ -17,32 +17,32 @@
 <meta property="og:site_name" content="Sprooc">
 <meta property="og:description" content="第7讲-内部存储器">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231211215347325.png">
-<meta property="og:image" content="https://pica.zhimg.com/80/v2-eea6e461a97e4273e93fcec13276ebba_720w.webp?source=1def8aca">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-0cf2e34ec4c12654f5c11156192d7406_720w.webp?source=1def8aca">
-<meta property="og:image" content="https://picx.zhimg.com/80/v2-1995e8bd1afa8bd20bac2f4098ae6cce_720w.webp?source=1def8aca">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/03ce4ce3bddda304f78a7874c4fbc21.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/cpt7-4.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/6aee1147c0a2b1dcbb6aad2260ac01a.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/c45a7bcd8f2fe3922ee186b9169abe8.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/95b95b545a8e205757cc1393d05ab4a.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/b55108f28bef2e7de730bce977c3680.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/70d77704608eec0f638c9073f3ed293.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/0f98bebd96a8cbcd7ee9b3b692a4aec.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/f94ea025cf9e0640b3c9ed1137bf7ba.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212180159945.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e95c8b405fbb5f2f6a13581cd132445.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/e408d144336de24dd3b59c2a6482d6c.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192727683.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192717520.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/d9de3049edd4019913d6b9fecaec64e.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/762c7f6add775ffee42a7e0c099b8b4.png">
-<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/399904474e1ad0c8309a6027406e9b7.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/image-20231211215347325.png">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/v2-eea6e461a97e4273e93fcec13276ebba_720w-17030664435721.webp">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/v2-0cf2e34ec4c12654f5c11156192d7406_720w.webp">
+<meta property="og:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/v2-1995e8bd1afa8bd20bac2f4098ae6cce_720w.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/03ce4ce3bddda304f78a7874c4fbc21.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/cpt7-4.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/6aee1147c0a2b1dcbb6aad2260ac01a.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/c45a7bcd8f2fe3922ee186b9169abe8.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/95b95b545a8e205757cc1393d05ab4a.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/b55108f28bef2e7de730bce977c3680.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/70d77704608eec0f638c9073f3ed293.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/0f98bebd96a8cbcd7ee9b3b692a4aec.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/f94ea025cf9e0640b3c9ed1137bf7ba.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/image-20231212180159945.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/e95c8b405fbb5f2f6a13581cd132445.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/e408d144336de24dd3b59c2a6482d6c.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192727683.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192717520.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/d9de3049edd4019913d6b9fecaec64e.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/762c7f6add775ffee42a7e0c099b8b4.png">
+<meta property="og:image" content="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/399904474e1ad0c8309a6027406e9b7.png">
 <meta property="article:published_time" content="2023-12-11T13:52:04.000Z">
-<meta property="article:modified_time" content="2023-12-12T12:06:44.000Z">
+<meta property="article:modified_time" content="2023-12-20T10:06:49.084Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231211215347325.png">
+<meta name="twitter:image" content="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/image-20231211215347325.png">
   
     <link rel="alternative" href="/atom.xml" title="Sprooc" type="application/atom+xml">
   
@@ -251,34 +251,30 @@
 <li>层次结构<ul>
 <li>主板内存储器：寄存器，Cache，主存。</li>
 <li>主板外存储器：磁盘，CD-ROM，CD-RW，DVD-RW，DVD-RAM。</li>
-<li>离线存储器：磁带</li>
+<li>离线存储器：磁带<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/image-20231211215347325.png" alt="image-20231211215347325" style="zoom:100%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="image-20231211215347325.png" alt="image-20231211215347325" style="zoom:100%;" /></p>
-<h3 id="AND-OR锁存器"><a href="#AND-OR锁存器" class="headerlink" title="AND-OR锁存器"></a>AND-OR锁存器</h3><p>参考文章：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/373693400">谁能告诉我AND-OR锁存器原理？ - 知乎 (zhihu.com)</a></p>
-<p>先解释OR锁</p>
-<p><strong>OR锁：</strong></p>
-<p><img src="https://pica.zhimg.com/80/v2-eea6e461a97e4273e93fcec13276ebba_720w.webp?source=1def8aca" alt="img"></p>
-<p>OR门B输入和输出连接。</p>
-<p>INIT为初始状态A=B=0；</p>
-<p>当A=1，B=0时，OUTPUT变为1同时将B变为1；</p>
-<p>此时，当A变回0，OUTPUT仍为1（被锁住）。</p>
+<h3 id="AND-OR锁存器"><a href="#AND-OR锁存器" class="headerlink" title="AND-OR锁存器"></a>AND-OR锁存器</h3><p>参考文章：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/373693400">谁能告诉我AND-OR锁存器原理？ - 知乎 (zhihu.com)</a><br>先解释OR锁<strong>OR锁：</strong></p>
+<p><img src="v2-eea6e461a97e4273e93fcec13276ebba_720w-17030664435721.webp" alt="img"><br>OR门B输入和输出连接。<br>INIT为初始状态A=B=0；<br>当A=1，B=0时，OUTPUT变为1同时将B变为1；<br>此时，当A变回0，OUTPUT仍为1（被锁住）。</p>
 <p><strong>AND锁：</strong></p>
-<p><img src="https://pic1.zhimg.com/80/v2-0cf2e34ec4c12654f5c11156192d7406_720w.webp?source=1def8aca" alt="img"></p>
+<p><img src="v2-0cf2e34ec4c12654f5c11156192d7406_720w.webp" alt="img"></p>
 <p>AND门B输入和输出连接。</p>
 <p>INIT为初始状态A=B=1；</p>
 <p>当A=0，B=1时，OUTPUT变为0同时将B变为0；</p>
 <p>此时，当A变回1，OUTPUT仍为0（被锁住）。</p>
 <p><strong>AND-OR锁存器：</strong></p>
-<p><img src="https://picx.zhimg.com/80/v2-1995e8bd1afa8bd20bac2f4098ae6cce_720w.webp?source=1def8aca" alt="img"></p>
+<p><img src="v2-1995e8bd1afa8bd20bac2f4098ae6cce_720w.png" alt="img"></p>
 <p>锁存器有两个输入SET和RESET，其<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=电路&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A1093469618}">电路</a>如上图连接。</p>
 <p>INIT为初始状态SET=RESET=0，最终输出OUTPUT=0；</p>
 <p>当SET=1，RESET=0（SET激活、RESET未激活）时，将输出变为1，锁住（可看出SET变为0，结果不变）</p>
 <p>此时RESET激活（SET=1，RESET=1），将输出重新变为0，即为重置。</p>
 <h3 id="半导体存储器"><a href="#半导体存储器" class="headerlink" title="半导体存储器"></a>半导体存储器</h3><ol>
-<li><p>用半导体芯片作主存储器是目前的主流做法</p>
-</li>
+<li>用半导体芯片作主存储器是目前的主流做法</li>
 <li><p>位元（memory cell）</p>
 <ul>
 <li>半导体存储器的基本元件，用于存储1位数据</li>
@@ -288,7 +284,7 @@
 <li>它们能够被读取（read）来获得状态信息  </li>
 </ol>
 </li>
-<li>操作<br><img src="03ce4ce3bddda304f78a7874c4fbc21.png" alt="03ce4ce3bddda304f78a7874c4fbc21"></li>
+<li>操作<br><img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/03ce4ce3bddda304f78a7874c4fbc21.png" alt="03ce4ce3bddda304f78a7874c4fbc21" style="zoom:80%;" /></li>
 </ul>
 </li>
 <li><p>半导体存储器类型</p>
@@ -361,14 +357,12 @@
 <li>易失的（Volatile）</li>
 </ul>
 </li>
-<li><p>类型</p>
-<ul>
+<li>类型<ul>
 <li>静态RAM（SRAM）：Static RAM（1963年由Robert Norman在仙童发明）</li>
 <li>动态RAM（DRAM）：Dynamic RAM（1967年由Robert Dennard在IBM发明）</li>
 </ul>
 </li>
-<li><p>静态RAM（SRAM）</p>
-<ol>
+<li>静态RAM（SRAM）<ol>
 <li>用传统的触发器逻辑门结构来存储二进制。只要有电源供电，SRAM就会保存数据（断电信息丢失）。常用于Cache。      </li>
 <li>典型结构：六管静态MOS管存储元件   <ol>
 <li>状态   <ul>
@@ -379,73 +373,20 @@
 <li>信息保持：字选择线（地址线）加低电平，T5、T6截止，触发器与外界隔离，信息保持不变。</li>
 <li>读出：首先在两根位线上加高电平，地址线加高电平，T5、T6导通。若为状态1，T2导通，所以有电流从位线$\overline{\text{B}}$经过T6、T2流入地，位线$\overline{\text{B}}$上产生负脉冲。反之，若为状态0，位线B上产生负脉冲。</li>
 <li>写入：地址线加高电平，T5、T6导通。若写入1，位线$\overline{\text{B}}$加低电平，T3导通，T1截止，C1电位升高，完成写1.若写入，位线B加低电平，T4导通，T2截止，C2电位升高，完成写0.   </li>
-<li>即使元件不读写时，保持状态1时，T2、T3导通，仍有电流经T3、T2流向地线，因此功耗大。</li>
+<li>即使元件不读写时，保持状态1时，T2、T3导通，仍有电流经T3、T2流向地线，因此功耗大。<br><img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/cpt7-4.png" alt="img" style="zoom:80%;" /></li>
 </ol>
 </li>
 </ol>
 </li>
-</ol>
-<p><img src="cpt7-4.png" alt="img"></p>
-<ol>
-<li><p>动态RAM（DRAM）</p>
-<ol>
+<li>动态RAM（DRAM）<ol>
 <li>DRAM的存储单元把数据存储为电容上的电荷。电容上的电荷存在或不存在被解释为状态1或0。   </li>
 <li>写入：字选择线加高电平，T导通。若写1，位线加高电平，给电容充电；若写0，位线加低电平，给电容放点。   </li>
 <li>读出：字选择线加高电平，T导通。若原存1，电容放点，位线产生电流；若原存0，则无电流流过。放电后，电容点位下降，需要重写，成为“再生”操作。由于电容放点产生的电流不会很大，需要放大器增大电流。</li>
-<li>电容存在漏电效应，一段时间后电荷会流失，导致数据丢失。因此需要定时刷新。<br><img src="6aee1147c0a2b1dcbb6aad2260ac01a.png" alt="6aee1147c0a2b1dcbb6aad2260ac01a"></li>
+<li>电容存在漏电效应，一段时间后电荷会流失，导致数据丢失。因此需要定时刷新。<br><img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/6aee1147c0a2b1dcbb6aad2260ac01a.png" alt="6aee1147c0a2b1dcbb6aad2260ac01a" style="zoom:80%;" /></li>
 </ol>
 </li>
-<li><p>SRAM与DRAM的对比</p>
-</li>
+<li>SRAM与DRAM的对比<br>|              |     SRAM     | DRAM  |<br>| :—————: | :—————: | :—-: |<br>|  <strong>易失性</strong>  |     易失     | 易失  |<br>| <strong>存储单元</strong> | 双稳态触发器 | 电容  |<br>|  <strong>集成度</strong>  |      低      |  高   |<br>|   <strong>功耗</strong>   |      高      |  低   |<br>|   <strong>速度</strong>   |      快      |  慢   |<br>|   <strong>刷新</strong>   |      无      |  有   |<br>|   <strong>价格</strong>   |    $1/MB     | $1/GB |</li>
 </ol>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:center">SRAM</th>
-<th style="text-align:center">DRAM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong>易失性</strong></td>
-<td style="text-align:center">易失</td>
-<td style="text-align:center">易失</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>存储单元</strong></td>
-<td style="text-align:center">双稳态触发器</td>
-<td style="text-align:center">电容</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>集成度</strong></td>
-<td style="text-align:center">低</td>
-<td style="text-align:center">高</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>功耗</strong></td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">低</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>速度</strong></td>
-<td style="text-align:center">快</td>
-<td style="text-align:center">慢</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>刷新</strong></td>
-<td style="text-align:center">无</td>
-<td style="text-align:center">有</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>价格</strong></td>
-<td style="text-align:center">$1/MB</td>
-<td style="text-align:center">$1/GB</td>
-</tr>
-</tbody>
-</table>
-</div>
 <h4 id="只读存储器（ROM）"><a href="#只读存储器（ROM）" class="headerlink" title="只读存储器（ROM）"></a>只读存储器（ROM）</h4><ol>
 <li>只读存储器（ROM）<ol>
 <li>Read-only memory（ROM），一种可以长期保存信息的存储器，具有断电后信息仍可继续保存的特点，在正常工作时只可读取数据，而不能写入数据。</li>
@@ -458,13 +399,15 @@
 <li>问题：<ul>
 <li>数据插入步骤包含了相对较大的固定成本，不论制造的是特定ROM的一个还是几千个副本。</li>
 <li>无出错处理机会：如果有一位出错，整批的ROM芯片只能报废。</li>
-<li>用户无法写入数据：唯一的数据写入机会再出厂时完成。   </li>
+<li>用户无法写入数据：唯一的数据写入机会再出厂时完成。</li>
 </ul>
 </li>
 </ol>
 </li>
 <li>可编程ROM（PROM）<ol>
-<li>Programmable ROM（PROM），写处理的执行是电气化的，可以由供应商或客户在原始芯片制作出来后执行。<br><img src="c45a7bcd8f2fe3922ee186b9169abe8.png" alt="c45a7bcd8f2fe3922ee186b9169abe8" style="zoom:50%;" /></li>
+<li>Programmable ROM（PROM），写处理的执行是电气化的，可以由供应商或客户在原始芯片制作出来后执行。<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/c45a7bcd8f2fe3922ee186b9169abe8.png" alt="c45a7bcd8f2fe3922ee186b9169abe8" style="zoom:50%;" />
+</div></li>
 <li>特性<ul>
 <li>非易失的</li>
 <li>只能被写入一次。写入过程使用电信号执行，需要特殊设备来完成写或编程过程。   </li>
@@ -472,13 +415,11 @@
 </li>
 <li>与ROM的对比<ul>
 <li>PROM提供了灵活性和方便性。</li>
-<li>ROM在大批量生产领域仍具有吸引力。</li>
+<li>ROM在大批量生产领域仍具有吸引力。<h4 id="以读为主存储器"><a href="#以读为主存储器" class="headerlink" title="以读为主存储器"></a>以读为主存储器</h4></li>
 </ul>
 </li>
 </ol>
 </li>
-</ol>
-<h4 id="以读为主存储器"><a href="#以读为主存储器" class="headerlink" title="以读为主存储器"></a>以读为主存储器</h4><ol>
 <li>Read-Mostly Memory</li>
 <li>特性<ul>
 <li>非易失的</li>
@@ -491,28 +432,26 @@
 <li>Erasable programmable read-only memory（EPROM）</li>
 <li>特性<ul>
 <li>电写入（1- &gt;0）：漏极和选择栅加高压，电子温度上升变为热电子，上升穿过氧化层，进入浮栅。P型半导体的负电子被浮栅中的电子排斥，原理绝缘层，效应管不导通，数据被写入0。</li>
-<li>光擦除（0-&gt;1)：将封装芯片暴露在紫外线下，照射使电子获得能量，逃出浮栅，场效应管导通，所有单元变回状态1。每次擦除需要约20分钟。</li>
+<li>光擦除（0-&gt;1)：将封装芯片暴露在紫外线下，照射使电子获得能量，逃出浮栅，场效应管导通，所有单元变回状态1。每次擦除需要约20分钟。<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/95b95b545a8e205757cc1393d05ab4a.png" alt="95b95b545a8e205757cc1393d05ab4a" style="zoom: 50%;" />
+</div></li>
 </ul>
 </li>
 </ol>
 </li>
-</ol>
-<p><img src="95b95b545a8e205757cc1393d05ab4a.png" alt="95b95b545a8e205757cc1393d05ab4a" style="zoom: 50%;" /></p>
-<ol>
-<li><p>电可擦除可编程只读存储器（EEPROM）</p>
-<ol>
+<li>电可擦除可编程只读存储器（EEPROM）<ol>
 <li>Electrically erasable programmable read-only memory（EEPROM）。目前用于车载摄像头和传感器出厂设置、安全气囊的弹出记录以及需要长时间通电的工业自动化设备和服务器的数据记录系统等；在DDR SDRAM中也会使用EEPROM，用于保存内存的相关信息，计算机会在开机自检时会读取这些信息</li>
 <li>特性<ul>
 <li>可以随时写入而不删除之前的内容；只更新寻址到的一个或多个字节。</li>
 <li>电写入（1-&gt;0）：源极和漏极接地，控制栅接高电平，电子进入浮栅。写操作每字节需要大约5ms，而读一个字节大约0.5微秒。</li>
-<li>电擦除（0-&gt;1）：源极和控制栅接地，漏极接高电平，浮栅中电子进入衬底。每次擦除仅需4~6ms，可擦除百万次。</li>
+<li>电擦除（0-&gt;1）：源极和控制栅接地，漏极接高电平，浮栅中电子进入衬底。每次擦除仅需4~6ms，可擦除百万次。<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/b55108f28bef2e7de730bce977c3680.png" alt="b55108f28bef2e7de730bce977c3680" style="zoom:50%;" />
+</div></li>
 </ul>
 </li>
 </ol>
-<p><img src="b55108f28bef2e7de730bce977c3680.png" alt="b55108f28bef2e7de730bce977c3680" style="zoom:50%;" /></p>
 </li>
-<li><p>快闪存储器（Flash Memory）</p>
-<ol>
+<li>快闪存储器（Flash Memory）<ol>
 <li>特性<ul>
 <li>电可擦除：与EEPROM原理类似，优于EPROM。</li>
 <li>可以在块级擦除，不能在字节级擦除：优于EPROM，不如EEPROM。</li>
@@ -521,23 +460,26 @@
 </li>
 <li>分类<ul>
 <li>NOR Flash：数据线和地址线分开，可以读任意字节。</li>
-<li>NAND Flash：数据线可地址线共用，只能按页读取。</li>
+<li>NAND Flash：数据线可地址线共用，只能按页读取。<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/70d77704608eec0f638c9073f3ed293.png" alt="70d77704608eec0f638c9073f3ed293" style="zoom:50%;" />
+</div></li>
 </ul>
 </li>
 </ol>
 </li>
+<li>各类ROM 对比<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/0f98bebd96a8cbcd7ee9b3b692a4aec.png" alt="0f98bebd96a8cbcd7ee9b3b692a4aec" style="zoom:67%;" />
+</div>
+
+</li>
 </ol>
-<p><img src="70d77704608eec0f638c9073f3ed293.png" alt="70d77704608eec0f638c9073f3ed293" style="zoom:50%;" /></p>
-<ol>
-<li>各类ROM 对比</li>
-</ol>
-<p><img src="0f98bebd96a8cbcd7ee9b3b692a4aec.png" alt="0f98bebd96a8cbcd7ee9b3b692a4aec" style="zoom:67%;" /></p>
 <h3 id="从位元到主存"><a href="#从位元到主存" class="headerlink" title="从位元到主存"></a>从位元到主存</h3><h4 id="寻址单元"><a href="#寻址单元" class="headerlink" title="寻址单元"></a>寻址单元</h4><ol>
 <li>寻址单元（Addressable unit）：由若干相同地址的位元组成。</li>
 <li>寻址模式：字节（Byte）：常用；字（Word）：专门用途的计算机。</li>
 </ol>
 <h4 id="芯片"><a href="#芯片" class="headerlink" title="芯片"></a>芯片</h4><ol>
-<li>芯片引脚<ul>
+<li><p>芯片引脚</p>
+<ul>
 <li>Address：A0 - A19</li>
 <li>Data：D0 - D7</li>
 <li>Vcc：电源</li>
@@ -547,18 +489,17 @@
 <li>WE：写允许</li>
 <li>OE：读允许</li>
 <li>RAS：行地址选通</li>
-<li>CAS：列地址选通</li>
+<li>CAS：列地址选通<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/f94ea025cf9e0640b3c9ed1137bf7ba.png" alt="f94ea025cf9e0640b3c9ed1137bf7ba" style="zoom:70%;" />
+</div>
+</li>
 </ul>
 </li>
-</ol>
-<p><img src="f94ea025cf9e0640b3c9ed1137bf7ba.png" alt="f94ea025cf9e0640b3c9ed1137bf7ba" style="zoom:70%;" /></p>
-<ol>
-<li>存储阵列（Memory Array）：由大量寻址单元组成</li>
-</ol>
-<p><img src="image-20231212180159945.png" alt="image-20231212180159945" style="zoom: 50%;" /></p>
-<ol>
-<li><p>如何寻址</p>
-<ol>
+<li><p>存储阵列（Memory Array）：由大量寻址单元组成</p>
+<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/image-20231212180159945.png" alt="image-20231212180159945" style="zoom: 50%;" />
+</div></li>
+<li>如何寻址<ol>
 <li>获得总线控制权。</li>
 <li>CPU向存储阵列发送地址。</li>
 <li>时序和控制单元将地址分解为行地址或列地址。</li>
@@ -570,8 +511,7 @@
 <li>数据进入数据输入缓冲区。</li>
 </ol>
 </li>
-<li><p>如何刷新</p>
-<ol>
+<li>如何刷新<ol>
 <li>约束：刷新会占用片选线、地址线、地址译码器</li>
 <li>刷新时只给各芯片送行地址和RAS信号，这样一行的所有元素被选中并进行读出操作。因此刷新按行进行，一次可刷新一行。2048x2038x4位的芯片只要2048次刷新。</li>
 <li>三种刷新方式<ul>
@@ -589,15 +529,13 @@
 <li>异步刷新<ul>
 <li>每一行各自以固定间隔（小于最大刷新周期，毫秒级）刷新</li>
 <li>将DRAM的刷新安排在CPU对指令的译码阶段，可有效避免死区</li>
-<li>效率高：常用</li>
+<li>效率高：常用<h4 id="DDR-DRAM"><a href="#DDR-DRAM" class="headerlink" title="DDR DRAM"></a>DDR DRAM</h4></li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
 </li>
-</ol>
-<h4 id="DDR-DRAM"><a href="#DDR-DRAM" class="headerlink" title="DDR DRAM"></a>DDR DRAM</h4><ol>
 <li>异步DRAM与同步DRAM<ul>
 <li>异步DRAM：传统DRAM是异步的。读写操作时，处理器向内存提供地址和控制电平。接着进入访问延迟时间，这段时间内DRAM执行各种内部功能，如激活行和列地址线的高电容，读取数据，以及通过输出缓冲将数据输出，处理器只能等待这段延迟，即存取时间，从而降低了系统性能。</li>
 <li>同步DRAM：SDRAM在系统时钟控制下移入和移出数据。处理器或其他主机发出指令和地址信息，并有SDRAM锁存。然后SDRAM在一定的时钟周期后响应。同时，当SDRAM处理请求时，主设备可以安全地执行其他任务。</li>
@@ -605,28 +543,34 @@
 </li>
 <li>DRAM读写周期<ol>
 <li>读周期<br>（1）行地址必须在$\overline{\text{RAS}}$信号有效之前送到芯片的地址输入端。<br>（2）$\overline{\text{CAS}}$信号应滞后$\overline{\text{RAS}}$一段时间,并滞后列地址送到芯片地址输入端的时间。<br>（3）$\overline{\text{RAS}}$、$\overline{\text{CAS}}$的时延分别为 t<sub>RAS</sub>和 <sub>CAS</sub>，它们应有足够的宽度。<br>（4）$\overline{\text{WE}}$信号为高电平，并在$\overline{\text{CAS}}$有效之前建立。<br>（5）每次读后要再生，即重新写人一次。<ol>
-<li>写周期：在写周期中,$\overline{\text{RAS}}$与$\overline{\text{CAS}}$之间的关系以及与地址信息间的关系和读周期相同但还有两点不同。<br>（1）$\overline{\text{WE}}$信号为低电平，并在$\overline{\text{CAS}}$信号有效之前建立。（$\overline{\text{WE}}$上有一条上划线，表示取反，$\overline{\text{WE}}$=0时，表示写使能有效）<br>（2）写数据必须在$\overline{\text{CAS}}$有效之前出现在D端。<br><img src="e95c8b405fbb5f2f6a13581cd132445.png" alt="e95c8b405fbb5f2f6a13581cd132445" style="zoom:60%;" /></li>
+<li>写周期：在写周期中,$\overline{\text{RAS}}$与$\overline{\text{CAS}}$之间的关系以及与地址信息间的关系和读周期相同但还有两点不同。<br>（1）$\overline{\text{WE}}$信号为低电平，并在$\overline{\text{CAS}}$信号有效之前建立。（$\overline{\text{WE}}$上有一条上划线，表示取反，$\overline{\text{WE}}$=0时，表示写使能有效）<br>（2）写数据必须在$\overline{\text{CAS}}$有效之前出现在D端。    <div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/e95c8b405fbb5f2f6a13581cd132445.png" alt="e95c8b405fbb5f2f6a13581cd132445" style="zoom:60%;" />
+</div></li>
 </ol>
 </li>
 </ol>
 </li>
-<li><p>SDRAM读写<br>​    SDRAM的每一步操作都在外部系统时钟CLK 的控制下进行支持突发(burst)传输方式。只要在第一次存取时给出首地址，以后按地址顺序读写即可，而不再需要地址建立时间和行列预充电时间就能快速连续地从行缓冲器(row buffer)中输出一连串数据。行缓冲器用来缓存指定行中每一行的数据，通常用SRAM 元件实现。内部的工作方式寄存器(也称模式寄存器)可用来设置传送数据的长度以及从收到读命令(与CAS 信号同时发出)到开始传送数据的延迟时间等前者称为突发长度(burst length，BL)，后者称为CAS潜伏期(CAS latency，CL)。根据所设定的 BL和CL，CPU 可以确定何时开始从总线上取数以及连续取多少个数据在开始的第一个数据读出后，同一行的所有数据都被送到行缓冲器中，因此，以后每个时钟可从SDRAM读取一个数据，并在下一个时钟内通过总线传送到 CPU。<br><img src="e408d144336de24dd3b59c2a6482d6c.png" alt="e408d144336de24dd3b59c2a6482d6c" style="zoom:50%;" /></p>
-</li>
-<li><p>DDR SDRAM</p>
-<ul>
+<li>SDRAM读写<br> SDRAM的每一步操作都在外部系统时钟CLK 的控制下进行支持突发(burst)传输方式。只要在第一次存取时给出首地址，以后按地址顺序读写即可，而不再需要地址建立时间和行列预充电时间就能快速连续地从行缓冲器(row buffer)中输出一连串数据。行缓冲器用来缓存指定行中每一行的数据，通常用SRAM 元件实现。内部的工作方式寄存器(也称模式寄存器)可用来设置传送数据的长度以及从收到读命令(与CAS 信号同时发出)到开始传送数据的延迟时间等前者称为突发长度(burst length，BL)，后者称为CAS潜伏期(CAS latency，CL)。根据所设定的 BL和CL，CPU 可以确定何时开始从总线上取数以及连续取多少个数据在开始的第一个数据读出后，同一行的所有数据都被送到行缓冲器中，因此，以后每个时钟可从SDRAM读取一个数据，并在下一个时钟内通过总线传送到 CPU。<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%e3%80%8a%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%bb%84%e7%bb%87%e7%bb%93%e6%9e%84%e3%80%8b%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0-%e7%ac%ac7%e8%ae%b2-%e5%86%85%e9%83%a8%e5%ad%98%e5%82%a8%e5%99%a8/e408d144336de24dd3b59c2a6482d6c.png" alt="e408d144336de24dd3b59c2a6482d6c" style="zoom:50%;" />
+</div></li>
+<li>DDR SDRAM<ul>
 <li>Double Data Rate：每个时钟周期发送两次数据，一次在时钟脉冲的上升沿，一次在下降沿。</li>
 <li>通过三种途径获得更高的数据速率，DDR -&gt; DDR2 -&gt;  DDR3 -&gt; DDR4 -&gt; DDR5<ul>
 <li>数据传输被同步到时钟的上升沿和下降沿，而不仅仅在上升沿，使得数据速率加倍。</li>
 <li>使用更高的总线时钟频率。</li>
-<li>使用缓冲方案。</li>
+<li>使用缓冲方案。<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192727683.png" alt="image-20231212192727683" style="zoom:80%;" /> 
+<img src="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/image-20231212192717520.png" alt="image-20231212192717520" style="zoom:80%;" />
+<img src="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/d9de3049edd4019913d6b9fecaec64e.png" alt="d9de3049edd4019913d6b9fecaec64e" style="zoom:80%;" />
+<img src="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/762c7f6add775ffee42a7e0c099b8b4.png" alt="762c7f6add775ffee42a7e0c099b8b4" style="zoom:80%;" />
+</div>
+
+</li>
 </ul>
 </li>
 </ul>
-<p><img src="image-20231212192727683.png" alt="image-20231212192727683"><br><img src="image-20231212192717520.png" alt="image-20231212192717520"></p>
 </li>
 </ol>
-<p><img src="d9de3049edd4019913d6b9fecaec64e.png" alt="d9de3049edd4019913d6b9fecaec64e"></p>
-<p><img src="762c7f6add775ffee42a7e0c099b8b4.png" alt="762c7f6add775ffee42a7e0c099b8b4"></p>
 <h4 id="模块组织"><a href="#模块组织" class="headerlink" title="模块组织"></a>模块组织</h4><ol>
 <li>位扩展：地址线不变，数据线增加<ul>
 <li>使用8 块4K*1 bit 的芯片组成4K*8 bit的存储器</li>
@@ -637,11 +581,13 @@
 </ul>
 </li>
 <li>字、位同时扩展：地址线增加，数据线增加<ul>
-<li>使用8 个16K*4 bit 的芯片组成64K*8bit 的存储器</li>
+<li>使用8 个16K*4 bit 的芯片组成64K*8bit 的存储器<div align="center">
+<img src="https://sprooc.github.io/2023/12/11/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC7%E8%AE%B2-%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/399904474e1ad0c8309a6027406e9b7.png" alt="399904474e1ad0c8309a6027406e9b7" style="zoom:80%;" />
+</div>
+</li>
 </ul>
 </li>
 </ol>
-<p><img src="399904474e1ad0c8309a6027406e9b7.png" alt="399904474e1ad0c8309a6027406e9b7"></p>
 
     
 
