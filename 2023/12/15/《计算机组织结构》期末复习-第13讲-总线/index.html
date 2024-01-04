@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/9a3f8dc17b40122e261822c986ab632.png">
 <meta property="og:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/d43da1decbed8bba82ae3b3f586a29d.png">
 <meta property="article:published_time" content="2023-12-15T12:57:33.000Z">
-<meta property="article:modified_time" content="2023-12-20T09:53:13.315Z">
+<meta property="article:modified_time" content="2024-01-01T04:12:04.816Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://sprooc.github.io/2023/12/15/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC13%E8%AE%B2-%E6%80%BB%E7%BA%BF/image-20231215210246332.png">
@@ -257,7 +257,7 @@
 <li>地址线的数量决定了寻址空间的大小</li>
 </ul>
 </li>
-<li>控制线：控制对数据线和地址线的存取和使用</li>
+<li>控制线：控制对数据线和地址线的存取和使用<ul>
 <li>时钟（clock）：用于总线同步操作</li>
 <li>总线请求（bus request）：表示模块需要获得对总线的控制</li>
 <li>总线允许（bus grant）：发出请求的设备已经被允许控制总线</li>
@@ -266,12 +266,11 @@
 <li>存储器读（memory read）：从存储器读数据到总线</li>
 <li>存储器写（memory write）：将数据从总线写入存储器</li>
 <li>I/O读（I/O read）：从I/O 端口读数据到总线</li>
-<li>I/O写（I/O write）：将数据从总线写入I/O 端口</li>
+<li>I/O写（I/O write）：将数据从总线写入I/O 端口<br><img src="image-20231215210246332.png" alt="image-20231215210246332" style="zoom:70%;" /></li>
 </ul>
 </li>
-</ol>
-<p><img src="image-20231215210246332.png" alt="image-20231215210246332" style="zoom:70%;" /></p>
-<ol>
+</ul>
+</li>
 <li>总线上数据传输的特点<ul>
 <li>总线可以被多个设备监听，但同一时刻只能由一个设备发送数据<ul>
 <li>如果同一时刻多个设备同时发送数据，会造成数据之间的混淆</li>
@@ -370,25 +369,31 @@
 <li>缺点：复杂的控制逻辑；更多的控制线路<br><img src="a45b0f7154ac47e6ea3bd4ea0b74939.png" alt="a45b0f7154ac47e6ea3bd4ea0b74939" style="zoom:85%;" /></li>
 </ul>
 </li>
-<li>自举式</li>
-<li>固定优先级</li>
-<li>每个设备在其总线请求线上发送请求<ul>
+<li><p>自举式</p>
+<ul>
+<li><p>固定优先级</p>
+</li>
+<li><p>每个设备在其总线请求线上发送请求</p>
+<ul>
 <li>最低优先级的设备没有请求线</li>
 </ul>
 </li>
-<li>每个设备自行判断自己是否在请求总线的设备中优先级最高<br><img src="862036a6fe5287ef6b619355bd58ab3.png" alt="862036a6fe5287ef6b619355bd58ab3" style="zoom:75%;" /></li>
-<li>冲突检测</li>
-<li>当一个设备想要使用总线时，它会检查总线是否繁忙<ul>
-<li>如果总线空闲，设备使用总线</li>
-</ul>
+<li><p>每个设备自行判断自己是否在请求总线的设备中优先级最高<br><img src="862036a6fe5287ef6b619355bd58ab3.png" alt="862036a6fe5287ef6b619355bd58ab3" style="zoom:75%;" /></p>
 </li>
-<li>冲突：如果两个设备发现总线空闲，它们可能同时使用总线<ul>
-<li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
-<li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机时间间隔后再次请求总线</li>
 </ul>
 </li>
 </ul>
 </li>
+</ol>
+<pre><code>  - 冲突检测
+
+ - 当一个设备想要使用总线时，它会检查总线是否繁忙
+   - 如果总线空闲，设备使用总线
+
+ - 冲突：如果两个设备发现总线空闲，它们可能同时使用总线
+   - 在传输数据时，设备会监听总线，检查是否存在冲突
+   - 如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机时间间隔后再次请求总线
+</code></pre><ol>
 <li><p>时序（timing）</p>
 <ul>
 <li>确定每个总线事务的开始和结束时间</li>
@@ -407,7 +412,8 @@
 <li>存储器释放Ack 线</li>
 <li>存储器将数据传到数据线并设置DataRdy 线</li>
 <li>CPU读取数据并设置Ack 线</li>
-<li>存储器释放数据线和dataRdy 线 CPU 释放Ack 线<br><img src="8008a65b2bba709b69858ae51276bf4.png" alt="8008a65b2bba709b69858ae51276bf4" style="zoom:80%;" />     </li>
+<li>存储器释放数据线和dataRdy 线</li>
+<li>CPU 释放Ack 线<br><img src="8008a65b2bba709b69858ae51276bf4.png" alt="8008a65b2bba709b69858ae51276bf4" style="zoom:80%;" />     </li>
 </ol>
 </li>
 <li>优点：可以灵活地协调速度不同的设备</li>
@@ -705,7 +711,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2023 <a href="http://sprooc.github.io/" target="_blank">Sprooc</a>
+    		&copy; 2023-2024 <a href="http://sprooc.github.io/" target="_blank">Sprooc</a>
     	</div>
       	<div class="footer-right">
 			

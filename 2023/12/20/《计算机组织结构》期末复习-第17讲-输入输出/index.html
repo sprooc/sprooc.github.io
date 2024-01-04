@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://sprooc.github.io/2023/12/20/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC17%E8%AE%B2-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20231221104155508.png">
 <meta property="og:image" content="https://sprooc.github.io/2023/12/20/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC17%E8%AE%B2-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20231221104241900.png">
 <meta property="article:published_time" content="2023-12-20T14:07:36.000Z">
-<meta property="article:modified_time" content="2023-12-21T02:57:37.746Z">
+<meta property="article:modified_time" content="2024-01-01T05:31:28.003Z">
 <meta property="article:author" content="Sprooc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://sprooc.github.io/2023/12/20/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC17%E8%AE%B2-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20231220222712734.png">
@@ -424,7 +424,8 @@
 </li>
 </ul>
 </li>
-<li>直接存储器存取（DMA）<ul>
+<li><p>直接存储器存取（DMA）</p>
+<ul>
 <li>前两种技术的不足<ul>
 <li>I/O传送速度受处理器测试和服务设备速度的限制•</li>
 <li>处理器负责管理I/O 传送，对于每一次I/O 传送，处理器必须执行很多指令</li>
@@ -446,7 +447,7 @@
 <li>三种DMA内存访问方式<ol>
 <li>CPU 停止法。DMA传输时，由DMA控制器发一个停止信号给CPU，使CPU脱离总线，停止访问主存，直到DMA传送一块数据结束。<ul>
 <li>优点：控制简单 </li>
-<li>缺点：影响CPUCPU，没有充分利用内存</li>
+<li>缺点：影响CPU，没有充分利用内存</li>
 <li>适用：高速I/O 设备的块传输  <div align="center">
  <img src="https://sprooc.github.io/2023/12/20/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC17%E8%AE%B2-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/a84370ae45e6e88013ce7b4d8624272.png" alt="a84370ae45e6e88013ce7b4d8624272" style="zoom:70%;" />
   </div></li>
@@ -472,7 +473,8 @@
 </li>
 </ol>
 </li>
-<li>DMA配置机制<ol>
+<li><p>DMA配置机制</p>
+<ol>
 <li>单总线分离DMA<ul>
 <li>所有模块共享相同的系统总线</li>
 <li>DMA模块使用编程式I/O，通过DMA 模块在存储器和I/O 模块之间交换数据</li>
@@ -481,11 +483,12 @@
  </div></li>
 </ul>
 </li>
-<li>单总线集合的DMA I/O<ul>
+<li><p>单总线集合的DMA I/O</p>
+<ul>
 <li>DMA逻辑实际上可能是I/O 模块的一部分，也可能是控制一个或多个I/O 模块的单独模块</li>
-<li>减少总线周期数<div align="center">
+<li>减少总线周期数 <div align="center">
 <img src="https://sprooc.github.io/2023/12/20/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E3%80%8B%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0-%E7%AC%AC17%E8%AE%B2-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20231221104155508.png" alt="image-20231221104155508" style="zoom:100%;" />
-</div></li>
+ </div></li>
 </ul>
 </li>
 <li>I/O 总线<ul>
@@ -504,7 +507,7 @@
 </ol>
 <h3 id="I-O模块的演变"><a href="#I-O模块的演变" class="headerlink" title="I/O模块的演变"></a>I/O模块的演变</h3><ol>
 <li>CPU直接控制外设</li>
-<li>增加控制器或I/O 模块，CPU 使用编程式I/O O，将CPU 与外围设备的细节分离</li>
+<li>增加控制器或I/O 模块，CPU 使用编程式I/O，将CPU 与外围设备的细节分离</li>
 <li>采用中断，CPU 无需花费时间等待外围设备就绪</li>
 <li>I/O模块可通过DMA 直接存取存储器，无需CPU 负责存储器和I/O 模块之间的数据传递</li>
 <li>I/O通道（I/O channel）：I/O 模块有自己的处理器，带有专门为I/O 操作定制的指令集<ul>
@@ -666,7 +669,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2023 <a href="http://sprooc.github.io/" target="_blank">Sprooc</a>
+    		&copy; 2023-2024 <a href="http://sprooc.github.io/" target="_blank">Sprooc</a>
     	</div>
       	<div class="footer-right">
 			
