@@ -1,0 +1,1788 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计算机操作系统-期末复习 | Sprooc</title><meta name="author" content="Sprooc"><meta name="copyright" content="Sprooc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="选择题                                                                                        判断题考试不考判断题，仅记录相关知识点             应该是错误的。Spooling实质是将独占设备转化为共享设备的技术    对一个具有三级索引表的文件，存取一个记录通常需要4次访问磁盘。x答案解析：三级索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机操作系统-期末复习">
+<meta property="og:url" content="http://sprooc.github.io/2024/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="选择题                                                                                        判断题考试不考判断题，仅记录相关知识点             应该是错误的。Spooling实质是将独占设备转化为共享设备的技术    对一个具有三级索引表的文件，存取一个记录通常需要4次访问磁盘。x答案解析：三级索">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sprooc.github.io/img/atri.png">
+<meta property="article:published_time" content="2024-06-23T10:04:55.000Z">
+<meta property="article:modified_time" content="2024-06-27T23:48:33.465Z">
+<meta property="article:author" content="Sprooc">
+<meta property="article:tag" content="OS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/img/atri.png"><link rel="shortcut icon" href="/img/head.jpg"><link rel="canonical" href="http://sprooc.github.io/2024/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机操作系统-期末复习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-28 07:48:33'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/font.css"><meta name="generator" content="Hexo 7.0.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/%5Clayout%5Cincludes%5Cloading%5Cpace.pug"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影片</span></a></li><li><a class="site-page child" href="/html/firework/"><i class="fa-fw iconfont icon-yanhua"></i><span> 烟花</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/atri.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Sprooc"><span class="site-name">Sprooc</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影片</span></a></li><li><a class="site-page child" href="/html/firework/"><i class="fa-fw iconfont icon-yanhua"></i><span> 烟花</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机操作系统-期末复习<a class="post-edit-link" href="https://github.com/sprooc/sprooc.github.io.git_posts/计算机操作系统-期末复习.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-23T10:04:55.000Z" title="发表于 2024-06-23 18:04:55">2024-06-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-27T23:48:33.465Z" title="更新于 2024-06-28 07:48:33">2024-06-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">8.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>29分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机操作系统-期末复习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h2><p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231806666.png" alt="aacced7315d0252fe2b0b8856dfcd26"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231806336.png" alt="923f4488a463cd31519ccaaadd63b89"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807380.png" alt="b990732478443b28a967f347b76d8b8"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807961.png" alt="c0398820c094f8b5b7436ed9bc910ce"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807777.png" alt="dc48641147f466358d376599ea55e83"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807133.png" alt="6f282ef6c3cedb88170a25318e82cbf"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807625.png" alt="33e166818033150ccdf40712d64dc00"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807083.png" alt="397a59527aacf8c14c6a43dc8935492"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231807072.png" alt="7732605b5e77cfd67abf863975dc0f6"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808022.png" alt="a2d384f6aa9d61e65f7c17f6c2351dc"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808799.png" alt="6f0b14b05de90b6c868198aea3b423b"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808746.png" alt="8c9d0b9fe1543de0520265f96498f66"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808512.png" alt="cc19d9c1e917fa05dec3fd906b1d16c"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808983.png" alt="c04017f1340d9b255d7ae1c056c7ce2"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808718.png" alt="b16af551e37eefbe57f7538d8c0cb85"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231808151.png" alt="b410262347f3d2062a348ad0dde82f7"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231809028.png" alt="0ee235021a6fef8dcda538b8b289362"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231809419.png" alt="bf1c1e96e6ac4f1383b8dac148caa36"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231809500.png" alt="b6414598cd00d7ae2cf4e13fd255da1"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231809121.png" alt="22e8322ce1cdb53520991e1abfa2053"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231809212.png" alt="8c703e4af89d180581fd9cb1e14a711"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231809468.png" alt="ff3fef9e10d8941ff162312fabad15e"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231810479.png" alt="d57ba8b0b00ed311659a355f6379347"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231810954.png" alt="5b2f5189db2c85187f0c058223982d1"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231810181.png" alt="3c973cdc2c5916c09271ff4c5718fbd"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231810112.png" alt="4114772b7bab2d38a83baf9919fe874"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231811645.png" alt="image-20240623181133609"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231812841.png" alt="5f1ef1f22177c42dce484641a51873a"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231812978.png" alt="5daca117823e5171aa2b809696cba05"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231812757.png" alt="d1f70956cdca5a924a3a7598a4a4f97"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231812407.png" alt="258add643affc6a0d02a30b51471f87"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231813124.png" alt="1bbe208151387d0ca4e115a5198dfc1"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231813967.png" alt="9667a5bbef0c8ac8ed20ec3d621681d"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231813064.png" alt="d9369d23a5270ee03fa198556aef0dd"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231813021.png" alt="b3f3b889876346ffc02bc01509a437f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231813292.png" alt="f10c49fe2e08a5ced5bba5432e3b60e"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231814591.png" alt="bcf066a50a9ebc2c8b0686e7cf5c101"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231814988.png" alt="e0c4e1e3b55a10644f8e02e9424989a"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231814590.png" alt="0a016c437889a20bb29d68885d6f4bd"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231815600.png" alt="0589abc92616a277baee5a2a80cb264"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231815953.png" alt="074906f657e7d626aa8df7220b2d6ac"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231815395.png" alt="9485853619b2fa7ec843a825656a69b"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231815926.png" alt="6933d9f9f84cfe10ed26e2d50d93bce"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231815430.png" alt="65f1b6b338489a9eca04112d700f1f9"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231815867.png" alt="630355d82a499950e4a49894b3368fd"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816097.png" alt="5b0ddbe48cde6b6b448fcadfd9edb5e"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816432.png" alt="52b254453f28b8da14f6bef179d3d15"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816627.png" alt="868e7d8428950cc991927ecb4e58da0"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816955.png" alt="fef94e5ab891a49c9a3f5075d9904c7"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816648.png" alt="1c68aef76332ea874230dde60b3c09f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816554.png" alt="812bc27162ed21d903ae83a0059d836"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231816792.png" alt="dfa023b40a150dd3f8102884eadb999"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231817068.png" alt="abd4bff17b12f6352b317a79884b699"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231817980.png" alt="573da50381ddf8d139bf0f9c832b95f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231817371.png" alt="2f18c8aa01a1ee9ff955c59ed8f58fa"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231817519.png" alt="ff5856560bb000462024fd0a7a6b3f1"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231817287.png" alt="9dde388e3bf968fa6cefef99ea8d9b4"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231818657.png" alt="e1720f58c7fe4de8e96513eecbe85ed"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231818012.png" alt="95be88cd7c70dd5011b8cbdb8123b84"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231818063.png" alt="72e051de67877515aa89d434f765989"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231819356.png" alt="f276e66cef95521f604f96418d4f546"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231819378.png" alt="7ab6ac14ac2a55c5356deb0235a7b83"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231819065.png" alt="8e2aaee75c3e6102583cb0d61e9a29c"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231819677.png" alt="69782bc77a4196e6fd39e1a57f1e8d1"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231819921.png" alt="070f8216c087c7dce91006f36134f5e"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231820702.png" alt="25c2ef134c2b819f9116568d7f35e5f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231820801.png" alt="a0dccb47799a279b41b9012486f9288"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231820933.png" alt="a789487b2e7ca26199c727bfcf61b5c"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231820349.png" alt="e05385d152a02c024170e9f1dc53abf"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231821945.png" alt="023c73e0a853c86322fc0645f8947fb"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231823675.png" alt="image-20240623182307644"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231823629.png" alt="1a92c07aed8e927cfd75995511d4f84"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231823326.png" alt="f6be2733f9a1880df937df91bda4290"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231824111.png" alt="29a08803ef1b9da13db48735c7ed4a2"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231824073.png" alt="97ce9408fb311e97282183f19dc697b"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231824335.png" alt="7230b830a58bbce4228e9cc6d621407"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231824147.png" alt="1cb08dcfc2460325e3ffd686aa2f83e"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231825385.png" alt="35c0272dd9673a54209f46b4b7a2bd9"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231825051.png" alt="bb2dfa361e9d3719dab05bfbf61fdd2"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231825475.png" alt="82bd05224f3d91793c7300e69382b35"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231826179.png" alt="1f27a3227f8a4b6918965f7206c6623"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231948134.png" alt="2329385f054d528d7fdeb2e0eff7e7c"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231951815.png" alt="f389e4c06a49314ab4405fc78f5e95f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231952040.png" alt="ba2f35ba25a0b3332d90fc4e149bd54"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231952862.png" alt="83622aa27a8521ab850a4e2db1e8843"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231952184.png" alt="c9aeb9d4dbb33e4201e530e8e2a31bb"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231953904.png" alt="560d91a7cf5f474e3f4a7c7161a88a4"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406232012021.png" alt="aca03b64dbc815261f98f5ffcfce10e"></p>
+<h2 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a>判断题</h2><p>考试不考判断题，仅记录相关知识点</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231954700.png" alt="ad03c90f694e8d2bf242a59fc54d53f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231954628.png" alt="c829a86470c426c3f401adfde9afa42"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231954192.png" alt="b10b0869ea08c5fa15181e1b4640182"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231954276.png" alt="af79a2c92b2f009d4147c1671bf8a7d"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231954867.png" alt="302634558b09df9775505db0458b928"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231955936.png" alt="c1e1b7b743d7fc7b5ed4d60a09d287f"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231955510.png" alt="f17a2984775b0b57b1a203165e847bc"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231955247.png" alt="a68ae72ca4701130e6672c586c484b1"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231955758.png" alt="47e9d3665057754c5ddee32d58fd79c"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231956255.png" alt="c5024327f704cc809d4fec3551a0a01"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231956968.png" alt="07e71aab48c76dda8e22ad3f1593cf0"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231956003.png" alt="19d872b62c65b86d52334e07c0c38c4"></p>
+<p>应该是错误的。Spooling实质是将独占设备转化为共享设备的技术</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231956849.png" alt="e53a38b9c0c9821c5d8c800d732bbb5"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231958202.png" alt="9497ea5be9ea98ae6d75cb279993733"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406231958332.png" alt="eb2945d35693c8a6a2d6dd6b235ba7a"></p>
+<p>对一个具有三级索引表的文件，存取一个记录通常需要4次访问磁盘。x<br>答案解析：三级索引需要访问4次磁盘，3次磁盘索引块，1次读取数据。</p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="计算机操作系统概述"><a href="#计算机操作系统概述" class="headerlink" title="计算机操作系统概述"></a>计算机操作系统概述</h3><ol>
+<li><p>试述操作系统中三个最基础的抽象，并回答为什么要引入它们？</p>
+<ul>
+<li>进程抽象、虚存抽象、文件抽象</li>
+<li>防止硬件资源被应用程序滥用</li>
+<li>屏蔽复杂的硬件资源操作细节，为应用程序提供使用硬 件资源的简单且一致的方法</li>
+</ul>
+</li>
+<li><p>操作系统是计算机系统最基础的系统软件，管理软硬件资源、控制程序执行，改善人机界面，合理组织计算机工作流程，为用户使用计算机提供良好运行环境。</p>
+</li>
+<li><p>操作系统的组成</p>
+<ul>
+<li>进程调度子系统</li>
+<li>进程通信子系统</li>
+<li>内存管理子系统</li>
+<li>设备管理子系统</li>
+<li>文件管理子系统</li>
+<li>网络通信子系统</li>
+<li>作业控制子系统</li>
+</ul>
+</li>
+<li><p>操作系统的分类</p>
+<ul>
+<li>多道批处理操作系统<ul>
+<li>脱机控制方式</li>
+</ul>
+</li>
+<li>分时操作系统<ul>
+<li>交互式操作系统</li>
+</ul>
+</li>
+<li>实时操作系统</li>
+</ul>
+</li>
+<li><p>多道程序设计</p>
+<ul>
+<li>定义：让多个程序同时进入计算机的主存储器进行计算</li>
+<li>目的：解决CPU速度与I/O速度不匹配的矛盾</li>
+<li>特点：<ul>
+<li>CPU与外部设备充分并行</li>
+<li>外部设备之间充分并行</li>
+<li>发挥CPU的使用效率</li>
+<li>提高单位时间的算题量</li>
+<li>但是单道程序运行时间会增加</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>操作系统内核结构</p>
+<ul>
+<li>单内核：内核各部件杂然混居的形态。Linux, Windows</li>
+<li>微内核：结构性部件和功能性部件分离。将大部分功能模块置于用户态</li>
+<li>混合内核：微内核与单内核折中。</li>
+<li>外内核</li>
+</ul>
+</li>
+<li><p>试述系统调用的实现原理，陷阱机制和绘制系统调用的处理过程，并阐述系统调用的处理逻辑。</p>
+<ul>
+<li><p>定义：操作系统实现的完成某种特定功能的过程，为所有运行程序提供访问操作系统的接口</p>
+</li>
+<li><p>系统调用的实现</p>
+<ul>
+<li>编写系统调用服务例程</li>
+<li>设计系统调用入口地址表，每个入口地址都指向一个系统调用的服务例程，有些还包含系统调用自带参数的个数</li>
+<li>陷阱处理机制，需要开辟现场保护区，以保存发生系统调用时应用程序的处理器现场。</li>
+</ul>
+</li>
+<li>陷阱机制：操作系统实现系统调用功能的机制称为系统陷阱或系统异常处理机制，由于系统调用而引起处理器中断的机器指令称为陷入指令(trap)，它是非特权指令，在用户态下执行时会产生CPU 模式切换，即由用户态转换到内核态。每个系统调用都事先规定编号，称为功能号，执行陷入指令时，必须通过某种方式指明对应系统调用的功能号，大多数情况，还应附带有传递给相应服务例程的参数。</li>
+<li>系统调用的处理过程：<ul>
+<li>应用程序执行系统调用，产生中断转向内核态，进入陷阱处理程序</li>
+<li>将按功能号来查询入口地址表，并转至对应服务例程执行</li>
+<li>完成后退出中断，返回应用程序断点继续运行。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406241500543.png" alt="image-20240624150009414"></p>
+</li>
+</ol>
+<h3 id="处理器管理"><a href="#处理器管理" class="headerlink" title="处理器管理"></a>处理器管理</h3><ol>
+<li><p><strong>进程</strong>是一个具有一定独立功能的程序关于某个数据集合的一次运行活动；是操作系统进行<strong>资源分配和调度</strong>的一个<strong>独立单位</strong>。</p>
+</li>
+<li><p>进程实体</p>
+<ul>
+<li>操作系统管理的数据结构</li>
+<li>内存代码</li>
+<li>内存数据</li>
+<li>通用寄存器信息</li>
+<li>程序状态字信息</li>
+</ul>
+</li>
+<li><p>进程映像的组成部分</p>
+<ul>
+<li>进程控制块：保存进程的标识信息、状态信息和控制信息</li>
+<li>进程程序块: 进程执行的程序空间</li>
+<li>进程数据块: 进程处理的数据空间，包括数据、处理函数的用户栈和可修改的程序</li>
+<li>核心栈: 进程在内核模式下运行时使用的堆栈，中断或系统过程使用</li>
+</ul>
+</li>
+<li><p>共享的代码称为可再入程序，是纯代码的。</p>
+</li>
+<li><p>结合进程状态转换模型，解释操作系统是中断驱动的</p>
+<ul>
+<li><p>中断是激活操作系统的唯一方式</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406241505341.png" alt="c6ebb95cca0640ec913ca3a885ddfde"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>中断系统：计算机系统中响应和处理中断的系统</p>
+<ul>
+<li><p>中断响应由硬件子系统完成</p>
+</li>
+<li><p>中断处理由软件子系统完成</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>中断处理过程</p>
+<ul>
+<li>发现中断源。硬件发现中断/异常事件，并由CPU响应中断/异常请求。当发现多个中断源时，将根据预定的中断优先级先后响应中断请求。</li>
+<li>保存现场。暂停当前程序运行，将现场信息（PSW）保存至核心栈。</li>
+<li>转向中断/异常时间处理程序执行。</li>
+<li><p>恢复现场。恢复原运行程序的PSW，重新返回中断点以便执行后续指令。</p>
+<p>  <img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262101092.png" alt="19320255fbaccc796fca198472bdb26"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>进程三态模型</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262107848.png" alt="4131794f997adafc9dfd5eaf74b2c98"></p>
+</li>
+<li><p>进程五态模型</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271727094.png" alt="image-20230621002239523"></p>
+</li>
+</ol>
+<ol>
+<li><p>进程控制块PCB是用于记录和刻画进程状态及环境信息的数据结构</p>
+<ul>
+<li><p>标识信息</p>
+</li>
+<li><p>现场信息</p>
+</li>
+<li><p>控制信息</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>进程控制与管理原语</p>
+<ul>
+<li><p>进程创建</p>
+</li>
+<li><p>进程撤销</p>
+</li>
+<li><p>进程阻塞</p>
+</li>
+<li><p>进程唤醒</p>
+</li>
+<li><p>进程挂起</p>
+</li>
+<li><p>进程激活</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>多线程程序设计优点</p>
+<ul>
+<li><p>快速线程切换</p>
+</li>
+<li><p>减少系统管理开销</p>
+</li>
+<li><p>线程通信易于实现</p>
+</li>
+<li><p>并行程度提高</p>
+</li>
+<li><p>节省内存空间</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>内核级线程KLT：线程管理的所有工作由OS内核来做</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262140724.png" alt="image-20240626214042576" style="zoom: 25%;" /></p>
+</li>
+<li><p>用户级线程ULT：用户空间运行的线程库，提供多线程应用程序的开发和运行支撑环境</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262141393.png" alt="image-20240626214109248" style="zoom:25%;" /></p>
+</li>
+<li><p>Jacketing技术</p>
+<ul>
+<li><p>解决ULT中，一个线程阻塞导致整个进程阻塞的问题</p>
+</li>
+<li><p>把阻塞式系统调用改造成非阻塞式的</p>
+</li>
+<li><p>当线程陷入系统调用时，执行jacketing程序</p>
+</li>
+<li><p>由jacketing 程序来检查资源使用情况，以决定是否执行进程切换或传递控制权给另一个线程</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>用户级线程和内核级线程</p>
+<ul>
+<li>ULT适用于解决逻辑并行性问题</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>KLT适用于解决物理并行性问题</li>
+</ul>
+<ol>
+<li>多线程实现的混合策略：单应用的多个ULT可以映射成一些KLT，通过调整KLT数目，可以达到较好的并行效果<br>  <img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262149025.png" alt="522914f8f61d2c56185e6e4a779e576"></li>
+</ol>
+<ol>
+<li><p>多线程混合策略下的线程状态</p>
+<ul>
+<li><p>KLT三态，系统调度负责</p>
+</li>
+<li><p>ULT三态，用户调度负责</p>
+</li>
+<li><p>活跃态ULT代表绑定KLT的三态</p>
+</li>
+<li><p>活跃态ULT运行时可激活用户调度</p>
+</li>
+<li><p>非阻塞系统调用可使用Jacketing启动用户调度，调整活跃态ULT</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>   <img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262152068.png" alt="b1c0e7b35d6f135a661c45ab6d7bc12"></p>
+<p>   <img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262153096.png" alt="d5133f63851ebe082f92d71a4c5d46f"></p>
+<ol>
+<li><p>处理器调度的层次</p>
+<ul>
+<li>高级调度：决定能否加入到执行的进程池中</li>
+<li>中级调度：决定主存中的可用进程集合</li>
+<li>低级调度：决定哪个可用进程占用处理器执行</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262158569.png" alt="c6cb208b77f595d7d7a41f01ce7c945"></p>
+</li>
+<li><p>进程调度算法</p>
+<ul>
+<li><p>先来先服务 FCFS（非抢占式）</p>
+<ul>
+<li>按照进程进入系统的时间顺序排</li>
+<li>多用于高级调度</li>
+<li>以计算为主的进程过于优越，长时间占有CPU</li>
+<li>一个短进程不得不等待很长时间</li>
+</ul>
+</li>
+<li><p>最短进程优先 SPN（非抢占式）</p>
+<ul>
+<li>优先处理计算时间短的进程</li>
+<li>对长进程不公平，导致长进程饿死</li>
+</ul>
+</li>
+<li><p>最短剩余时间优先 SRT（抢占式）</p>
+<ul>
+<li>总是选择预期剩余时间更短的进程</li>
+<li>当一个新进程加入就绪队列，他可能比当前运行的进程具有更短的剩余时间，只要该新进就绪，调度器就可能抢占当前正在运行的进程</li>
+</ul>
+</li>
+<li><p>最高响应比优先HRRN（非抢占式）</p>
+<ul>
+<li>选择响应比最高的</li>
+<li>改善对长进程极端不公平的问题</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>时间片轮转调度算法RR（抢占式）<ul>
+<li>基于先来先服务的，但是每个选程占有 CPU 运 行必须受到时间片的限制，一旦进程运行时间超过了该时间片就得让出 CPU</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>多级反馈调度MLFQ（抢占式）</p>
+<ul>
+<li><p>建立多个不同优先级的就绪进程队列</p>
+</li>
+<li><p>多个就绪进程队列之间按照优先数调度</p>
+</li>
+<li><p>高优先级的就绪进程, 分配的时间片短</p>
+</li>
+<li><p>单个就绪进程队列中的进程的优先数和时间片相同，按照先来先服务算法调度</p>
+</li>
+<li><p>优点：优先级可变、适应性强</p>
+</li>
+<li><p>缺点：长进程最终会进入最低优先级队列，可能会一直等待</p>
+</li>
+<li><p>解决方法：对低优先级队列中等待时间足够长的进程提升优先级</p>
+</li>
+<li><p>当一个进程第一次进入系统时，它被放置在RQ0，当它第一次被抢占后并返回就绪状态时，它被放置在RQ1。在随后的时间里，每当它被抢占时，它被降级到下一个低优先级队列中。一个短进程很快会执行完，不会在就绪队列中降很多级。</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code> ![6dca3f981fbb8529c5a23fcf5a2cfb5](https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262223491.png)
+</code></pre><ol>
+<li><p>Unix SVR4调度算法</p>
+<ul>
+<li><p>实时优先级层次：优先数和时间片都是固定的，在抢占点执行抢占</p>
+</li>
+<li><p>分时优先级层次：优先数和时间片是可变的，从0优先数的100ms到59优先数的10ms<br> <img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262228020.png" alt="image-20240626222814967"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="存储管理"><a href="#存储管理" class="headerlink" title="存储管理"></a>存储管理</h3><ol>
+<li><p>虚存分页的原理，并画出流程图</p>
+<ul>
+<li><p>分页存储器将主存划分成多个大小相等的页架</p>
+</li>
+<li><p>受页架尺寸限制，程序的逻辑地址也自然分成页</p>
+</li>
+<li><p>不同的页可以放在不同页架中，不需要连续</p>
+</li>
+<li><p>页表用于维系进程的主存完整性，记录虚拟页面和页框的对应关系</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406262237283.png" alt="f22a7f3fa6c02a655351b8e0705984c"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>存储管理的基本模式</p>
+<ul>
+<li>单连续存储管理：一维逻辑地址空间的程序占用一个主存固定分区或可变分区</li>
+<li>段式存储管理：段式二维逻辑地址空间的程序占用多个主存可变分区</li>
+<li>页式存储管理：一维逻辑地址空间的程序占用多个主存页框(页架)区</li>
+<li>段页式存储管理：段式二维逻辑地址空间的程序占用多个主存页框(页架)区</li>
+</ul>
+</li>
+<li><p>地址转换：又称重定位，即把逻辑地址转换成绝对地址</p>
+<ul>
+<li>静态重定位：在程序装入内存时进行地址转换<ul>
+<li>由装入程序执行，早期小型OS使用</li>
+</ul>
+</li>
+<li>动态重定位：在CPU执行程序时进行地址转换<ul>
+<li>从效率出发，依赖硬件地址转换机构</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>主存扩充：把磁盘作为主存扩充，只把部分进程或进程的部分内容装入内存</p>
+<ul>
+<li>对换技术：把部分不运行的进程调出</li>
+<li>虚拟技术：只调入进程的部分内容</li>
+</ul>
+</li>
+<li><p>虚拟存储器的基本思想</p>
+<ul>
+<li>存储管理把进程全部信息放在辅存中，执行时先将其中一部分装入主存，以后根据执行行为随用随调入</li>
+<li>如主存中没有足够的空闲空间，存储管理需要根据执行行为把主存中暂时不用的信息调出到辅存上去</li>
+</ul>
+</li>
+<li><p>可变分区内存分配</p>
+<ul>
+<li><p>最先适应分配算法(First fit)</p>
+</li>
+<li><p>邻近适应分配算法(Next fit)</p>
+</li>
+<li><p>最优适应分配算法(Best fit)：最容易产生外零头</p>
+</li>
+<li><p>最坏适应分配算法(Worst fit)</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271023111.png" alt="image-20240627102308918" style="zoom: 67%;" /></p>
+</li>
+</ul>
+</li>
+<li><p>程序移动技术 （浮动技术）</p>
+<ul>
+<li><p>解决内存外零头</p>
+</li>
+<li><p>需要动态重定位</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271025630.png" alt="65b00b8ab1e435409f5c4269b2c8767"></p>
+</li>
+</ul>
+</li>
+<li><p>页的共享</p>
+<ul>
+<li>数据共享：不同进程可以使用<strong>不同页号</strong>共享数据页</li>
+<li>程序共享：不同进程必须使用<strong>相同页号</strong>共享代码页（现代操作系统都不需要相同页号共享代码页了）</li>
+</ul>
+</li>
+<li><p>抖动：如果一块正好将要被用到之前扔出，操作系统有不得不很快把它取回来，太多的这类操作会导致一种称为系统抖动的情况。在处理缺页中断期间，处理器的大部分时间都用于交换块，而不是用户进程的执行指令</p>
+</li>
+<li><p>页式虚拟存储管理</p>
+<ul>
+<li><p>基本思想：把进程全部页面装入虚拟存储器，执行时先把部分页面装入实际内存，然后，根据执行行为，动态调入不在主存的页，同时进行必要的页面调出</p>
+</li>
+<li><p>页表项</p>
+<ul>
+<li>每页的虚拟地址、实际地址</li>
+<li>主存驻留标志、写回标志、保护标志、引用标志、可移动标志</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271055494.png" alt="8b631841f840bfb9b3fda3d7bde1ecf"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271055391.png" alt="5f436807eae64b65880e47f7f0b7e93"></p>
+</li>
+</ul>
+</li>
+<li><p>页面调度</p>
+<ul>
+<li>最佳算法OPT/Belady：当要调入新页面时，首先淘汰以后不再访问的页，然后选择距现在最长时间后再访问的页。只可模拟，<strong>不可实现</strong>。</li>
+<li>先进先出FIFO：总是淘汰最先调入主存的那一页，或者说主存驻留时间最长的那一页(常驻的除外)</li>
+<li>最近最少使用LRU：淘汰最近一段时间较久未被访问的那一页，即那些刚被使用过的页面，可能马上还要被使用到。<strong>实现代价大</strong></li>
+<li>最不常用LFU：淘汰最近一段时间内访问次数较少的页面，对OPT的模拟性比LRU更好</li>
+<li>时钟CLOCK：<ul>
+<li>页面调入主存时，其引用标志位置1</li>
+<li>访问主存页面时，其引用标志位置1</li>
+<li>淘汰页面时，从指针当前指向的页面开始扫描循环队列把所遇到的引用标志位是1的页面的引用标志位清0，并跳过</li>
+<li>把所遇到的引用标志位是0的页面淘汰，指针推进一步</li>
+</ul>
+</li>
+<li>局部最佳页面替换算法MIN：不论发生缺页与否，算法在每一步要考虑引用串，如果该页面在时间间隔(t, t+τ)内未被再次引用，那么就移出；否则，该页被保留在进程驻留集中</li>
+<li>工作集替换算法：工作集模型用来对局部最佳页面替换算法进行模拟实现，不向前查看页面引用串，而是基于程序局部性原理向后看</li>
+</ul>
+</li>
+<li><p>多级页表</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271117380.png" alt="image-20240627111704311"></p>
+</li>
+<li><p>反置页表</p>
+<ul>
+<li><p>基本思想：</p>
+<ul>
+<li>针对内存中的每个页框建立一个页表，按照块号排序</li>
+<li>表项包含：正在访问该页框的进程标识、页号及特征位，和哈希链指针等</li>
+<li>用来完成内存页框到访问进程页号的对应，即物理地址到逻辑地址的转换</li>
+</ul>
+</li>
+<li><p>地址转换过程</p>
+<ul>
+<li>MMU通过哈希表把进程标识和虚页号转换成一个哈希值，指向IPT的一个表目</li>
+<li>MMU遍历哈希链找到所需进程的虚页号，该项的索引就是页框号，通过拼接位移便可生成物理地址</li>
+<li>若遍历整个反置页表中未能找到匹配页表项，说明该页不在内存，产生缺页中断，请求操作系统调入</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271120381.png" alt="e0826275d9292c3599f768b86e62a91"></p>
+</li>
+</ul>
+</li>
+<li><p>段式存储管理</p>
+<ul>
+<li><p>基本思想</p>
+<ul>
+<li>段式存储管理基于可变分区存储管理实现，一个进程要占用多个分区</li>
+<li>硬件需要增加一组用户可见的段地址寄存器（代码段、数据段、堆栈段，附加段），供地址转换使用</li>
+<li>存储管理需要增加设置一个段表，每个段占用一个段表项，包括：段始址、段限长，以及存储保护、可移动、可扩充等标志位</li>
+</ul>
+</li>
+<li><p>地址转换流程</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271124661.png" alt="e968d4c14e021c78708127f83c3ab3c"></p>
+</li>
+</ul>
+</li>
+<li><p>段式虚拟存储管理</p>
+<ul>
+<li>基本思想：把进程的所有分段都存放在辅存中，进程运行时先把当前需要的一段或几段装入主存，在执行过程中访问到不在主存的段时再把它们动态装入。段式虚拟存储管理中段的调进调出是由OS自动实现的，对用户透明</li>
+</ul>
+</li>
+<li><p>段页式存储管理</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271129568.png" alt="5e79345985c41d2b3b27af52398f5c8"></p>
+</li>
+</ol>
+<h3 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h3><ol>
+<li><p>IO软件的四个层次</p>
+<ul>
+<li>用户空间的IO软件<ul>
+<li>SPOOLing</li>
+</ul>
+</li>
+<li>独立于设备的IO软件</li>
+<li>设备驱动程序</li>
+<li>中断处理程序</li>
+</ul>
+</li>
+<li><p>设备分类</p>
+<ul>
+<li>字符设备：以字符为单位进行信息交换，例如鼠标、显示器</li>
+<li>块设备：以固定大小的数据块为单位进行信息交换，例如磁盘</li>
+</ul>
+</li>
+<li><p>总线：</p>
+<ul>
+<li>I/O和CPU速度、各设备I/O速度不匹配</li>
+<li>使主机和设备充分并行，提高系统效率</li>
+</ul>
+</li>
+<li><p>设备独立性</p>
+<ul>
+<li>设备独立性：用户通常不指定物理设备，而是指定逻辑设备，使得用户进程和物理设备分离开来，再通过其它途径建立逻辑设备和物理设备之间的映射</li>
+</ul>
+</li>
+<li><p>设备分配方式</p>
+<ul>
+<li>独占型外围设备：一次只能由一个进程独占使用</li>
+<li>分配方式<ul>
+<li>静态分配：进程运行前申请<ul>
+<li>实现简单，能够防止系统发生死锁，但会降低设备利用率</li>
+</ul>
+</li>
+<li>动态分配：进程随用随申请<ul>
+<li>提高设备利用率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>虚拟设备：使用一类物理设备模拟另一类物理设备</p>
+</li>
+<li><p>SPOOLing系统：用高速的磁盘设备来模拟慢速的字符设备，缩短进程在内存中的驻留时间</p>
+<ul>
+<li><p>预输入程序：预先把数据从输入设备传送到磁盘输入井</p>
+</li>
+<li><p>缓输出程序：把数据从磁盘输出井传送到输出设备</p>
+</li>
+<li><p>井管理程序：控制作进程和井之间的数据交换</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271328890.png" alt="e7f0416c00ce386478df5479b284c42"></p>
+</li>
+</ul>
+</li>
+<li><p>磁盘调度策略</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271345642.png" alt="image-20230616151146552"></p>
+</li>
+</ol>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ol>
+<li><p>文件系统面向用户的功能：</p>
+<ul>
+<li>文件的按名存取</li>
+<li>文件的共享和保护</li>
+<li>文件的操作和使用</li>
+</ul>
+</li>
+<li><p>逻辑文件，又称为文件的逻辑结构</p>
+<ul>
+<li>独立于物理环境的，用户概念中的抽象信息组织方式<ul>
+<li>用户能观察到的，并加以处理的数据集合</li>
+</ul>
+</li>
+<li>文件的逻辑结构分为两种形式<ul>
+<li>一种是流式文件</li>
+<li>一种是记录式文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件的物理结构和组织是指文件在物理存储空间中的存放方法和组织关系</p>
+<ul>
+<li>顺序文件</li>
+<li><p>连接文件（输入井、输出井）</p>
+</li>
+<li><p>直接文件（散列文件）</p>
+</li>
+<li>索引文件</li>
+</ul>
+</li>
+<li><p>文件系统调用</p>
+<ul>
+<li><p><strong>文件创建</strong></p>
+<p>int <strong>create</strong>(const char <strong>*pathname</strong>, mode_t <strong>mode</strong>);</p>
+<ul>
+<li>参数：文件名、模式（<strong>存取权限</strong>）</li>
+<li>返回值：成功返回<strong>文件描述符</strong>，失败返回-1</li>
+<li>实现步骤：<ul>
+<li>为新文件分配<strong>索引节点</strong>和<strong>活动索引节点</strong>，并把<strong>索引节点编号与文件分量名</strong>组成<strong>新目录项</strong>，记到目录中。</li>
+<li>在新文件所对应的活动索引节点中<strong>置初值</strong>，如置<strong>存取权限i_mode</strong>，连<strong>接计数i_nlink</strong>等。</li>
+<li>分配<strong>用户打开文件表项</strong>和<strong>系统打开文件表项</strong>，置表项初值，读写位移<strong>f_offset</strong>清“0”。</li>
+<li>把各表项及文件<strong>对应的活动索引节点用指针连接起来</strong></li>
+<li>把<strong>文件描述字</strong>返回给调用者。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件删除</strong></p>
+<p>int <strong>unlink</strong>(const char <strong>*pathname)</strong>;</p>
+<ul>
+<li>参数：<strong>文件名</strong></li>
+<li>返回值：成功返回0，失败返回-1</li>
+<li>实现步骤：<ul>
+<li>把指定文件从所在的目录文件中除去</li>
+<li>将inode中的i_nlink减1</li>
+<li>如果没有连接用户(i_nlink 为“0”)，还要把文件占用的存储空间释放。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件打开</strong></p>
+<p>int <strong>open</strong>(const char <strong>*pathname</strong>, mode_t <strong>mode</strong>);</p>
+<ul>
+<li>参数：文件名、模式（<strong>存取权限</strong>）</li>
+<li>返回值：成功返回<strong>文件描述符</strong>，失败返回-1</li>
+<li>实现步骤：<ul>
+<li>检索目录，如果inode还未被复制到内存，把它的<strong>inode复制到活动inode表</strong>。</li>
+<li>根据参数mode核对权限，如果非法，则这次打开失败。</li>
+<li>当“打开”合法时，为<strong>文件分配用户打开文件表项和系统打开文件表项</strong>，并为表项设置初值。</li>
+<li>通过指针建立这些表项与活动索引节点间的联系。</li>
+<li>把<strong>文件描述字</strong>，即用户打开文件表中相应文件表项的序号返回给调用者。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件关闭</strong></p>
+<p>int <strong>close(</strong>int <strong>fd</strong>);</p>
+<ul>
+<li>参数：文件描述符</li>
+<li>返回值：成功返回0，失败返回-1</li>
+<li>实现步骤：<ul>
+<li>根据fd找到<strong>用户打开文件表项</strong>，再找到系统打开文件表项。<strong>释放用户打开文件表项</strong>。</li>
+<li>把对应<strong>系统打开文件表项中的f_count减“1”</strong>，如果<strong>非“0”</strong>，说明还有进程共享这一表项，<strong>不用释放直接返回</strong>；否则<strong>释放表项</strong>。</li>
+<li>把<strong>活动索引节点中的i_count减“1”</strong>，<strong>若不为“0”</strong>，表明还有用户进程正在使用该文件，<strong>不用释放</strong>而直接返回，否则在把该<strong>活动索引节点中的内容复制回文件卷上的相应索引节点</strong>中后，释放该活动索引节点。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件读取</strong></p>
+<p>size_t <strong>read</strong> (int <strong>fd</strong>, void<em> <strong>buf</strong>, size_t <em>*cnt</em></em>);</p>
+<ul>
+<li>参数：文件描述符、读取数据缓冲区、缓冲区大小</li>
+<li>返回值：实际读取字节数</li>
+<li>实现步骤：<ul>
+<li>系统根据f_flag中的信息，<strong>检查读操作合法性</strong></li>
+<li>再根据当前位移量f_offset值，<strong>要求读出的字节数</strong>，及活动索引节点中i_data[15]指出的文件物理块存放地址，把相应的<strong>物理块读到缓冲区</strong>中，然后<strong>再送到bufp指向的用户主存区</strong>中。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件写入</strong></p>
+<p>size_t <strong>write</strong> (int <strong>fd</strong>, void<em> <strong>buf</strong>, size_t <em>*cnt</em></em>);</p>
+<ul>
+<li>参数：文件描述符、写入数据缓冲区、写入数据长度</li>
+<li>返回值：实际写入的数据</li>
+<li>实现步骤：<ul>
+<li>系统根据f_flag中的信息，<strong>检查写操作合法性</strong></li>
+<li>再根据当前位移量f_offset值，<strong>要求写入的字节数</strong>，及活动索引节点中i_data[15]指出的文件物理块存放地址，把数据缓冲区的数据写入到文件中。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>移动位移</strong></p>
+<p>off_t <strong>lseek</strong>(int <strong>fd</strong>, off_t <strong>offset</strong>, int <strong>whence</strong>);</p>
+<ul>
+<li>参数：文件描述符、偏移量、位置</li>
+<li>返回值：成功返回当前位置到开始的长度，失败返回-1</li>
+<li>实现步骤：<ul>
+<li>找到系统打开文件表项，修改f_offset的值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>文件链接</strong></p>
+<p>int <strong>link</strong>(const char <strong>*oldpath</strong>, const char <strong>*newpath</strong>);</p>
+<ul>
+<li>参数：原始文件名、新的硬链接名</li>
+<li>返回值：成功返回0，失败返回-1</li>
+<li>实现步骤：<ul>
+<li>检索目录找到oldnamep所指向<strong>文件的索引节点inode编号</strong>。</li>
+<li>再次检索目录找到<strong>newnamep所指文件的父目录文件</strong>，并把<strong>已存在文件的索引节点inode编号与别名构成一个目录项</strong>，记入到该目录中去。</li>
+<li>把已存在文件索引节点inode的<strong>连接计数i_nlink加“1”</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件系统的磁盘结构</p>
+<ul>
+<li>引导块</li>
+<li>超级块：占用1#号块，存放文件系统结构和管理信息（位示图）</li>
+<li>索引节点区</li>
+<li>数据区</li>
+</ul>
+</li>
+<li><p>文件系统数据结构</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271450093.png" alt="614f3e97b373c6f08fa7f09e08a3a26"></p>
+</li>
+<li><p>虚拟文件系统</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271511611.png" alt="51acf0f218dd3ac8eb90fd72806fed7"></p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406271513898.png" alt="9ec11595379b2b9a45d2b00bebf12f2"></p>
+</li>
+</ol>
+<h3 id="并发程序设计"><a href="#并发程序设计" class="headerlink" title="并发程序设计"></a>并发程序设计</h3><ol>
+<li><p>并行和并发</p>
+<ul>
+<li><strong>并行性</strong>是指两个或多个事件在<strong>同一时刻</strong>发生（多核）</li>
+<li><strong>并发性</strong>是指两个或多个事件在<strong>同一时刻间隔</strong>内发生</li>
+</ul>
+</li>
+<li><p>n个进程共享m个同类资源，若每个进程都需要用该类资源，而且各进程对该类资源的最大需求量之和小于m+n。则该系统不会因竞争该类资源而阻塞。</p>
+</li>
+<li><p>并发程序设计的特性</p>
+<ul>
+<li>并行性</li>
+<li>共享性</li>
+<li>交往性</li>
+</ul>
+</li>
+<li><p>进程间关系：竞争和协作</p>
+</li>
+<li><p>Bernstein条件</p>
+<ul>
+<li>R(pi)={ai1,ai2,…ain}，程序pi在执行期间引用的变量集</li>
+<li>W(pi)={bi1,bi2,…bim}，程序pi在执行期间改变的变量集</li>
+<li>若两个进程的程序p1和p2能满足Bernstein条件，即满足：<br>((R(p1)∩W(p2))∪(R(p2)∩W(p1))∪(W(p1)∩W(p2))= 空集<br>则并发进程的执行与时间无关</li>
+</ul>
+</li>
+<li><p>临界资源：互斥共享变量所代表的资源。即一次只能被一个进程使用的资源</p>
+</li>
+<li><p>临界区指并发进程中与互斥共享变量相关的程序段</p>
+</li>
+<li><p>Peterson算法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> inside[<span class="number">2</span>];</span><br><span class="line">inside[<span class="number">0</span>] = inside[<span class="number">1</span>] = <span class="literal">false</span>;</span><br><span class="line"><span class="class"><span class="keyword">enum</span> &#123;</span><span class="number">0</span>, <span class="number">1</span>&#125; turn;</span><br><span class="line">cobegin</span><br><span class="line">process <span class="title function_">P0</span><span class="params">()</span> &#123;</span><br><span class="line">    inside[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">    turn = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (inside[<span class="number">1</span>] &amp;&amp; turn == <span class="number">1</span>);</span><br><span class="line">    &#123;临界区&#125;</span><br><span class="line">    inside[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">process <span class="title function_">P1</span><span class="params">()</span> &#123;</span><br><span class="line">    inside[<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    turn = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (inside[<span class="number">0</span>] &amp;&amp; turn == <span class="number">0</span>);</span><br><span class="line">    &#123;临界区&#125;</span><br><span class="line">    inside[<span class="number">1</span>] = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现临界区管理的硬件设施</p>
+<ul>
+<li>关中断</li>
+<li>测试并建立指令</li>
+<li>对换指令</li>
+</ul>
+</li>
+<li><p>PV操作数据结构及操作伪代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">semaphore</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> value;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">pcb</span>* <span class="title">list</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">P</span><span class="params">(semaphore s)</span> &#123;</span><br><span class="line">    s.value--;</span><br><span class="line">    <span class="keyword">if</span> (value &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        sleep(s.<span class="built_in">list</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">V</span><span class="params">(semaphore s)</span> &#123;</span><br><span class="line">    s.value++;</span><br><span class="line">    <span class="keyword">if</span> (s.value &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        wakeup(s.<span class="built_in">list</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为什么要引入管程？</p>
+<ul>
+<li>把分散在各进程中的临界区集中起来进行管理</li>
+<li>防止进程有意或无意的违法同步操作</li>
+<li>便于用高级语言来书写程序</li>
+</ul>
+</li>
+<li>进程直接通信<ul>
+<li>对称直接寻址，发送进程和接收进程必须命名对方以便通信</li>
+<li>非对称直接寻址，只要发送者命名接收者，而接收者不需要命名发送者</li>
+</ul>
+</li>
+<li>进程间接通信<ul>
+<li>消息不是直接从发送者发送到接收者，而是发送到由临时保存这些消息的队列组成的一个共享数据结构，这些队列通常成为信箱(mailbox)</li>
+<li>一个进程给合适的信箱发送消息，另一进程从信箱中获得消息</li>
+</ul>
+</li>
+<li>高级通信机制<ul>
+<li>管道/多路转接器/套接字</li>
+<li>远程过程调用RPC</li>
+</ul>
+</li>
+<li>死锁形成的四个必要条件<ul>
+<li>互斥条件(mutual exclusion)：系统中存在临界资源，进程应互斥地使用这些资源</li>
+<li>占有和等待条件(hold and wait)：进程请求资源得不到满足而等待时，不释放已占有的资源<ul>
+<li><strong>静态分配</strong></li>
+</ul>
+</li>
+<li>不剥夺条件(no preemption)：已被占用的资源只能由属主释放，不允许被其它进程剥夺<ul>
+<li><strong>剥夺式调度方法</strong></li>
+</ul>
+</li>
+<li>循环等待条件(circular wait)：存在循环等待链，其中，每个进程都在链中等待下一个进程所持有的资源，造成这组进程永远等待</li>
+</ul>
+</li>
+<li>死锁防止（破坏循环等待条件）<ul>
+<li>层次分配策略 <ul>
+<li>一个进程得到某一层的一个资源后，它只能再申请在较高层的资源 </li>
+<li>当一个进程要释放某层的一个资源时，必须先释放所占用的较高层的资源 </li>
+<li>当一个进程获得了某一层的一个资源后，它想再申请该层中的另一个资源，那么，必须先释放该层中的已占资源</li>
+</ul>
+</li>
+<li>按序分配策略<ul>
+<li>把系统的所有资源排一个顺序，每个进程只能按序上锁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>死锁避免：银行家算法</li>
+<li>死锁检测和解除<ul>
+<li>资源分配图</li>
+<li>死锁定理：系统为死锁状态的充分条件是：当且仅当该状态的进程-资源分配图是不可完全简化的。</li>
+</ul>
+</li>
+</ol>
+<h2 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h2><ol>
+<li>假定系统中有五个进程｛P0, P1, P2, P3, P4｝和三类资源｛A, B, C｝，各种资源的数量分别为10、5、7，在T0时刻的资源分配情况如图所示。</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况</th>
+<th>Max</th>
+<th>Allocation</th>
+<th>Need</th>
+<th>Available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>进程</strong></td>
+<td>A  B  C</td>
+<td>A  B  C</td>
+<td>A  B  C</td>
+<td>A  B  C</td>
+</tr>
+<tr>
+<td>P0</td>
+<td>7  5  3</td>
+<td>0  1  0</td>
+<td>7  4  3</td>
+<td>3  3  2</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>3  2   2</td>
+<td>2  0   0</td>
+<td>1  2   2</td>
+<td></td>
+</tr>
+<tr>
+<td>P2</td>
+<td>9  0  2</td>
+<td>3  0  2</td>
+<td>6  0  0</td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td>2  2  2</td>
+<td>2  1  1</td>
+<td>0  1  1</td>
+<td></td>
+</tr>
+<tr>
+<td>P4</td>
+<td>4  3  3</td>
+<td>0  0  2</td>
+<td>4  3  1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>（1）利用下表来对T0 时刻系统是否为安全状态进行分析。检验T0 时刻系统是否为安全状态，若是在安全状态，请给出一个安全序列。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">资源情况</th>
+<th>Work</th>
+<th>Need</th>
+<th>Allocation</th>
+<th>Work+ Allocation</th>
+<th>Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>进程</strong></td>
+<td>A  B C</td>
+<td>A  B C</td>
+<td>A  B  C</td>
+<td>A  B C</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>（2）在T0时刻如果进程P1发出请求向量Request1(1，0，2)，是否能实现安全分配？为什么？(画表进行分析)</p>
+<p>答：</p>
+<p>（1）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Work</th>
+<th>Need</th>
+<th>Allocation</th>
+<th>Work+ Allocation</th>
+<th>Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B C</td>
+<td>A  B C</td>
+<td>A  B  C</td>
+<td>A  B C</td>
+<td></td>
+</tr>
+<tr>
+<td>P1</td>
+<td>3  3  2</td>
+<td>1  2  2</td>
+<td>2  0  0</td>
+<td>5  3  2</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>5  3  2</td>
+<td>0  1  1</td>
+<td>2  1  1</td>
+<td>7  4  3</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>7  4  3</td>
+<td>4  3  1</td>
+<td>0  0  2</td>
+<td>7  4  5</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>7  4  5</td>
+<td>6  0  0</td>
+<td>3  0  2</td>
+<td>10  4  7</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P0</td>
+<td>10 4  7</td>
+<td>7  4  3</td>
+<td>0  1  0</td>
+<td>10  5  7</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>答：在T0时刻存在着一个安全序列{P1，P3，P4 ，P2 ，P0}，故系统是安全的。</p>
+<p>（2）P1请求资源：P1发出请求向量Request1(1，0，2)，系统按银行家算法进行检查：</p>
+<p>​    ① Request1(1，0，2)≤Need1(1，2，2)</p>
+<p>​    ② Request1(1，0，2)≤Available1(3，3，2)</p>
+<p>​    ③ 系统先假定可为P1分配资源，并修改Available, Allocation1和Need1向量，由此形成的资源变化情况如图 3-15所示。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Max</th>
+<th>Allocation</th>
+<th>Need</th>
+<th>Available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B  C</td>
+<td>A  B  C</td>
+<td>A  B  C</td>
+<td>A  B  C</td>
+</tr>
+<tr>
+<td>P0</td>
+<td>7  5  3</td>
+<td>0  1  0</td>
+<td>7  4  3</td>
+<td>2  3  0</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>3  2   2</td>
+<td>3  0   2</td>
+<td>0  2   0</td>
+<td></td>
+</tr>
+<tr>
+<td>P2</td>
+<td>9  0  2</td>
+<td>3  0  2</td>
+<td>6  0  0</td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td>2  2  2</td>
+<td>2  1  1</td>
+<td>0  1  1</td>
+<td></td>
+</tr>
+<tr>
+<td>P4</td>
+<td>4  3  3</td>
+<td>0  0  2</td>
+<td>4  3  1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>​    ④ 再利用安全性算法检查此时系统是否安全。 </p>
+<p>因为分配后能存在这样的一个安全序列{P1，P3，P4，P0，P2} 所以，这次分配是安全的。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Work</th>
+<th>Need</th>
+<th>Allocation</th>
+<th>Work+ Allocation</th>
+<th>Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B C</td>
+<td>A  B C</td>
+<td>A  B  C</td>
+<td>A  B C</td>
+<td></td>
+</tr>
+<tr>
+<td>P1</td>
+<td>2  3  0</td>
+<td>0  2  0</td>
+<td>3  0  2</td>
+<td>5  3  2</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>5  3  2</td>
+<td>0  1  1</td>
+<td>2  1  1</td>
+<td>7  4  3</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>7  4  3</td>
+<td>4  3  1</td>
+<td>0  0  2</td>
+<td>7  4  5</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P0</td>
+<td>7  4  5</td>
+<td>7  4  3</td>
+<td>0  1  0</td>
+<td>7  5  5</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>7  5  5</td>
+<td>6  0  0</td>
+<td>3  0  2</td>
+<td>10  5  7</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li><p>假定系统中有五个进程｛P1, P2, P3, P4, P5｝和三类资源｛A, B, C｝，各种资源的数量分别为17、5、20，在T0时刻的资源分配情况如图所示。</p>
+<p>| 资源情况 | Max        | Allocation | Need      | Available（Work） |<br>| ———— | ————— | ————— | ————- | ————————- |<br>| 进程     | A  B    C  | A  B    C  | A  B    C | A  B    C         |<br>| P1       | 5  5    9  | 2  1    2  | 3  4    7 | 2  3    3         |<br>| P2       | 5  3    6  | 4  0    2  | 1  3    4 |                   |<br>| P3       | 4  0    11 | 4  0    5  | 0  0    6 |                   |<br>| P4       | 4  2    5  | 2  0    4  | 2  2    1 |                   |<br>| P5       | 4  2    4  | 3  1    4  | 1  1    0 |                   |</p>
+</li>
+</ol>
+<p>   （1）利用下表来对T0 时刻系统是否为安全状态进行分析。检验T0 时刻系统是否为安全状态，若是在安全状态，请给出一个安全序列。  <strong>（本问5分）</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Work</th>
+<th>Need</th>
+<th>Allocation</th>
+<th>Work+ Allocation</th>
+<th>Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B C</td>
+<td>A  B C</td>
+<td>A  B   C</td>
+<td>A  B C</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>   （2）在T0时刻如果进程P1发出请求向量Request1(1，2，3)，是否能实现安全分配？为什么？(画表进行分析)  <strong>（本问10分）</strong></p>
+<p>   参考答案：</p>
+<p>   （1） <strong>（本问5分）</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Work</th>
+<th>Need</th>
+<th>Allocation</th>
+<th>Work+ Allocation</th>
+<th>Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B C</td>
+<td>A  B C</td>
+<td>A  B   C</td>
+<td>A  B C</td>
+<td></td>
+</tr>
+<tr>
+<td>P4</td>
+<td>2  3   3</td>
+<td>2  2  1</td>
+<td>2  0   4</td>
+<td>4  3   7</td>
+<td>True</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>4  3   7</td>
+<td>1  1   0</td>
+<td>3  1   4</td>
+<td>7  4   11</td>
+<td>True</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>7 4   11</td>
+<td>3  4   7</td>
+<td>2  1   2</td>
+<td>9  5   13</td>
+<td>True</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>9 5 13</td>
+<td>1  3   4</td>
+<td>4  0   2</td>
+<td>13 5 15</td>
+<td>True</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>13 5 15</td>
+<td>0  0   6</td>
+<td>4  0   5</td>
+<td>17 5 20</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>   答：在T0时刻存在着一个安全序列{P4，P5，P1 ，P2 ，P3}，故系统是安全的。</p>
+<p>   （2）P1请求资源：P1发出请求向量Request1(1，2，3)，系统按银行家算法进行检查：</p>
+<p>   ​    ① Request1(1，2，3)≤Need1(2，2，1)</p>
+<p>   ​    ② Request1(1，2，3)≤Available(2，3，3)</p>
+<p>   ​    ③ 系统先假定可为P1分配资源，并修改Available, Allocation1和Need1向量，由此形成的资源变化情况如下图所示。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Max</th>
+<th>Allocation</th>
+<th>Need</th>
+<th>Available（Work）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B    C</td>
+<td>A  B    C</td>
+<td>A  B    C</td>
+<td>A  B    C</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>5  5    9</td>
+<td>3  3    5</td>
+<td>2  2    4</td>
+<td>1  1    0</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>5  3    6</td>
+<td>4  0    2</td>
+<td>1  3    4</td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td>4  0    11</td>
+<td>4  0    5</td>
+<td>0  0    6</td>
+<td></td>
+</tr>
+<tr>
+<td>P4</td>
+<td>4  2    5</td>
+<td>2  0    4</td>
+<td>2  2    1</td>
+<td></td>
+</tr>
+<tr>
+<td>P5</td>
+<td>4  2    4</td>
+<td>3  1    4</td>
+<td>1  1    0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>   ​    ④ 再利用安全性算法检查此时系统是否安全。 </p>
+<p>   因为分配后能存在这样的一个安全序列{P5，P1，P2，P3，P4} 所以，这次分配是安全的。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>资源情况  进程</th>
+<th>Work</th>
+<th>Need</th>
+<th>Allocation</th>
+<th>Work+ Allocation</th>
+<th>Finish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>A  B C</td>
+<td>A  B C</td>
+<td>A  B   C</td>
+<td>A  B C</td>
+<td></td>
+</tr>
+<tr>
+<td>P5</td>
+<td>1  1   0</td>
+<td>1  1   0</td>
+<td>3  1   4</td>
+<td>4    2  4</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>4  2   4</td>
+<td>2  2   4</td>
+<td>3  3   5</td>
+<td>7    5  9</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>7  5   9</td>
+<td>1  3   4</td>
+<td>4  0   2</td>
+<td>11   5  11</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>11 5 11</td>
+<td>0  0   6</td>
+<td>4  0   5</td>
+<td>15   5  16</td>
+<td>true</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>15 5 16</td>
+<td>2  2   1</td>
+<td>2  0   4</td>
+<td>17  5   20</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li><p>某请求分页系统的局部页面置换策略如下：</p>
+<p>​    系统从0时刻开始扫描，每隔5个时间单位扫描一轮驻留集（扫描时间忽略不计），本轮没有被访问过的页框将被系统回收，并放入到空闲页框链尾，其中内容在下一次被分配之前不被清空。当发生缺页时，如果该页曾被使用过且还在空闲页框链表中，则重新放回进程的驻留集中；否则，从空闲页框链表头部取出一个页框。</p>
+<p>假设不考虑其它进程的影响和系统开销，初始时进程驻留集为空。目前系统空闲页框链表中页框号依次为32、15、21、41。进程P依次访问的 &lt;虚拟页号，访问时刻&gt; 是：<1, 1>、<3, 2>、<0, 4>、<0, 6>、<1, 11>、<0, 13>、<2, 14>。请回答下列问题。</p>
+<p>（1）访问 <0, 4> 时，对应的页框号是什么？说明理由。</p>
+<p>（2）访问 <1, 11> 时，对应的页框号是什么？说明理由。</p>
+<p>（3）访问 <2, 14> 时，对应的页框号是什么？说明理由。</p>
+<p>（4）该策略是否适合于时间局部性好的程序？说明理由。</p>
+<p>答案：</p>
+<p>（1）页框号是21。</p>
+<p>由于初始时进程驻留集为空，目前系统空闲页框链表中页框号依次为32、15、21、41。因此，访问<1, 1>时，将1号页装入32号页框，访问<3, 2>时，将3号页装入15号页框，访问<0, 4>时，将0号页装入21号页框。</p>
+<p>（2）页框号是32。</p>
+<p>因为访问 <1, 1> 时，1号页被装入32号页框，但在10时刻进行第2轮扫描时，1号页所在的32号页框由于在本轮未被访问而被系统收回，访问 <1, 11> 时，1号页所在的32号页框仍在空闲页框链表中，因此重新被放回进程的驻留集中。</p>
+<p>（3）页框号是41。</p>
+<p>因为2号页是首次访问，14时刻系统空闲页框链表中页框号依次为41、15，因此将取出链首的41号页框装入2号页。</p>
+<p>（4）该策略适合于时间局部性好的程序。</p>
+<p>因为置换时，选择的是最近未被访问的页面淘汰，根据局部性原理，这样的页面在最近的将来仍可能不被访问。而且即使刚被淘汰的页面又被访问，如果该页还在空闲页框链表中，只需重新将其放回进程的驻留集中即可。</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://sprooc.github.io">Sprooc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://sprooc.github.io/2024/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">http://sprooc.github.io/2024/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://sprooc.github.io" target="_blank">Sprooc</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OS/">OS</a></div><div class="post_share"><div class="social-share" data-image="/img/atri.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/06/20/PV%E6%93%8D%E4%BD%9C%E5%92%8C%E7%AE%A1%E7%A8%8B%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/" title="PV操作和管程题目汇总"><img class="cover" src="/img/atri.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PV操作和管程题目汇总</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/06/20/PV%E6%93%8D%E4%BD%9C%E5%92%8C%E7%AE%A1%E7%A8%8B%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB/" title="PV操作和管程题目汇总"><img class="cover" src="/img/atri.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-20</div><div class="title">PV操作和管程题目汇总</div></div></a></div><div><a href="/2024/05/11/%E5%86%85%E6%A0%B8%E7%8B%AC%E7%AB%8B%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4/" title="内核独立地址空间"><img class="cover" src="/img/ad.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-11</div><div class="title">内核独立地址空间</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sprooc</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/sprooc"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/sprooc" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1127626033@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Sprooc's Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">选择题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">判断题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="toc-number">3.1.</span> <span class="toc-text">计算机操作系统概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%99%A8%E7%AE%A1%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">处理器管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="toc-number">3.3.</span> <span class="toc-text">存储管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86"><span class="toc-number">3.4.</span> <span class="toc-text">设备管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-number">3.5.</span> <span class="toc-text">文件管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.6.</span> <span class="toc-text">并发程序设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">计算题</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/atri.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Sprooc</div><div class="footer_custom_text">Have a bright future.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '0dccd33a9be75a73e855',
+      clientSecret: 'f411fd3dbe2629bd4201987fa59e9ea530072779',
+      repo: 'gitalk-comment',
+      owner: 'sprooc',
+      admin: ['sprooc'],
+      id: '1cc1b50be7b4e85d4253cec2f97d9825',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !true) {
+    if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
