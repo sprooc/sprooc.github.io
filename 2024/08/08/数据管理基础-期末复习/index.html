@@ -1,0 +1,995 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据管理基础-期末复习 | Sprooc</title><meta name="author" content="Sprooc"><meta name="copyright" content="Sprooc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="数据管理基础-期末复习第一章 绪论 数据（Data）是数据库中存储的基本对象  什么是数据库，有什么基本特点  数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合  数据库的基本特征  数据按一定的数据模型组织、描述和储存 可为各种用户共享 冗余度较小 数据独立性较高 易扩展     数据库系统（Database System，简称DBS），在计算机系统中引">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据管理基础-期末复习">
+<meta property="og:url" content="http://sprooc.github.io/2024/08/08/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Sprooc">
+<meta property="og:description" content="数据管理基础-期末复习第一章 绪论 数据（Data）是数据库中存储的基本对象  什么是数据库，有什么基本特点  数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合  数据库的基本特征  数据按一定的数据模型组织、描述和储存 可为各种用户共享 冗余度较小 数据独立性较高 易扩展     数据库系统（Database System，简称DBS），在计算机系统中引">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sprooc.github.io/img/atri.png">
+<meta property="article:published_time" content="2024-08-08T14:07:48.000Z">
+<meta property="article:modified_time" content="2024-08-08T14:07:56.644Z">
+<meta property="article:author" content="Sprooc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sprooc.github.io/img/atri.png"><link rel="shortcut icon" href="/img/head.jpg"><link rel="canonical" href="http://sprooc.github.io/2024/08/08/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据管理基础-期末复习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-08 22:07:56'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/font.css"><meta name="generator" content="Hexo 7.0.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/%5Clayout%5Cincludes%5Cloading%5Cpace.pug"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影片</span></a></li><li><a class="site-page child" href="/html/firework/"><i class="fa-fw iconfont icon-yanhua"></i><span> 烟花</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/atri.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Sprooc"><span class="site-name">Sprooc</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影片</span></a></li><li><a class="site-page child" href="/html/firework/"><i class="fa-fw iconfont icon-yanhua"></i><span> 烟花</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据管理基础-期末复习<a class="post-edit-link" href="https://github.com/sprooc/sprooc.github.io.git_posts/数据管理基础-期末复习.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-08T14:07:48.000Z" title="发表于 2024-08-08 22:07:48">2024-08-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-08T14:07:56.644Z" title="更新于 2024-08-08 22:07:56">2024-08-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据管理基础-期末复习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数据管理基础-期末复习"><a href="#数据管理基础-期末复习" class="headerlink" title="数据管理基础-期末复习"></a>数据管理基础-期末复习</h1><h2 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h2><ol>
+<li><p><strong>数据</strong>（Data）是数据库中存储的<strong>基本对象</strong></p>
+</li>
+<li><p>什么是<strong>数据库</strong>，有什么<strong>基本特点</strong></p>
+<ul>
+<li><p><strong>数据库</strong>（Database，简称DB）是<strong>长期储存在计算机内</strong>、<strong>有组织的</strong>、<strong>可共享的</strong>大量数据的集合</p>
+</li>
+<li><p>数据库的基本特征</p>
+<ul>
+<li>数据按一定的数据模型组织、描述和储存</li>
+<li>可为各种用户共享</li>
+<li>冗余度较小</li>
+<li>数据独立性较高</li>
+<li>易扩展</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>数据库系统</strong>（Database System，简称DBS），在计算机系统中<strong>引入数据库后的系统</strong>构成</p>
+<ul>
+<li>数据库</li>
+<li>数据库管理系统（及其应用开发工具）</li>
+<li>应用程序</li>
+<li>数据库管理员（DBA） </li>
+</ul>
+</li>
+<li><p>数据模型</p>
+<ul>
+<li>概念模型：按用户的观点来对数据和信息建模，主要用于数据库设计</li>
+<li>逻辑模型：按计算机系统的观点对数据建模，主要用于数据库管理系统的实现</li>
+<li>物理模型：对数据最底层的抽象，是面向计算机系统的</li>
+</ul>
+</li>
+<li><p>常见逻辑数据模型</p>
+<ul>
+<li>格式化模型<ul>
+<li>层次模型（Hierarchical Model）</li>
+<li>网状模型（Network Model）</li>
+</ul>
+</li>
+<li>关系模型（Relational Model)）</li>
+<li>对象模型<ul>
+<li>面向对象数据模型（Object Oriented Data Model）</li>
+<li>对象关系数据模型（Object Relational Data Model）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关系模型的优缺点</p>
+<ul>
+<li>优点<ul>
+<li>建立在严格的数学概念的基础上</li>
+<li>概念单一</li>
+<li>关系模型的存取路径对用户透明<ul>
+<li>具有更高的数据独立性，更好的安全保密性</li>
+<li>简化了程序员的工作和数据库开发建立的工作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>存取路径对用户透明，查询效率往往不如格式化数据模型</li>
+<li>为提高性能，必须对用户的查询请求进行优化，增加了开发DBMS的难度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三级模式</p>
+<ul>
+<li>数据库系统的三级模式结构由外模式、模式和内模式组成</li>
+<li>外模式，是<strong>数据库用户能够看见和使用</strong>的<strong>局部数据</strong>的逻辑结构和特征的描述，是<strong>数据库用户的数据视图</strong>。</li>
+<li>模式，是数据库中<strong>全体数据的逻辑结构和特性的描述</strong>，是<strong>所有用户的公共数据视图</strong>。模式描述的是数据的全局逻辑结构。外模式通常是模式的子集。一个数据库只有一个模式。</li>
+<li>内模式，是数据在数据库系统<strong>内部的表示</strong>，即对数据的物理结构和存储方式的描述。一个数据库只有一个内模式。</li>
+</ul>
+</li>
+<li><p>两级映像</p>
+<ul>
+<li>二级映象在数据库管理系统内部实现这<strong>三个抽象层次的联系和转换</strong></li>
+<li>外模式／模式映像：保证数据的逻辑独立性<ul>
+<li>当模式改变时，数据库管理员对外模式／模式映象作相应改变，使外模式保持不变</li>
+</ul>
+</li>
+<li>模式／内模式映：保证数据的物理独立性<ul>
+<li>当数据库的存储结构改变了，数据库管理员修改模式／内模式映象，使模式保持不变。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="第二章-关系型数据库"><a href="#第二章-关系型数据库" class="headerlink" title="第二章 关系型数据库"></a>第二章 关系型数据库</h2><ol>
+<li>关系模型的完整性约束<ul>
+<li>实体完整性规则（Entity Integrity）<ul>
+<li>若属性<em>A</em>是基本关系<em>R</em>的主属性，则属性<em>A</em>不能取空值</li>
+</ul>
+</li>
+<li>参照完整性规则<ul>
+<li>若属性（或属性组）<em>F</em>是基本关系<em>R</em>的外码,它与基本关系<em>S</em>的主码K_s相对应（基本关系<em>R</em>和<em>S</em>不一定是不同的关系），则对于<em>R</em>中每个元组在<em>F</em>上的值必须为：<ul>
+<li>或者取空值（<em>F</em>的每个属性值均为空值）</li>
+<li>或者等于<em>S</em>中某个元组的主码值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用户定义的完整性<ul>
+<li>针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>5种基本操作<ul>
+<li>选择、投影、并、差、笛卡尔积</li>
+</ul>
+</li>
+</ol>
+<h2 id="第三章-关系数据库标准语言SQL"><a href="#第三章-关系数据库标准语言SQL" class="headerlink" title="第三章 关系数据库标准语言SQL"></a>第三章 关系数据库标准语言SQL</h2><ol>
+<li><p>基本表和视图</p>
+<ul>
+<li>基本表<ul>
+<li>本身独立存在的表</li>
+<li>一个关系对应一个基本表</li>
+</ul>
+</li>
+<li>视图<ul>
+<li>从一个或几个基本表导出的表</li>
+<li>数据库中只存放视图的定义而不存放视图对应的数据</li>
+<li>视图是一个虚表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>连接操作</p>
+<ul>
+<li>嵌套循环法</li>
+<li>排序合并法</li>
+<li>索引连接法</li>
+</ul>
+</li>
+<li><p>EXISTS 子查询</p>
+<ul>
+<li><p>查询选修了全部课程的学生姓名。</p>
+<p>SELECT Sname<br>FROM Student<br>WHERE NOT EXISTS<br>   (SELECT *</p>
+<pre><code>FROM Course
+WHERE NOT EXISTS
+  (SELECT * FROM SC
+   WHERE Sno= Student.Sno
+    AND Cno= Course.Cno
+   )
+</code></pre><p>   );</p>
+</li>
+<li><p>查询至少选修了学生201215122选修的全部课程的学生号码。<br>SELECT DISTINCT Sno<br>FROM SC SCX<br>WHERE NOT EXISTS<br>   (SELECT *</p>
+<pre><code>FROM SC SCY
+WHERE SCY.Sno = &#39; 201215122 &#39;  AND 
+      NOT EXISTS
+        (SELECT *
+         FROM SC SCZ
+         WHERE SCZ.Sno=SCX.Sno AND
+               SCZ.Cno=SCY.Cno
+        )
+</code></pre><p>   );</p>
+</li>
+</ul>
+</li>
+<li><p>行列子集视图</p>
+<ul>
+<li>若一个视图是从单个基本表导出的，并且只是去掉了基本表的某些行和某些列，但保留了主码，我们称这类视图为行列子集视图</li>
+</ul>
+</li>
+<li><p>视图有什么作用</p>
+<ul>
+<li><p>视图能简化用户的操作</p>
+</li>
+<li><p>视图使用户能以多种视角看待同一数据</p>
+</li>
+<li><p>视图对重构数据库提供了一定程度的逻辑独立性</p>
+</li>
+<li><p>视图能够对机密数据提供安全保护</p>
+</li>
+<li><p>适当的利用视图可以更清晰地表达查询</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="第四章-数据库安全性"><a href="#第四章-数据库安全性" class="headerlink" title="第四章 数据库安全性"></a>第四章 数据库安全性</h2><ol>
+<li><p>自主存取控制和强制存取控制</p>
+<ul>
+<li>自主存取控制<ul>
+<li>用户对不同的数据对象有不同的存取权限</li>
+<li>不同的用户对同一对象也有不同的权限</li>
+<li>用户还可将其拥有的存取权限转授给其他用户</li>
+</ul>
+</li>
+<li>强制存取控制<ul>
+<li>每一个数据对象被标以一定的<strong>密级</strong></li>
+<li>每一个用户也被授予某一个级别的<strong>许可证</strong></li>
+<li>对于任意一个对象，只有具有合法许可证的用户才可以存取</li>
+<li>用户不能直接感知或进行控制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>GRANT和REVOKE</p>
+<ul>
+<li>GRANT INSERT ON <strong>TABLE</strong> SC TO U5 <strong>WITH GRANT OPTION</strong>;</li>
+<li>REVOKE INSERT  ON <strong>TABLE</strong> SC  FROM U5 <strong>CASCADE</strong> ;</li>
+</ul>
+</li>
+<li><p>审计</p>
+<ul>
+<li>启用一个专用的审计日志（Audit Log）将用户对数据库的所有操作记录在上面</li>
+</ul>
+</li>
+</ol>
+<h2 id="第五章-数据库完整性"><a href="#第五章-数据库完整性" class="headerlink" title="第五章 数据库完整性"></a>第五章 数据库完整性</h2><ol>
+<li><p>完整性和安全性</p>
+<ul>
+<li><p>数据的完整性</p>
+<ul>
+<li>防止数据库中存在不符合语义的数据，也就是防止数据库中存在不正确的数据</li>
+<li>防范对象：不合语义的、不正确的数据</li>
+</ul>
+</li>
+<li>数据的安全性<ul>
+<li>保护数据库，防止恶意的破坏和非法的存取</li>
+<li>防范对象：非法用户和非法操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>参照完整性检查</p>
+<p>| 被参照表               | 参照表                 | <strong>违约处理</strong>                 |<br>| ——————————— | ——————————— | —————————————— |<br>| <strong>可能破坏参照完整性</strong> | <strong>插入元组</strong>           | <strong>拒绝</strong>                     |<br>| <strong>可能破坏参照完整性</strong> | <strong>修改外码值</strong>         | <strong>拒绝</strong>                     |<br>| <strong>删除元组</strong>           | <strong>可能破坏参照完整性</strong> | <strong>拒绝/级连删除/设置为空值</strong> |<br>| <strong>修改主码值</strong>         | <strong>可能破坏参照完整性</strong> | <strong>拒绝/级连修改/设置为空值</strong> |</p>
+</li>
+<li><p>断言</p>
+<ul>
+<li><p>使用 CREATE ASSERTION语句，通过声明性断言来指定更具一般性的约束。</p>
+</li>
+<li><p>可以定义涉及多个表的或聚集操作的比较复杂的完整性约束。</p>
+</li>
+<li><p>CREATE ASSERTION ASSE_SC_CNUM1<br>CHECK(60 &gt;= ALL (SELECT count(*)    FROM  SC GROUP by cno);</p>
+</li>
+</ul>
+</li>
+<li><p>触发器</p>
+<ul>
+<li><p>触发器（Trigger）是用户定义在关系表上的一类由事件驱动的特殊过程</p>
+</li>
+<li><p>CREATE TRIGGER SC_T<br>AFTER UPDATE OF Grade ON SC<br>REFERENCING<br>OLD row AS OldTuple,<br>NEW row AS NewTuple<br>FOR EACH ROW<br>WHEN (NewTuple.Grade &gt;= 1.1 * OldTuple.Grade)<br>INSERT INTO SC_U (Sno,Cno,OldGrade,NewGrade)<br>VALUES(OldTuple.Sno,OldTuple.Cno,OldTuple.Grade,NewTuple.Grade)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="第六章-关系数据库理论"><a href="#第六章-关系数据库理论" class="headerlink" title="第六章 关系数据库理论"></a>第六章 关系数据库理论</h2><ol>
+<li>范式<ul>
+<li>1NF：每个分量必须是不可分开的数据项。</li>
+<li>2NF：若关系模式R∈1NF，并且每一个非主属性都完全函数依赖于任何一个候选码，则R∈2NF</li>
+<li>3NF：设关系模式R<U,F>∈1NF,若R中不存在这样的码X、属性组Y及非主属性Z（Z ⊉Y）, 使得X→Y，Y→Z成立，Y ↛ X，则称R<U,F> ∈ 3NF。</li>
+<li>BCNF：设关系模式R<U,F>∈1NF，若X →Y且Y ⊈ X时X必含有码，则R<U,F>∈BCNF。</li>
+</ul>
+</li>
+<li>简述规范化理论对数据库设计的指导意义 <ul>
+<li>在数据分析阶段，用数据依赖的概念分析和表示各项数据项之间的关系</li>
+<li>在设计概念结构阶段，用规范化理论消除初步 E-R 图冗余的联系</li>
+<li>在 E-R 图向数据模型转化阶段，用模式分解的概念和方法指导设计</li>
+</ul>
+</li>
+</ol>
+<h2 id="第七章-数据库设计"><a href="#第七章-数据库设计" class="headerlink" title="第七章 数据库设计"></a>第七章 数据库设计</h2><ol>
+<li>数据库设计的基本步骤<ul>
+<li>需求分析</li>
+<li>概念结构设计<ul>
+<li>概念模式</li>
+</ul>
+</li>
+<li>逻辑结构设计<ul>
+<li>逻辑模式和外模式</li>
+</ul>
+</li>
+<li>物理结构设计<ul>
+<li>内模式</li>
+</ul>
+</li>
+<li>数据库实施</li>
+<li>数据库运行和维护</li>
+</ul>
+</li>
+<li>逻辑模型设计中的水平分解和垂直分解<ul>
+<li>水平分解：把（基本）关系的元组分为若干子集合，定义每个子集合为一个子关系 <ul>
+<li>对符合”80/20“原则的，把经常被使用的数据分解出来，形成一个子关系 </li>
+<li>水平分解为若干子关系，使每个事务存取的数据对应于一个子关系 </li>
+</ul>
+</li>
+<li>垂直分解：经常在一起使用的属性从 R 中分解出来形成一个子关系模式 <ul>
+<li>优点：提高某些事务的效率 </li>
+<li>缺点：可能使另一些事务不得不执行连接操作，降低了效率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="第十章-数据库恢复技术"><a href="#第十章-数据库恢复技术" class="headerlink" title="第十章 数据库恢复技术"></a>第十章 数据库恢复技术</h2><ol>
+<li><p>事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。事务是恢复和并发控制的基本单位</p>
+</li>
+<li><p>事务的特性（ACID）</p>
+<ul>
+<li>原子性</li>
+<li>一致性</li>
+<li>隔离性</li>
+<li>持久性</li>
+</ul>
+</li>
+<li><p>故障种类</p>
+<ul>
+<li>事务内部的故障<ul>
+<li>事务没有达到预期的终点(COMMIT或者显式的ROLLBACK)</li>
+</ul>
+</li>
+<li>系统故障</li>
+<li>介质故障</li>
+<li>计算机病毒</li>
+</ul>
+</li>
+<li><p>恢复的基本原理：冗余</p>
+<ul>
+<li>利用存储在系统别处的冗余数据来重建数据库中已被破坏或不正确的那部分数据</li>
+</ul>
+</li>
+<li><p>静态转储和动态转储</p>
+<ul>
+<li>静态转储<ul>
+<li>在系统中无运行事务时进行的转储操作</li>
+<li>转储开始时数据库处于一致性状态</li>
+<li>转储期间不允许对数据库的任何存取、修改活动</li>
+<li>得到的一定是一个数据一致性的副本 </li>
+<li>优点：实现简单</li>
+<li>缺点：降低了数据库的可用性</li>
+</ul>
+</li>
+<li>动态转储<ul>
+<li>转储操作与用户事务并发进行</li>
+<li>转储期间允许对数据库进行存取或修改</li>
+<li>优点<ul>
+<li>不用等待正在运行的用户事务结束</li>
+<li>不会影响新事务的运行</li>
+</ul>
+</li>
+<li>缺点：不能保证副本中的数据正确有效</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>海量转储和增量转储</p>
+<ul>
+<li>海量转储: 每次转储全部数据库</li>
+<li>增量转储: 只转储上次转储后更新过的数据</li>
+</ul>
+</li>
+<li><p>日志文件</p>
+<ul>
+<li><p>日志文件是用来记录事务对数据库的更新操作的文件</p>
+</li>
+<li><p>作用</p>
+<ul>
+<li>事务故障恢复和系统故障恢复必须用日志文件。</li>
+<li>在动态转储方式中必须建立日志文件，后备副本和日志文件结合起来才能有效地恢复数据库。</li>
+<li>在静态转储方式中，也可以建立日志文件。<ul>
+<li>当数据库毁坏后可重新装入后援副本把数据库恢复到转储结束时刻的正确状态</li>
+<li>利用日志文件，把已完成的事务进行重做处理</li>
+<li>对故障发生时尚未完成的事务进行撤销处理</li>
+<li>不必重新运行那些已完成的事务程序就可把数据库恢复到故障前某一时刻的正确状态</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406251244168.png" alt="image-20240625124444028"></p>
+</li>
+</ul>
+</li>
+<li><p>为什么要先写日志文件</p>
+<ul>
+<li>写数据库和写日志文件是两个不同的操作</li>
+<li>在这两个操作之间可能发生故障</li>
+<li>如果先写了数据库修改，而在日志文件中没有登记下这个修改，则以后就无法恢复这个修改了</li>
+<li>如果先写日志，但没有修改数据库，按日志文件恢复时只不过是多执行一次不必要的UNDO操作，并不会影响数据库的正确性</li>
+</ul>
+</li>
+<li><p>恢复策略</p>
+<ul>
+<li><p>事务故障</p>
+<ul>
+<li>反向扫描文件日志（即从最后向前扫描日志文件），查找该事务的更新操作。</li>
+<li>对该事务的更新操作执行逆操作。即将日志记录中“更新前的值” 写入数据库。</li>
+<li>继续反向扫描日志文件，查找该事务的其他更新操作，并做同样处理。</li>
+<li>如此处理下去，直至读到此事务的开始标记，事务故障恢复就完成了。</li>
+</ul>
+</li>
+<li><p>系统故障</p>
+<ul>
+<li>正向扫描日志文件，找出在故障发生前已经提交的事务队列(REDO队列)和未完成的事务队列(UNDO队列)。</li>
+<li>对未完成的事务队列中的各个事务进行UNDO处理。反向扫描日志文件，对每个撤销事务的更新操作执行逆操作</li>
+<li>对已经提交的事务队列中的各个事务进行REDO处理。正向扫描日志文件，对每个重做事务重新执行登记的操作</li>
+</ul>
+</li>
+<li><p>介质故障</p>
+<ul>
+<li><p>装入最新的数据库后备副本(离故障发生时刻最近的转储副本),使数据库恢复到最近一次转储时的一致性状态。</p>
+</li>
+<li><p>装入转储结束时刻的日志文件副本，重做已完成的事务。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>检查点记录</p>
+<ul>
+<li>建立检查点时刻所有正在执行的事务清单</li>
+<li>这些事务最近一个日志记录的地址</li>
+</ul>
+</li>
+<li><p>重新开始文件的内容</p>
+<ul>
+<li>记录各个检查点记录在日志文件中的地址</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406251305380.png" alt="image-20240625130505325"></p>
+</li>
+<li><p>动态维护日志文件的方法</p>
+<ul>
+<li>周期性地执行如下操作：建立检查点，保存数据库状态。</li>
+<li>具体步骤是：<ul>
+<li>将当前日志缓冲区中的所有日志记录写入磁盘的日志文件上</li>
+<li>在日志文件中写入一个检查点记录</li>
+<li>将当前数据缓冲区的所有数据记录写入磁盘的数据库中</li>
+<li>把检查点记录在日志文件中的地址写入一个重新开始文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>利用检查点恢复步骤<ul>
+<li>从重新开始文件中找到最后一个检查点记录在日志文件中的地址，由该地址在日志文件中找到最后一个检查点记录</li>
+<li>由该检查点记录得到检查点建立时刻所有正在执行的事务清单ACTIVE-LIST<ul>
+<li>建立两个事务队列<ul>
+<li>UNDO-LIST </li>
+<li>REDO-LIST </li>
+</ul>
+</li>
+<li>把ACTIVE-LIST暂时放入UNDO-LIST队列，REDO队列暂为空。</li>
+</ul>
+</li>
+<li>从检查点开始正向扫描日志文件，直到日志文件结束<ul>
+<li>如有新开始的事务Ti ，把Ti暂时放入UNDO-LIST队列</li>
+<li>如有提交的事务Tj，把Tj从UNDO-LIST队列移到REDO-LIST队列；直到日志文件结束</li>
+</ul>
+</li>
+<li>对UNDO-LIST中的每个事务执行UNDO操作</li>
+<li>对REDO-LIST中的每个事务执行REDO操作</li>
+</ul>
+</li>
+</ol>
+<h2 id="第十一章-并发控制"><a href="#第十一章-并发控制" class="headerlink" title="第十一章 并发控制"></a>第十一章 并发控制</h2><ol>
+<li><p>并发操作带来的数据不一致</p>
+<ul>
+<li>丢失修改</li>
+<li>不可重复读</li>
+<li>读脏数据</li>
+</ul>
+</li>
+<li><p>并发控制的主要技术</p>
+<ul>
+<li>封锁</li>
+<li>时间戳</li>
+<li>乐观控制法</li>
+<li>多版本并发控制</li>
+</ul>
+</li>
+<li><p>封锁：事务T在对某个数据对象（例如表、记录等）操作之前，先向系统发出请求，对其加锁。在事务T释放它的锁之前，其它的事务不能更新此数据对象。</p>
+<p>基本类型：排它锁、共享锁</p>
+</li>
+<li><p>封锁协议</p>
+<ul>
+<li>一级封锁协议<ul>
+<li>事务T在修改数据R之前必须先对其加X锁，直到事务结束才释放。</li>
+<li>防止丢失修改</li>
+</ul>
+</li>
+<li>二级封锁协议<ul>
+<li>一级封锁协议加上事务T在读取数据R之前必须先对其加S锁，读完后即可释放S锁。</li>
+<li>防止丢失修改和读“脏”数据</li>
+</ul>
+</li>
+<li>三级封锁协议<ul>
+<li>一级封锁协议加上事务T在读取数据R之前必须先对其加S锁，直到事务结束才释放。</li>
+<li>防止丢失修改、读脏数据和不可重复读</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>什么是活锁，如何避免？</p>
+<ul>
+<li>事务T1封锁了数据R，事务T2又请求封锁R，于是T2等待。</li>
+<li>T3也请求封锁R，当T1释放了R上的封锁之后系统首先批准了T3的请求，T2仍然等待。</li>
+<li>T4又请求封锁R，当T3释放了R上的封锁之后系统又批准了T4的请求……</li>
+<li>T2有可能永远等待，这就是活锁的情形</li>
+<li>避免活锁：采用先来先服务的策略</li>
+</ul>
+</li>
+<li><p>什么是死锁，如何解决？</p>
+<ul>
+<li>事务T1封锁了数据R1，T2封锁了数据R2</li>
+<li>T1又请求封锁R2 ，因T2已封锁了R2 ，于是T1等待T2释放R2上的锁</li>
+<li>接着T2又申请封锁R1 ，因T1已封锁了R1 ， T2也只能等待T1释放R1上的锁</li>
+<li>这样T1在等待T2 ，而T2又在等待T1 ， T1和T2两个事务永远不能结束，形成死锁 </li>
+<li>预防死锁的方法：<ul>
+<li>一次封锁法，要求每个事务必须一次将所有要使用的数据全部加锁，否则就不能继续执行</li>
+<li>顺序封锁法，预先对数据对象规定一个封锁顺序，所有事务都按这个顺序实行封锁</li>
+</ul>
+</li>
+<li>检测死锁的方法：<ul>
+<li>超时法，如果一个事务的等待时间超过了规定的时限，就认为发生了死锁</li>
+<li>等待图法，并发控制子系统周期性地（比如每隔数秒）生成事务等待图，检测事务。如果发现图中存在回路，则表示系统中出现了死锁</li>
+</ul>
+</li>
+<li>解除死锁的方法：<ul>
+<li>选择一个处理死锁代价最小的事务，将其撤消</li>
+<li>释放此事务持有的所有的锁，使其它事务能继续运行下去</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>可串行化调度</p>
+<ul>
+<li>多个事务的并发执行是正确的，当且仅当其结果与按某一次序串行地执行这些事务时的结果相同</li>
+</ul>
+</li>
+<li><p>冲突可串行化</p>
+<ul>
+<li>一个调度Sc在保证冲突操作的次序不变的情况下，通过交换两个事务不冲突操作的次序得到另一个调度Sc’，如果Sc’是串行的，称调度Sc是冲突可串行化的调度</li>
+</ul>
+</li>
+<li><p>两段锁协议，指所有事务必须分两个阶段对数据项加锁和解锁。可保证并发调度的可串行性</p>
+<ul>
+<li>在对任何数据进行读、写操作之前，事务首先要获得对该数据的封锁</li>
+<li>在释放一个封锁之后，事务不再申请和获得任何其他封锁</li>
+</ul>
+</li>
+<li><p>封锁粒度</p>
+<ul>
+<li>封锁对象的大小称为封锁粒度</li>
+</ul>
+</li>
+<li><p>意向锁</p>
+<ul>
+<li>提高对某个数据对象加锁时系统的检查效率</li>
+<li>如果对一个结点加意向锁，则说明该结点的下层结点正在被加锁</li>
+<li>对任一结点加基本锁，必须先对它的上层结点加意向锁</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406251404582.png" alt="image-20240625140408506"></p>
+</li>
+</ol>
+<h2 id="第十二章-NoSQL"><a href="#第十二章-NoSQL" class="headerlink" title="第十二章 NoSQL"></a>第十二章 NoSQL</h2><ol>
+<li><p>关系型数据库的优缺点</p>
+<ul>
+<li>优点<ul>
+<li>建立在严格的数学概念的基础上 </li>
+<li>概念单一 </li>
+<li>关系模型的存取路径对用户透明</li>
+<li>获取持久化数据</li>
+<li>并发</li>
+<li>近乎标准的模型</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>存取路径对用户透明，查询效率往往不如格式化数据模型（NoSQL） </li>
+<li>为提高性能，必须对用户的查询请求进行优化，增加了开发 DBMS 的难度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>阻抗失谐：关系模型和内存中的数据结构之间存在差异</p>
+<ul>
+<li>如果在内存中使用了较为丰富的数据结构，那么要把它保存到磁盘之前，必须先将其转换成“关系形式。于是就发生了“阻抗失谐”：需要在两种不同的表示形式之间转译</li>
+</ul>
+</li>
+<li><p>NoSQL共同特征</p>
+<ul>
+<li>不使用关系模型</li>
+<li>在集群中运行良好</li>
+<li>开源</li>
+<li>适用于21世纪的互联网公司</li>
+<li>无模式</li>
+</ul>
+</li>
+<li><p>聚合</p>
+<ul>
+<li>把一组相互关联的对象视为一个整体单元来操作，而这个单元就叫聚合（aggregate）。</li>
+<li>“键值数据库”、“文档数据库”、“列族数据库”</li>
+</ul>
+</li>
+<li><p>CAP定理：给定“一致性”(Consistency)、“可用性”(Availability)、“分区耐受性”( Partition tolerance) 这三个属性，我们只能同时满足其中两个属性。</p>
+</li>
+<li><p>仲裁</p>
+<ul>
+<li>写入仲裁<ul>
+<li>对等式分布模型：如果发生两个相互冲突的写入操作，那么只有其中一个操作能为超过半数的节点所认可，W&gt;N/2 。即，参与写入操作的节点数(W)，必须超过副本节点数(N)的一半。副本个数又称为“复制因子”</li>
+<li>主从式分布模型：只需要向主节点中写入数据</li>
+</ul>
+</li>
+<li>读取仲裁<ul>
+<li>对等式分布模型：只有当R+W&gt;N时，才能保证读取操作的“强一致性”。其中，执行读取操作时所需联系的节点数(R)，确认写入操作时所需征询的节点数(W)，以及复制因子(N)</li>
+<li>主从式分布模型：只需从主节点中读取数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>键值数据库</p>
+<ul>
+<li>键值数据库(key-value store)是一张简单的哈希表(hash table)，主要用在所有数据库访问均通过主键(primary key)来操作的情况下。</li>
+<li>客户端可以根据键查询值，设置键所对应的值，或从数据库中删除键。</li>
+<li>适用场景<ul>
+<li>保存会话</li>
+<li>购物车数据</li>
+<li>用户配置信息</li>
+</ul>
+</li>
+<li>不适用场景<ul>
+<li>数据间关系 </li>
+<li>含有多项操作的事务 </li>
+<li>查询数据（无法根据值来查询） </li>
+<li>操作关键字集合（一次只能操作一个键）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文档数据库</p>
+<ul>
+<li>文档彼此相似，但不必完全相同。文档数据库所存放的文档，就相当于键值数据库所存放的“值”。</li>
+<li>文档数据库可视为其值可查的键值数据库。</li>
+<li>“文档”( document)是文档数据库中的主要概念。</li>
+<li>其格式可以是XML、JSON、BSON等。</li>
+<li>文档具备自述性(self-describing)，呈现分层的树状数据结构(hierarchical tree data structure)，可以包含映射表、集合和标量值。</li>
+<li>适用场景<ul>
+<li>事件记录</li>
+<li>内容管理系统及博客平台</li>
+<li>网站分析与实时分析</li>
+<li>电子商务应用程序</li>
+</ul>
+</li>
+<li>不适用场景<ul>
+<li>包含多项操作的复杂事务</li>
+<li>查询持续变化的聚合结构</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>列族数据库</p>
+<ul>
+<li>列族数据库，可以存储关键字及其映射值， 并且可以把值分成多个列族，让每个列族代表一张数据映射表(map of data)。</li>
+<li>列族数据库将数据存储在列族中，而列族里的行则把许多列数据与本行的“行键”(row key)关联起来。</li>
+</ul>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406251457407.png" alt="image-20240625145747288"></p>
+<ul>
+<li>适用场景<ul>
+<li>事件记录</li>
+<li>内容管理系统和博客平台</li>
+<li>计数器</li>
+<li>限期   </li>
+</ul>
+</li>
+<li>不适用场景<ul>
+<li>需要以“ACID事务”执行写入及读取操作的系统。</li>
+<li>根据查询结果来聚合数据(例如SUM(求和)或AVG (求平均值))</li>
+<li>在开发早期原型或刚开始试探某个技术方案时</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>图数据库</p>
+<ul>
+<li>图数据库可存放实体及实体间关系。</li>
+<li>实体也叫“节点”(node)，它们具有属性(property)。可将节点视为应用程序中某对象的实例。</li>
+<li>关系又叫“边”(edge)，它们也有属性。边具备方向性( directional significance)，而节点则按关系组织起来，以便在其中查找所需模式。</li>
+<li>适用场景<ul>
+<li>互联数据 </li>
+<li>安排运输路线 </li>
+<li>分派货物和基于位置的服务 </li>
+<li>推荐引擎</li>
+</ul>
+</li>
+<li>不适用场景<ul>
+<li>更新全部或某子集内的实体</li>
+<li>无法处理那么大的数据量，尤其在执行“全局图操作”，涉及整张图的操作)时更是如此</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>NoSQL汇总</p>
+<p><img src="https://sprooc-pic.oss-cn-hangzhou.aliyuncs.com/202406251506876.png" alt="image-20220620212854163"></p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://sprooc.github.io">Sprooc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://sprooc.github.io/2024/08/08/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">http://sprooc.github.io/2024/08/08/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://sprooc.github.io" target="_blank">Sprooc</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/atri.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/06/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="计算机操作系统-期末复习"><img class="cover" src="/img/atri.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算机操作系统-期末复习</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sprooc</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/sprooc"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/sprooc" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1127626033@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Sprooc's Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">数据管理基础-期末复习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.1.</span> <span class="toc-text">第一章 绪论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.</span> <span class="toc-text">第二章 关系型数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86%E8%AF%AD%E8%A8%80SQL"><span class="toc-number">1.3.</span> <span class="toc-text">第三章 关系数据库标准语言SQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">1.4.</span> <span class="toc-text">第四章 数据库安全性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-number">1.5.</span> <span class="toc-text">第五章 数据库完整性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA"><span class="toc-number">1.6.</span> <span class="toc-text">第六章 关系数据库理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.7.</span> <span class="toc-text">第七章 数据库设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF"><span class="toc-number">1.8.</span> <span class="toc-text">第十章 数据库恢复技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6"><span class="toc-number">1.9.</span> <span class="toc-text">第十一章 并发控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-NoSQL"><span class="toc-number">1.10.</span> <span class="toc-text">第十二章 NoSQL</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/atri.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Sprooc</div><div class="footer_custom_text">Have a bright future.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '0dccd33a9be75a73e855',
+      clientSecret: 'f411fd3dbe2629bd4201987fa59e9ea530072779',
+      repo: 'gitalk-comment',
+      owner: 'sprooc',
+      admin: ['sprooc'],
+      id: '0c1d7753c27da25b6131475294a45ec9',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !true) {
+    if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
